@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzie Delish</title>
+    <meta
+      name="description"
+      content="Order the best pizzas online from Pizzie Delish. Enjoy our delicious menu of handcrafted pizzas, sides, desserts, and drinks delivered straight to your door."
+    />
+    <meta
+      name="keywords"
+      content="Pizzie Delish, pizzas, online ordering, delivery, menu, sides, desserts, drinks, restaurant, food, food delivery"
+    />
+    <link rel="icon" href="media/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+  <body>
+    <h1>Pizzie Delish Order Form</h1>
+    <form id="order-form">
+      <fieldset style="width: 60%">
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required /><br /><br />
+      </fieldset>
+      <fieldset style="width: 60%">
+        <legend>Order Information</legend>
+        <label for="pizza">Select Pizza:</label>
+        <select id="pizza" name="pizza">
+          <option value="Margherita">Margherita</option>
+          <option value="Pepperoni">Pepperoni</option>
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="BBQ Chicken">BBQ Chicken</option></select
+        ><br /><br />
+        <label for="size">Select Size:</label>
+        <input type="radio" id="small" name="size" value="Small" />
+        <label for="small">Small</label>
+        <input type="radio" id="medium" name="size" value="Medium" />
+        <label for="medium">Medium</label>
+        <input type="radio" id="large" name="size" value="Large" />
+        <label for="large">Large</label><br /><br />
+        <label for="toppings">Select Toppings:</label>
+        <input type="checkbox" id="mushroom" name="toppings" value="Mushroom" />
+        <label for="mushroom">Mushroom</label>
+        <input type="checkbox" id="olives" name="toppings" value="Olives" />
+        <label for="olives">Olives</label>
+        <input type="checkbox" id="onions" name="toppings" value="Onions" />
+        <label for="onions">Onions</label><br /><br />
+        <label for="delivery">Delivery Method:</label>
+        <input type="radio" id="pickup" name="delivery" value="Pickup" />
+        <label for="pickup">Pickup</label>
+        <input type="radio" id="delivery" name="delivery" value="Delivery" />
+        <label for="delivery">Delivery</label><br /><br />
+        <label for="delivery-date">Delivery Date:</label>
+        <input type="date" id="delivery-date" name="delivery-date" />
+
+        <label for="delivery-time">Delivery Time:</label>
+        <input
+          type="time"
+          id="delivery-time"
+          name="delivery-time"
+        /><br /><br />
+        <label for="requests">Additional Requests:</label><br />
+        <textarea id="requests" name="requests" rows="4" cols="50"></textarea
+        ><br /><br />
+      </fieldset>
+      <br />
+      <input type="submit" value="Submit Order" />
+    </form>
+  </body>
+</html>
