@@ -13,18 +13,18 @@
       name="keywords"
       content="Pizzie Delish, pizzas, online ordering, delivery, menu, sides, desserts, drinks, restaurant, food, food delivery"
     />
-    <link rel="icon" href="/img/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/styles/style.css" />
+    <link rel="icon" href="media/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/menu/main.html">Menu</a></li>
-          <li><a href="/about-us/main.html">About</a></li>
-          <li><a href="/contact-us/main.html">Contact</a></li>
-          <li><a href="/order-now/order-page.html">Order Now</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu/main.html">Menu</a></li>
+          <li><a href="about-us/main.html">About</a></li>
+          <li><a href="contact-us/main.html">Contact</a></li>
+          <li><a href="order-now/order-page.html">Order Now</a></li>
         </ul>
       </nav>
       <h1>Pizzie Delish</h1>
@@ -38,31 +38,109 @@
           recipe. We take pride in delivering the most delicious and satisfying
           pizza experience to our customers.
         </p>
-        <img src="/img/hero.jpg" width="300" /><br />
-        <a href="/menu/main.html" class="button">Explore Our Menu</a>
+        <img src="media/hero.jpg" width="300" /><br />
+        <a href="menu/main.html" class="button">Explore Our Menu</a>
       </section>
       <section id="featured">
         <h2>Featured Pizzas</h2>
         <div>
-          <img src="/img/margherita.jpg" alt="Margherita Pizza" width="300" />
+          <img src="media/margherita.jpg" alt="Margherita Pizza" width="300" />
           <h3>Margherita Pizza</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <a href="#" class="button">Order Now</a>
         </div>
         <div>
-          <img src="/img/pepperoni.png" alt="Pepperoni Pizza" width="300" />
+          <img src="media/pepperoni.png" alt="Pepperoni Pizza" width="300" />
           <h3>Pepperoni Pizza</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <a href="#" class="button">Order Now</a>
         </div>
         <div>
-          <img src="/img/vegetarian.jpg" alt="Vegetarian Pizza" width="300" />
+          <img src="media/vegetarian.jpg" alt="Vegetarian Pizza" width="300" />
           <h3>Vegetarian Pizza</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <a href="#" class="button">Order Now</a>
         </div>
       </section>
     </main>
+
+    <section id="nutrition">
+      <table>
+        <caption>
+          Nutrition Information
+        </caption>
+        <tr>
+          <th>Ingredient</th>
+          <th>Serving Size (g)</th>
+          <th>Calories (kcal)</th>
+          <th>Fat (g)</th>
+          <th>Carbs (g)</th>
+          <th>Protein (g)</th>
+        </tr>
+        <tr>
+          <td>Tomato Sauce</td>
+          <td>100</td>
+          <td>40</td>
+          <td>0.5</td>
+          <td>9</td>
+          <td>1.5</td>
+        </tr>
+        <tr>
+          <td>Mozzarella Cheese</td>
+          <td>100</td>
+          <td>280</td>
+          <td>22</td>
+          <td>2</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Pepperoni</td>
+          <td>100</td>
+          <td>400</td>
+          <td>35</td>
+          <td>1</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Pineapple</td>
+          <td>100</td>
+          <td>50</td>
+          <td>0.5</td>
+          <td>13</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Bell Peppers</td>
+          <td>100</td>
+          <td>30</td>
+          <td>0.3</td>
+          <td>7</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Mushrooms</td>
+          <td>100</td>
+          <td>22</td>
+          <td>0.3</td>
+          <td>4</td>
+          <td>3</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="video">
+      <h3>Check out our latest dish!!!!</h3>
+      <video
+        preload="metadata"
+        poster="/img/hero.jpg"
+        autoplay
+        controls
+        width="640"
+        height="320"
+        src="media/making-pizza.mp4"
+      ></video>
+    </section>
+
     <footer>
       <p>Pizzie Delish &copy; 2023</p>
       <p>Address: 59 Hayden Street, Toronto ON M4Y 2P2</p>
