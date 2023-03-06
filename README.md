@@ -6,7 +6,7 @@ This is the project of Humber College Winter 2023 ITC5103 Web Programming and De
 
 Group members:
 
-- *Harman Singh Sikand*
+- *Harman Sikand*
 
 - *Kajanan Sivarajah*
 
