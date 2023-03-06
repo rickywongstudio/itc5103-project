@@ -1,47 +1,26 @@
-# Web-Design-Project
+# Pizza Restaurant 'Pizza Palace'
 
-Pizza Palace
+This is a fictional website for a pizza restaurant, built using HTML, CSS, Javascript and jQuery.
 
-Find all information here:
-https://rrickywong.notion.site/Project-Check-in-2-250ac313b82c4f71859f69dd6f504f24
+This is the project of Humber College Winter 2023 ITC5103 Web Programming and Design Group 'Global Fusion'.
 
-Epics & features
+Group members:
 
-1. **User Registration** **(Kajanan)**
+- *Harman Singh Sikand*
 
-   - [ ] register on the website,
-   - [ ] create an account,
-   - [ ] manage their personal information,
-   - [ ] manage their orders
-   - [ ] reorder their favorites
+- *Kajanan Sivarajah*
 
-2. **User Feedback** **(Kajanan)**
+- *Mayokun Badejo*
 
-   - [ ] ratings on each dish
-   - [ ] reviews on each dish
-   - [ ] contact forms.
+- *Ricky Wong (Team Representative)*
 
-3. **Online Food ordering & Delivery (Mayo / Harman)**
+## Project Overview
 
-   - [ ] add to shopping cart
-   - [ ] checkout (order form → customer information, payment information)
-   - [ ] Check the delivery status / pickup order status (estimated delivery time)
+The purpose of this project is to develop a website for a pizza shop to improve their online presence and increase their sales. The website will be a platform for customers to browse the menu, place orders, and learn more about the pizza shop's offerings.
 
-4. **Menu display:** **(Ricky)**
+### Scope of the project
 
-   - [ ] Dishes stock photos &
-   - [ ] Dishes Content,
-   - [ ] Specials deals and promotions
-
-5. **Shop information** **(Ricky)**
-
-   - [ ] **About Us (Brand story),**
-   - [ ] **Store locator,**
-   - [ ] **Contact information**
-
-6. **Mobile Optimization**:
-   - [ ] optimize the website for mobile devices, including responsive design, mobile-specific content, and
-   - [ ] mobile-friendly navigation.
-7. **Search and Navigation**: (+-Kajanan)
-   - search for specific dish
-   - filtering of dishes based on special dietary needs
+- Provide information about the location, contact details, and opening hours of the store to the local customers
+- Develop a responsive and user-friendly website that allows online customers to easily browse the menu, select their desired items, and place an order for delivery;
+- Allow customers to view the menu and place an order for pickup or delivery.
+- Provide information about the ingredients used in the pizza and any options available for customers with special dietary needs such as vegetarians, vegans, or people with food allergies
