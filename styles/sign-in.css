@@ -1,0 +1,58 @@
+.container {
+    /*background: brown;*/
+    width:35% !important;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*margin: auto;*/
+    /*border: 2px solid black;*/
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.submit-style{
+    width: 30%;
+    margin: 2% auto;
+
+}
+
+.input-box{
+    text-align: start;
+    margin: 1% 5% 2% 5%;
+}
+
+/*body {*/
+/*    !*background: white;*!*/
+/*    !*background: url("../media/login-pic.jpg");*!*/
+/*    !*background: url("../media/login-pic1.jpg") no-repeat center center fixed;*!*/
+/*    !*background-size: cover;*!*/
+/*    !*z-index: 1;*!*/
+/*}*/
+
+/*.formInput {*/
+/*    color: #73777B;*/
+/*}*/
+
+
+/*label {*/
+/*    text-align: start;*/
+/*    padding-left: 5%;*/
+/*    width: 20%;*/
+/*    display: inline-block;*/
+/*    margin: 2%;*/
+/*}*/
+
+/*.forgetPass {*/
+/*    text-decoration: none;*/
+/*    color: #82C3EC;*/
+
+/*}*/
+/*.submitBtn{*/
+/*    text-align: center;*/
+/*    color: brown;*/
+/*    float: right;*/
+/*}*/

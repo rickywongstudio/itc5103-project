@@ -1,0 +1,29 @@
+.topic{
+    text-align: center;
+    font-family: "Comic Sans MS";
+}
+
+.container {
+    width: 40% !important;
+    /*height: 60% !important;*/
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.input-box{
+    text-align: start !important;
+    width: 90%;
+    margin: 1% 0% 2% 5%;
+}
+.submit-style{
+    float: right;
+    margin: 1% 5% 2% 5%;
+}
+
+.txtAlgn{
+    text-align: start !important;
+}
