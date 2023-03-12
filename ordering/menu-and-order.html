@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-CA">
+<html lang="en">
 <head>
   <title>Pizza Palace</title>
   <!-- metadata -->
@@ -18,26 +18,42 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
   <link rel="stylesheet" href="../styles/common.css">
   <link href="https://fonts.cdnfonts.com/css/nexa-bold" rel="stylesheet"/>
-  <link rel="stylesheet" type="text/css" href="../styles/menu-and-order.css" />
-
-  <!--  jQuery to inject header & footer  -->
   <script
-          src="https://code.jquery.com/jquery-3.3.1.js"
-          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          src="https://code.jquery.com/jquery-3.6.4.js"
+          integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
           crossorigin="anonymous"></script>
+  <!--  jQuery to inject header & footer  -->
   <script>
     $(function(){
       $("#header").load("../common/header.html");
       $("#footer").load("../common/footer.html");
     });
   </script>
+  <script defer src="../scripts/menu-and-order.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="../styles/menu-and-order.css" />
 </head>
 
 <body>
-<!--------------------- header and nav------------------- -->
-<header id="header" class="section1"></header>
+
+<header id="header"></header>
+
 <main class="section2">
+
+  <aside class="secondary">
+    <div id="tabs" class="category">
+      <div class="tab" data-tab="tab-1">Pizzas</div>
+      <div class="tab" data-tab="tab-2">Pastas</div>
+      <div class="tab" data-tab="tab-3">Sides</div>
+      <div class="tab" data-tab="tab-4">Salads</div>
+      <div class="tab" data-tab="tab-5">Drinks</div>
+    </div>
+  </aside>
+
   <section class="primary">
+
+
     <!--------------------- filtering widget--------------------->
 
     <div class="filtering-widget">
@@ -60,9 +76,26 @@
             <input type="checkbox" class="form-check-input" id="kosher" />
             <label class="form-check-label" for="kosher">Kosher</label>
           </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="halal" />
+            <label class="form-check-label" for="halal">Halal</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="low-carb" />
+            <label class="form-check-label" for="low-carb">Low-carb</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="dairy-free" />
+            <label class="form-check-label" for="dairy-free">Dairy-free</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="paleo" />
+            <label class="form-check-label" for="paleo">Paleo</label>
+          </div>
         </form>
       </div>
     </div>
+
 
     <div class="tab-content active" id="tab-1">
       <article class="menu-item">
@@ -152,8 +185,49 @@
         </div>
       </article>
     </div>
-
     <div class="tab-content" id="tab-3">
+      <article class="menu-item">
+        <div class="menu-item-img">
+          <img src="../media/pasta-1.png" alt="Pasta 1" />
+        </div>
+        <div class="menu-item-text">
+          <h2>Spaghetti Carbonara</h2>
+          <p>Traditional Italian spaghetti dish with creamy egg, pancetta, and parmesan sauce.</p>
+          <p>$12</p>
+        </div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-item-img">
+          <img src="../media/pasta-2.png" alt="Pasta 2" />
+        </div>
+        <div class="menu-item-text">
+          <h2>Penne Arrabiata</h2>
+          <p>Spicy tomato sauce with garlic, chili flakes, and fresh basil served with penne pasta.</p>
+          <p>$11</p>
+        </div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-item-img">
+          <img src="../media/pasta-3.png" alt="Spaghetti Bolognese" />
+        </div>
+        <div class="menu-item-text">
+          <h2>Spaghetti Bolognese</h2>
+          <p>Classic spaghetti dish with rich meat sauce made with beef, pork, and tomato sauce.</p>
+          <p>$10</p>
+        </div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-item-img">
+          <img src="../media/pasta-4.png" alt="Spaghetti Marinara" />
+        </div>
+        <div class="menu-item-text">
+          <h2>Spaghetti Marinara</h2>
+          <p>Simple yet delicious spaghetti dish with fresh tomato sauce, garlic, and basil.</p>
+          <p>$9</p>
+        </div>
+      </article>
+    </div>
+    <div class="tab-content" id="tab-4">
       <article class="menu-item">
         <div class="menu-item-img">
           <img src="../media/garlic-bread.png" alt="Garlic Bread" />
@@ -195,7 +269,7 @@
         </div>
       </article>
     </div>
-    <div class="tab-content" id="tab-4">
+    <div class="tab-content" id="tab-5">
       <article class="menu-item">
         <div class="menu-item-img">
           <img src="../media/drink-1.png" alt="Drink 1" />
@@ -239,136 +313,11 @@
     </div>
   </section>
 
-  <aside class="secondary">
-    <div id="tabs" class="category">
-      <div class="tab" data-tab="tab-1">Pizzas</div>
-      <div class="tab" data-tab="tab-2">Pastas</div>
-      <div class="tab" data-tab="tab-3">Sides</div>
-      <div class="tab" data-tab="tab-4">Drinks</div>
-    </div>
-  </aside>
+
 </main>
 <footer id="footer"></footer>
 </body>
 
 <script>
-
-  // array of menuitems
-  const menuItems = [
-    {
-      name: "Hawaiian Pizza",
-      category: "Pizza",
-      description: "Tomato sauce, mozzarella cheese, ham, and pineapple.",
-      price: "$12"
-    },
-    {
-      name: "Pepperoni Pizza",
-      category: "Pizza",
-      description: "Tomato sauce, mozzarella cheese, and pepperoni.",
-      price: "$10"
-    },
-    {
-      name: "Margherita Pizza",
-      category: "Pizza",
-      description: "Tomato sauce, mozzarella cheese, and fresh basil.",
-      price: "$8"
-    },
-    {
-      name: "Vegetarian Pizza",
-      category: "Pizza",
-      description: "Tomato sauce, mozzarella cheese, mushrooms, bell peppers, and onions.",
-      price: "$12"
-    },
-    {
-      name: "Spaghetti Carbonara",
-      category: "Pasta",
-      description: "Traditional Italian spaghetti dish with creamy egg, pancetta, and parmesan sauce.",
-      price: "$12"
-    },
-    {
-      name: "Penne Arrabiata",
-      category: "Pasta",
-      description: "Spicy tomato sauce with garlic, chili flakes, and fresh basil served with penne pasta.",
-      price: "$11"
-    },
-    {
-      name: "Spaghetti Bolognese",
-      category: "Pasta",
-      description: "Classic spaghetti dish with rich meat sauce made with beef, pork, and tomato sauce.",
-      price: "$10"
-    },
-    {
-      name: "Spaghetti Marinara",
-      category: "Pasta",
-      description: "Simple yet delicious spaghetti dish with fresh tomato sauce, garlic, and basil.",
-      price: "$9"
-    },
-    {
-      name: "Garlic Bread",
-      category: "Sides",
-      description: "Warm and crispy bread with butter and garlic.",
-      price: "$4"
-    },
-    {
-      name: "French Fries",
-      category: "Sides",
-      description: "Crispy and golden fries served with ketchup.",
-      price: "$5"
-    },
-    {
-      name: "Ceasar Salad",
-      category: "Salads",
-      description: "Crisp romaine lettuce, croutons, parmesan cheese, and caesar dressing.",
-      price: "$8"
-    },
-    {
-      name: "Bruschetta",
-      category: "Appetizers",
-      description: "Toasted bread topped with fresh tomatoes, basil, garlic, and olive oil.",
-      price: "$6"
-    },
-    {
-      name: "Iced Tea",
-      category: "Drinks",
-      description: "Refreshing iced tea with a blend of black tea and lemon, served with ice.",
-      price: "$3"
-    },
-    {
-      name: "Lemonade",
-      category: "Drinks",
-      description: "Freshly squeezed lemonade served with ice.",
-      price: "$4"
-    },
-    {
-      name: "Soda",
-      category: "Drinks",
-      description: "Assorted sodas including Coke, Sprite, and Fanta.",
-      price: "$2"
-    },
-  ];
-
-
-
-  // script for tab function
-  const tabs = document.querySelectorAll(".tab");
-  const tabContents = document.querySelectorAll(".tab-content");
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const tabId = tab.dataset.tab;
-      tabContents.forEach((tabContent) => {
-        tabContent.classList.remove("active");
-      });
-      document.querySelector(`#${tabId}`).classList.add("active");
-    });
-  });
-
-  // Filtering widget function
-  const link = document.querySelector('.widget-link');
-  const container = document.querySelector('.options-container');
-
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-    container.classList.toggle('expanded');
-  });
 </script>
 </html>

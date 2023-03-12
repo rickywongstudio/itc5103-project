@@ -1,20 +1,12 @@
 /* ------------------- Header tag styles -------------------*/
-.section1 {
-    align-items: center;
+header {
     background-color: #b61500;
 }
 
-.logo {
-    width: 7rem;
+header .logo {
+    max-width: 5rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-}
-
-nav {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
 }
 
 header ul {
@@ -23,28 +15,45 @@ header ul {
     align-items: center;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
-nav li {
+header nav li {
     display: block;
     flex-grow: 1;
 }
 
-nav li a {
+header nav li a {
     color: #f2f2f2;
     text-align: center;
     font-weight: 900;
     text-decoration: none;
 }
 
-nav li a:hover {
+.navbar-item {
+    display:none;
+}
+
+header nav li a:hover {
     text-decoration: underline;
 }
 
-.tab {
-    padding: 20px;
+
+.nav-dropdown-toggle {
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
 }
+
+.nav-dropdown-menu {
+    display: none;
+    padding: 10px;
+    background-color: #b61500;
+}
+.nav-dropdown-menu li {
+    padding: 0.5rem;
+}
+
+
 
 /* ------------------- Footer tag styles -------------------*/
 
@@ -59,7 +68,7 @@ footer {
 }
 
 .footer-container {
-    display: flex;
+    display: block;
     justify-content: space-between;
     margin-bottom: 30px;
 }
@@ -120,11 +129,25 @@ div .social-icons a {
     margin: 0;
 }
 
-@media screen and (max-width: 720px) {
-    * {
-        max-width:100%;
-    }
+footer .logo {
+    width: 7rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+
+@media screen and (min-width: 768px) {
     .footer-container {
-        display: block;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .navbar-item {
+        display:block;
+    }
+
+    .nav-dropdown-toggle, .nav-dropdown-menu{
+        display:none;
     }
 }
