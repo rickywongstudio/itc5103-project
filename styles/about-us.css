@@ -1,0 +1,38 @@
+/* Set font family and size */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Center the heading */
+h1 {
+    text-align: center;
+}
+
+/* Style the headings for the sections */
+h2, h3 {
+    color: #cc0000;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+/* Add a margin to the list */
+ul {
+    margin-left: 20px;
+}
+
+/* Style the links */
+a {
+    color: #cc0000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Set width and margin for the page content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="76805197-6c8c-454c-aaab-feb483476564" name="Changes" comment="Updated menu, find-us, about-us" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="stable" />
+      </map>
+    </option>
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2476065d-9ce1-49d4-851c-799f9037621e" />
+        <option name="url" value="https://github.com/lokilok1/Web-Design-Project.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Mcfk43ynHCYgvPnkiy2lwVLTV2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/ricky/Documents/GitHub/pizzie-delish/itc5103-project",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "terminal",
+    "two.files.diff.last.used.folder": "C:/Users/ricky/Documents/GitHub/pizzie-delish/itc5103-project",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ricky\OneDrive - The Hong Kong Polytechnic University\Documents\GitHub\itc5103-project\media\unused" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76805197-6c8c-454c-aaab-feb483476564" name="Changes" comment="" />
+      <created>1678071930392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678071930392</updated>
+      <workItem from="1678071931449" duration="1186000" />
+      <workItem from="1678073168762" duration="1815000" />
+      <workItem from="1678075234527" duration="760000" />
+      <workItem from="1678076050261" duration="65000" />
+      <workItem from="1678151800222" duration="1097000" />
+      <workItem from="1678225772799" duration="10730000" />
+      <workItem from="1678239066626" duration="864000" />
+      <workItem from="1678407173644" duration="349000" />
+      <workItem from="1678428430791" duration="1331000" />
+      <workItem from="1678482098085" duration="757000" />
+      <workItem from="1678484427184" duration="19247000" />
+      <workItem from="1678534224184" duration="1737000" />
+      <workItem from="1678560914379" duration="9460000" />
+      <workItem from="1678592585811" duration="4042000" />
+      <workItem from="1678597529807" duration="310000" />
+    </task>
+    <task id="LOCAL-00001" summary="debug">
+      <created>1678074721954</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678074721954</updated>
+    </task>
+    <task id="LOCAL-00002" summary="delete duplicates">
+      <created>1678074735528</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678074735528</updated>
+    </task>
+    <task id="LOCAL-00003" summary="re-state the href (testing)">
+      <created>1678074916764</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678074916764</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Refine page &amp; header and footer">
+      <created>1678074972333</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678074972333</updated>
+    </task>
+    <task id="LOCAL-00005" summary="debug">
+      <created>1678075889822</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678075889822</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated menu, find-us, about-us">
+      <created>1678597747797</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678597747797</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Menu" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="delete duplicates" />
+    <MESSAGE value="re-state the href (testing)" />
+    <MESSAGE value="Refine page &amp; header and footer" />
+    <MESSAGE value="debug" />
+    <MESSAGE value="Updated menu, find-us, about-us" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated menu, find-us, about-us" />
+  </component>
+</project>
