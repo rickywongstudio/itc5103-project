@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76805197-6c8c-454c-aaab-feb483476564" name="Changes" comment="Updated menu, find-us, about-us" />
+    <list default="true" id="76805197-6c8c-454c-aaab-feb483476564" name="Changes" comment="Updated menu, find-us, about-us">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordering/menu-and-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/menu-and-order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/menu-and-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu-and-order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/menu-and-order.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/menu-and-order.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,25 +56,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ricky/Documents/GitHub/pizzie-delish/itc5103-project",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "terminal",
-    "two.files.diff.last.used.folder": "C:/Users/ricky/Documents/GitHub/pizzie-delish/itc5103-project",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ricky/Documents/GitHub/pizzie-delish/itc5103-project&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/ricky/Documents/GitHub/pizzie-delish/itc5103-project&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ricky\OneDrive - The Hong Kong Polytechnic University\Documents\GitHub\itc5103-project\media\unused" />
@@ -94,7 +102,10 @@
       <workItem from="1678534224184" duration="1737000" />
       <workItem from="1678560914379" duration="9460000" />
       <workItem from="1678592585811" duration="4042000" />
-      <workItem from="1678597529807" duration="310000" />
+      <workItem from="1678597529807" duration="611000" />
+      <workItem from="1678637240389" duration="7692000" />
+      <workItem from="1678806184202" duration="472000" />
+      <workItem from="1678830674469" duration="669000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>
@@ -138,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678597747797</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated menu, find-us, about-us">
+      <created>1678597962348</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678597962348</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -105,7 +105,53 @@
         <div class="menu-item-text">
           <h2>Hawaiian Pizza</h2>
           <p>Tomato sauce, mozzarella cheese, ham, and pineapple.</p>
-          <p>$12</p>
+        </div>
+        <div class="content-switch">
+          <section class="content-switch-tab">
+            <a class="menu-item-order-btn">ADD TO ORDER</a>
+          </section>
+          <section class="content-switch-tab hidden">
+          <form class="form-to-cart">
+            <fieldset class="price-display-container">
+              <span class="price-display">$<span class="price-display-target">0.00</span></span></fieldset>
+            <fieldset class="to-cart-fields">
+              <div class="field-container size-container select-parent">
+                <label for="size">Select size</label>
+                <select id="size" class="select-size" name="size" autocomplete="off">
+                  <option class="placeholder" disabled="disabled" selected="selected" value="">Select size</option>
+                  <option value="2">Small</option>
+                  <option value="3">Medium</option>
+                  <option value="4">Large</option>
+                  <option value="20">18" Jumbo</option>
+                  <option value="21">21" X 15" Party</option>
+                </select>
+              </div>
+              <div class="field-container quantity-container select-parent">
+                <label for="quantity">Quantity</label>
+                <select id="quantity" class="select-quantity" name="quantity" autocomplete="off">
+                  <option class="placeholder" disabled="disabled" value="">Select quantity</option>
+                  <option value="1" selected="selected">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+<!--              <a class="to-cart-modify" href="/PNAPI/order/make-your-own/?type=pizza&amp;product_id=121349">Modify Pizza</a>-->
+<!--              <a class="nutrition-guide-link" data-product-id="121349">Nutrition</a>-->
+          </fieldset>
+            <div class="calories-display-container"> 180 - 320 Calories/Slice</div>
+            <fieldset class="form-actions">
+              <input type="submit" class="to-cart-add" value="Add to order"/>
+              <a class="to-cart-cancel">Cancel</a>
+            </fieldset>
+          </form>
+          </section>
         </div>
       </article>
 

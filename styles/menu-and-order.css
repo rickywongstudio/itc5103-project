@@ -1,6 +1,4 @@
-* {
-  font-family: "Nexa Bold", sans-serif;
-}
+
 body {
   display: grid;
 }
@@ -47,6 +45,58 @@ body {
   font-style: italic;
   color: #606060;
   margin-bottom: 0.5rem;
+}
+
+.menu-item-order-btn, .to-cart-add {
+  display: block;
+  width: 60%;
+  background-color: #b61500;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 40px auto;
+  text-align: center;
+  outline: none; /* to remove the focus outline */
+}
+
+.content-switch-tab.hidden {
+  position:relative;
+  display:none;
+  opacity:0;
+  left:-110%;
+}
+
+.content-switch-tab {
+  position:relative;
+  text-align: center;
+  left:0;
+  opacity: 1;
+  width:100%;
+  transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.form-to-cart fieldset {
+  border:none;
+}
+
+.to-cart-fields select {
+  width:80%;
+  margin:5px;
+  border:2px solid #b61500;
+  border-radius: 5px;
+}
+
+.to-cart-fields label {
+  display: none;
+}
+
+.to-cart-cancel {
+  margin: 10px 0 0 0;
+  display:block;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /*---------------- Aside tag styles ----------------*/
@@ -167,7 +217,7 @@ body {
   }
 }
 
-/* desktop responsive */
+/* tablet responsive */
 @media only screen and (min-width: 768px) {
   main {
     margin-left: 3%;
@@ -197,7 +247,7 @@ body {
     border-bottom: 1px solid #d9d9d9;
     font-size: 1rem;
     text-align: center;
-    padding:10px;
+    padding: 10px;
     cursor: pointer;
     font-weight: 900;
   }
@@ -223,6 +273,7 @@ body {
   }
 }
 
+/* laptop responsive */
 @media only screen and (min-width: 1200px) {
   main {
     max-width: 1200px;
@@ -235,6 +286,8 @@ body {
   }
 }
 
+
+/* desktop responsive */
 @media only screen and (min-width: 2560px) {
   main {
     max-width: 2560px;

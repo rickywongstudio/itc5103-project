@@ -1,3 +1,9 @@
+* {
+    /*font-family: "Nexa Bold", sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 /* ------------------- Header tag styles -------------------*/
 header {
     background-color: #b61500;
