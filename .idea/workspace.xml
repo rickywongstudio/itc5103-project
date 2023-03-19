@@ -5,31 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/media/bacon-cheeseburger-pizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/bbq-chicken-pizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/buffalo-wings-pizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/fettuccine-alfredo.png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/four-cheese-pizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/lasagna-bolognese.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/meat-lovers-pizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/penne-alla-vodka.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/penne-arrabiata.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/pesto-linguine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/rigatoni-norma.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/shrimp-scampi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/spaghetti-aglio-olio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/spaghetti-carbonara.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/supreme-pizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/find-us.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/menuitem.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/menuitem.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/find-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/find-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/locations.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/locations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordering/menu-and-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/menu-and-order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/menu-and-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu-and-order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/find-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/find-us.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/menu-and-order.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/menu-and-order.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/find-us.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/find-us.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +111,7 @@
       <workItem from="1679116028371" duration="2000" />
       <workItem from="1679150863211" duration="1316000" />
       <workItem from="1679153047762" duration="15694000" />
+      <workItem from="1679200004344" duration="156000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>

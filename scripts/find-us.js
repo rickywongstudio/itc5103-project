@@ -1,11 +1,9 @@
 'use strict';
 
-const map = L.map("map");
-const userLocation = [];
-const markers = [];
-const storeLocations = [
+const stores = [
     {
-        name: "Downtown Toronto", location: [43.6542, -79.3808],
+        name: "Downtown Toronto", 
+      location: [43.6542, -79.3808],
         address: "123 Main Street, Toronto, ON",
         hours: "Monday-Sunday: 11:00am-11:00pm",
         distanceTo: "",
@@ -74,148 +72,77 @@ const storeLocations = [
         distanceTo: "",
     }
 ];
-const branchesList = document.getElementById('branches-list');
 
-for (const location of storeLocations) {
-    // Create a list item element
-    const listItem = document.createElement('li');
-    listItem.className = 'branch';
+function insertBranches(stores){
+  const branchesList = document.getElementById('branches-list');
 
-    // Create a paragraph element for the branch area
-    const areaParagraph = document.createElement('p');
-    areaParagraph.className = 'branch-area';
-    areaParagraph.textContent = location.name;
-    listItem.appendChild(areaParagraph);
+  for (const store of stores) {
+      // Create a list item element
+      const listItem = document.createElement('li');
+      listItem.className = 'branch';
 
-    // Create a paragraph element for the branch address
-    const addressParagraph = document.createElement('p');
-    addressParagraph.className = 'branch-address';
-    addressParagraph.textContent = location.address;
-    listItem.appendChild(addressParagraph);
+      // Create a paragraph element for the branch area
+      const areaParagraph = document.createElement('p');
+      areaParagraph.className = 'branch-area';
+      areaParagraph.textContent = store.name;
+      listItem.appendChild(areaParagraph);
 
-    // Create a paragraph element for the branch hours
-    const hoursParagraph = document.createElement('p');
-    hoursParagraph.className = 'branch-hours';
-    hoursParagraph.textContent = location.hours;
-    listItem.appendChild(hoursParagraph);
+      // Create a paragraph element for the branch address
+      const addressParagraph = document.createElement('p');
+      addressParagraph.className = 'branch-address';
+      addressParagraph.textContent = store.address;
+      listItem.appendChild(addressParagraph);
 
-    // Add the list item to the branches list
-    branchesList.appendChild(listItem);
+      // Create a paragraph element for the branch hours
+      const hoursParagraph = document.createElement('p');
+      hoursParagraph.className = 'branch-hours';
+      hoursParagraph.textContent = store.hours;
+      listItem.appendChild(hoursParagraph);
+
+      // Add the list item to the branches list
+      branchesList.appendChild(listItem);
+  }
+  return document.querySelectorAll('.branch');
 }
 
-const branches = document.querySelectorAll('.branch');
-
-////////////////////////////////////////////////////////////////////////
-
-// MAP
-// Load the map
-L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
-    maxZoom: 18,
-    subdomains: ["mt0", "mt1", "mt2", "mt3"],
-}).addTo(map);
-
-// Load the marker and store it into markers array
-for (const store of storeLocations) {
-    const marker = L.marker(store.location).addTo(map).bindPopup(store.name);
-    markers.push(marker);
+function loadMap(map){
+  L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
+      maxZoom: 18,
+      subdomains: ["mt0", "mt1", "mt2", "mt3"],
+  }).addTo(map);
 }
 
-// get the user's current position
-
-// // center the map on user's Location
-// function centerMapOnGeolocation() {
-//     getCurrentPosition().then(position => {
-//         const lat = position.coords.latitude;
-//         const lng = position.coords.longitude;
-//         // Store the userLocation
-//         userLocation.push(lat, lng);
-//         map.setView([lat, lng], 13);
-//     }).catch(error => {
-//         console.log(error);
-//     });
-// }
-//
-// centerMapOnGeolocation();
+function addAndGetMarkers(map, stores){
+  return stores.map(store=>{
+    return L.marker(store.location).addTo(map).bindPopup(store.name)
+  });
+}
 
 function getCurrentPosition() {
     return new Promise((resolve, reject) => {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(resolve, reject);
+            navigator.geolocation.getCurrentPosition(pos=>{
+              console.log({pos});
+              resolve(pos);
+            }, err => {
+              console.error({pos});
+              reject(err);
+            });
         } else {
             reject("Geolocation is not supported by this browser.");
         }
     });
 }
 
-function centerMapOnGeolocation(position) {
+function centerMapOnGeolocation(map ,position) {
     const lat = position.coords.latitude;
     const lng = position.coords.longitude;
-    // Store the userLocation
-    userLocation.push(lat, lng);
     map.setView([lat, lng], 13);
 }
-
-getCurrentPosition()
-    .then(centerMapOnGeolocation)
-    .catch(error => {
-        console.log(error);
-    });
-
-
-// SIDEBAR
-// Insert the store locations into HTML
-
-// Loop through each store location and calculate the distance to the user location
-// function calculateDistances() {
-//     return getCurrentPosition().then(() => {
-//         storeLocations.forEach(store => {
-//             const lat1 = userLocation[0];
-//             const lon1 = userLocation[1];
-//             const lat2 = store.location[0];
-//             const lon2 = store.location[1];
-//
-//             const R = 6371e3; // metres
-//             const φ1 = lat1 * Math.PI / 180;
-//             const φ2 = lat2 * Math.PI / 180;
-//             const Δφ = (lat2 - lat1) * Math.PI / 180;
-//             const Δλ = (lon2 - lon1) * Math.PI / 180;
-//
-//             const a = Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
-//                 Math.cos(φ1) * Math.cos(φ2) *
-//                 Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
-//             const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-//
-//             const distance = (R * c) / 1000;
-//             store.distanceTo = distance.toFixed(1);
-//         });
-//     }).catch(error => {
-//         console.log(error)
-//     });
-// }
-//
-// // Insert the distance value into HTML
-// function insertDistanceHTML() {
-//     const branchAreas = document.querySelectorAll('.branch-area');
-//     branchAreas.forEach((branchArea, index) => {
-//         const distance = storeLocations[index].distanceTo;
-//         const distanceParagraph = document.createElement('p');
-//         distanceParagraph.className = 'branch-distance';
-//         distanceParagraph.textContent = distance + ' km';
-//         branchArea.parentNode.insertBefore(distanceParagraph, branchArea.nextSibling);
-//     });
-// }
-// calculateDistances().then(() => {
-//     insertDistanceHTML();
-// }).catch(error => {
-//     console.log(error);
-// });
-
-
-
-function calculateDistances() {
-    storeLocations.forEach(store => {
-        const lat1 = userLocation[0];
-        const lon1 = userLocation[1];
+function calculateDistances(stores, position) {
+    stores.forEach(store => {
+        const lat1 = position.coords.latitude;
+        const lon1 = position.coords.longitude;
         const lat2 = store.location[0];
         const lon2 = store.location[1];
 
@@ -233,13 +160,12 @@ function calculateDistances() {
         const distance = (R * c) / 1000;
         store.distanceTo = distance.toFixed(1);
     });
-    return Promise.resolve();
 }
 
-function insertDistanceHTML() {
+function insertDistanceHTML(stores) {
     const branchAreas = document.querySelectorAll('.branch-area');
     branchAreas.forEach((branchArea, index) => {
-        const distance = storeLocations[index].distanceTo;
+        const distance = stores[index].distanceTo;
         const distanceParagraph = document.createElement('p');
         distanceParagraph.className = 'branch-distance';
         distanceParagraph.textContent = distance + ' km';
@@ -247,31 +173,37 @@ function insertDistanceHTML() {
     });
 }
 
-getCurrentPosition().then(() => {
-    return calculateDistances();
-}).then(() => {
-    insertDistanceHTML();
-}).catch(error => {
-    console.log(error);
-});
+function registerEvents(markers, map, stores){
+  const branches = document.querySelectorAll('.branch');
+  // Activate select branch
+  branches.forEach(branch => {
+      branch.addEventListener('click', () => {
+          branches.forEach(otherBranch => {
+              otherBranch.classList.remove('active');
+          });
+          branch.classList.add('active');
+          const location = branch.querySelector('.branch-area').textContent;
+          const index = stores.findIndex(branch => branch.name === location);
+          const storeLocation = stores[index];
+          markers[index].openPopup();
+          map.setView(storeLocation.location, 13);
+      });
+  });
+}
 
+async function setup() {
+  insertBranches(stores);
+  const map = L.map("map");
+  loadMap(map);
+  const markers = addAndGetMarkers(map, stores);
+  const currentPosition = await getCurrentPosition();
+  const distances = calculateDistances(stores, currentPosition);
+  insertDistanceHTML(stores);
+  centerMapOnGeolocation(map, currentPosition);
+  registerEvents(markers, map, stores);
+}
 
-// Activate select branch
-branches.forEach(branch => {
-    branch.addEventListener('click', () => {
-        branches.forEach(otherBranch => {
-            otherBranch.classList.remove('active');
-        });
-        branch.classList.add('active');
-        const location = branch.querySelector('.branch-area').textContent;
-        const index = storeLocations.findIndex(branch => branch.name === location);
-        const storeLocation = storeLocations[index];
-        markers[index].openPopup();
-        map.setView(storeLocation.location, 13);
-    });
-});
-
-
+setup().catch(console.error);
 
 ////////////////////////////////////////////////////////////////////////
 // map.setView([43.6532, -79.3832], 13); // Coordinates of Toronto
