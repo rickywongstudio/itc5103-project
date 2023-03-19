@@ -1,4 +1,6 @@
-// script for tab function
+'use strict';
+
+// Tab switching
 const tabs = document.querySelectorAll(".tab");
 const tabContents = document.querySelectorAll(".tab-content");
 tabs.forEach((tab) => {
@@ -11,6 +13,9 @@ tabs.forEach((tab) => {
     });
 });
 
+
+
+
 // Filtering widget expansion toggle
 const link = document.querySelector('.widget-link');
 const container = document.querySelector('.options-container');
@@ -21,8 +26,10 @@ link.addEventListener('click', (event) => {
 });
 
 
-// Switch tab for order cart
 
+
+
+// Ordering Switch Content
 const addButton = document.querySelector('.menu-item-order-btn');
 const toggleSection1 = document.querySelector('.content-switch-tab');
 const toggleSection2 = document.querySelector('.content-switch-tab.hidden');

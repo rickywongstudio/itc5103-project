@@ -4,13 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76805197-6c8c-454c-aaab-feb483476564" name="Changes" comment="Updated menu, find-us, about-us">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/media/bacon-cheeseburger-pizza.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/bbq-chicken-pizza.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/buffalo-wings-pizza.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/fettuccine-alfredo.png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/four-cheese-pizza.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/lasagna-bolognese.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/meat-lovers-pizza.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/penne-alla-vodka.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/penne-arrabiata.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/pesto-linguine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/rigatoni-norma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/shrimp-scampi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/spaghetti-aglio-olio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/spaghetti-carbonara.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/supreme-pizza.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/find-us.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/menuitem.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/menuitem.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/find-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/find-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/locations.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/locations.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ordering/menu-and-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/menu-and-order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/menu-and-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu-and-order.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/find-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/find-us.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/menu-and-order.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/menu-and-order.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,15 +40,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="stable" />
+        <entry key="$PROJECT_DIR$" value="Menu" />
       </map>
     </option>
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
@@ -52,17 +70,21 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Mcfk43ynHCYgvPnkiy2lwVLTV2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ricky/Documents/GitHub/pizzie-delish/itc5103-project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ricky/OneDrive - The Hong Kong Polytechnic University/Documents/GitHub/jonas-js-course&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -83,7 +105,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="76805197-6c8c-454c-aaab-feb483476564" name="Changes" comment="" />
+      <changelist id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="" />
       <created>1678071930392</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -106,6 +128,13 @@
       <workItem from="1678637240389" duration="7692000" />
       <workItem from="1678806184202" duration="472000" />
       <workItem from="1678830674469" duration="669000" />
+      <workItem from="1678837691944" duration="3889000" />
+      <workItem from="1678919063482" duration="597000" />
+      <workItem from="1679078112936" duration="16600000" />
+      <workItem from="1679115438185" duration="571000" />
+      <workItem from="1679116028371" duration="2000" />
+      <workItem from="1679150863211" duration="1316000" />
+      <workItem from="1679153047762" duration="15694000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>
@@ -178,7 +207,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Menu" />
+                        <option value="Location" />
                       </list>
                     </value>
                   </entry>
@@ -206,6 +235,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="delete duplicates" />
     <MESSAGE value="re-state the href (testing)" />
     <MESSAGE value="Refine page &amp; header and footer" />

@@ -104,7 +104,7 @@
 "ingredient": ["spaghetti", "pancetta", "egg yolks", "parmesan cheese", "black pepper"],
 "price": "$11",
 "dietaryOption": ["kosher"],
-"imgUrl": "../media/spaghetti-carbonara",
+"imgUrl": "../media/spaghetti-carbonara.png",
 "description": "A classic Italian dish made with spaghetti, pancetta, egg yolks, parmesan cheese, and black pepper. This dish is known for its creamy texture and savory taste."
 },
 {
@@ -113,7 +113,7 @@
 "ingredient": ["penne pasta", "tomato sauce", "red pepper flakes", "garlic", "olive oil"],
 "price": "$9",
 "dietaryOption": ["vegan", "dairy-free"],
-"imgUrl": "../media/penne-arrabiata",
+"imgUrl": "../media/penne-arrabiata.png",
 "description": "A spicy pasta dish made with penne pasta, tomato sauce, red pepper flakes, garlic, and olive oil. This dish has a bold flavor and is perfect for those who enjoy a little heat in their food."
 },
 {
@@ -122,7 +122,7 @@
 "ingredient": ["fettuccine pasta", "heavy cream", "butter", "parmesan cheese"],
 "price": "$12",
 "dietaryOption": ["vegetarian"],
-"imgUrl": "../media/fettuccine-alfredo",
+"imgUrl": "../media/fettuccine-alfredo.png",
 "description": "A rich and creamy pasta dish made with fettuccine pasta, heavy cream, butter, and parmesan cheese. This classic Italian dish is a favorite for those who love a comforting and indulgent meal."
 },
 {
@@ -131,7 +131,7 @@
 "ingredient": ["linguine pasta", "shrimp", "garlic", "white wine", "butter", "lemon juice"],
 "price": "$14",
 "dietaryOption": ["dairy-free"],
-"imgUrl": "../media/shrimp-scampi",
+"imgUrl": "../media/shrimp-scampi.png",
 "description": "A delicious pasta dish made with linguine pasta, shrimp, garlic, white wine, butter, and lemon juice. This dish is light and flavorful, perfect for those who enjoy seafood and citrus flavors."
 },
 {
@@ -140,7 +140,7 @@
 "ingredient": ["penne pasta", "tomato sauce", "vodka", "heavy cream", "garlic"],
 "price": "$10",
 "dietaryOption": ["vegetarian"],
-"imgUrl": "../media/penne-alla-vodka",
+"imgUrl": "../media/penne-alla-vodka.png",
 "description": "A creamy and flavorful pasta dish made with penne pasta, tomato sauce, vodka, heavy cream, and garlic. This dish has a subtle sweetness and is perfect for those who enjoy a twist on classic tomato-based pasta dishes."
 },
 {
@@ -149,7 +149,7 @@
 "ingredient": ["linguine pasta", "basil", "pine nuts", "garlic", "olive oil", "parmesan cheese"],
 "price": "$10",
 "dietaryOption": ["vegetarian"],
-"imgUrl": "../media/pesto-linguine",
+"imgUrl": "../media/pesto-linguine.png",
 "description": "A classic pasta dish featuring linguine tossed in a homemade basil pesto sauce, made with pine nuts, garlic, and parmesan cheese. A vegetarian option that is both flavorful and filling."
 },
 {
@@ -158,7 +158,7 @@
 "ingredient": ["bucatini pasta", "pancetta", "tomato sauce", "onion", "pecorino romano cheese", "red pepper flakes"],
 "price": "$12",
 "dietaryOption": ["dairy-free"],
-"imgUrl": "../media/bucatini-amatriciana",
+"imgUrl": "../media/bucatini-amatriciana.png",
 "description": "A traditional Italian pasta dish with bucatini noodles served in a spicy tomato sauce made with pancetta, onion, and red pepper flakes. This dairy-free option is perfect for those who prefer a touch of heat in their pasta."
 },
 {
@@ -167,7 +167,7 @@
 "ingredient": ["spaghetti", "garlic", "olive oil", "red pepper flakes", "parsley"],
 "price": "$9",
 "dietaryOption": ["vegan"],
-"imgUrl": "../media/spaghetti-aglio-olio",
+"imgUrl": "../media/spaghetti-aglio-olio.png",
 "description": "A simple yet flavorful vegan pasta dish featuring spaghetti tossed in a garlic and olive oil sauce with a hint of red pepper flakes and parsley for a touch of freshness."
 },
 {
@@ -176,7 +176,7 @@
 "ingredient": ["rigatoni pasta", "eggplant", "tomato sauce", "ricotta salata cheese", "basil"],
 "price": "$11",
 "dietaryOption": ["vegetarian"],
-"imgUrl": "../media/rigatoni-norma",
+"imgUrl": "../media/rigatoni-norma.png",
 "description": "A vegetarian pasta dish with rigatoni noodles served in a tomato sauce with sautéed eggplant and topped with crumbled ricotta salata cheese and fresh basil."
 },
 {
@@ -185,7 +185,7 @@
 "ingredient": ["lasagna noodles", "ground beef", "tomato sauce", "béchamel sauce", "ricotta cheese", "mozzarella cheese", "parmesan cheese"],
 "price": "$14",
 "dietaryOption": ["kosher"],
-"imgUrl": "../media/lasagna-bolognese",
+"imgUrl": "../media/lasagna-bolognese.png",
 "description": "A classic lasagna recipe featuring layers of lasagna noodles, a hearty meat sauce made with ground beef and tomato sauce, and a creamy béchamel sauce. Topped with a blend of ricotta, mozzarella, and parmesan cheeses, this dish is perfect for those looking for a comforting, kosher option."
 },
 {
@@ -194,7 +194,7 @@
 "ingredient": ["baguette", "garlic", "butter", "parsley"],
 "price": "$3",
 "dietaryOption": ["vegetarian"],
-"imgUrl": "../media/garlic-bread",
+"imgUrl": "../media/garlic-bread.png",
 "description": "Toasted baguette slices rubbed with garlic and butter, topped with fresh parsley."
 },
 {
@@ -203,7 +203,7 @@
 "ingredient": ["potatoes", "vegetable oil", "salt"],
 "price": "$4",
 "dietaryOption": ["vegan"],
-"imgUrl": "../media/french-fries",
+"imgUrl": "../media/french-fries.png",
 "description": "Crispy fried potatoes, seasoned with salt and served hot."
 },
 {
@@ -212,7 +212,7 @@
 "ingredient": ["baguette", "tomatoes", "garlic", "olive oil", "basil"],
 "price": "$6",
 "dietaryOption": ["vegetarian"],
-"imgUrl": "../media/bruschetta",
+"imgUrl": "../media/bruschetta.png",
 "description": "Toasted baguette slices topped with chopped tomatoes, garlic, olive oil, and fresh basil."
 },
 {
@@ -221,7 +221,7 @@
 "ingredient": ["calamari rings", "flour", "cornmeal", "salt", "pepper", "lemon wedges"],
 "price": "$8",
 "dietaryOption": ["dairy-free"],
-"imgUrl": "../media/fried-calamari",
+"imgUrl": "../media/fried-calamari.png",
 "description": "Breaded and fried calamari rings served with lemon wedges."
 },
 {
@@ -230,7 +230,7 @@
 "ingredient": ["chicken wings", "hot sauce", "butter", "garlic powder", "paprika", "salt", "black pepper"],
 "price": "$9",
 "dietaryOption": [],
-"imgUrl": "../media/chicken-wings",
+"imgUrl": "../media/chicken-wings.png",
 "description": "Crispy chicken wings tossed in a spicy sauce made with hot sauce, butter, garlic powder, paprika, salt, and black pepper."
 },
 {
@@ -239,7 +239,7 @@
 "ingredient": ["chicken wings", "hot sauce", "butter", "garlic powder", "paprika", "salt", "black pepper", "blue cheese dressing", "celery sticks"],
 "price": "$9",
 "dietaryOption": [],
-"imgUrl": "../media/buffalo-wings",
+"imgUrl": "../media/buffalo-wings.png",
 "description": "Crispy chicken wings tossed in a spicy sauce made with hot sauce, butter, garlic powder, paprika, salt, and black pepper, served with blue cheese dressing and celery sticks."
 },
 
@@ -249,7 +249,7 @@
 "ingredient": ["romaine lettuce", "croutons", "parmesan cheese", "caesar dressing"],
 "price": "$8",
 "dietaryOption": ["vegetarian"],
-"imgUrl": "../media/caesar-salad",
+"imgUrl": "../media/caesar-salad.png",
 "description": "A classic Caesar salad with crisp romaine lettuce, crunchy croutons, and tangy parmesan cheese, tossed with a creamy Caesar dressing."
 },
 {
@@ -258,7 +258,7 @@
 "ingredient": ["tomatoes", "fresh mozzarella", "basil", "olive oil", "balsamic glaze"],
 "price": "$10",
 "dietaryOption": ["vegetarian"],
-"imgUrl": "../media/caprese-salad",
+"imgUrl": "../media/caprese-salad.png",
 "description": "A refreshing Caprese salad with ripe tomatoes, fresh mozzarella, fragrant basil, and a drizzle of olive oil and balsamic glaze."
 },
 {
@@ -267,7 +267,7 @@
 "ingredient": ["romaine lettuce", "grilled chicken", "bacon", "hard-boiled eggs", "avocado", "tomatoes", "blue cheese", "ranch dressing"],
 "price": "$12",
 "dietaryOption": [],
-"imgUrl": "../media/cobb-salad",
+"imgUrl": "../media/cobb-salad.png",
 "description": "A hearty Cobb salad with grilled chicken, crispy bacon, hard-boiled eggs, creamy avocado, juicy tomatoes, tangy blue cheese, and a side of ranch dressing."
 },
 {
@@ -276,7 +276,7 @@
 "ingredient": ["romaine lettuce", "cucumbers", "tomatoes", "red onions", "feta cheese", "kalamata olives", "greek dressing"],
 "price": "$9",
 "dietaryOption": ["vegetarian"],
-"imgUrl": "../media/greek-salad",
+"imgUrl": "../media/greek-salad.png",
 "description": "A flavorful Greek salad with crisp romaine lettuce, crunchy cucumbers, juicy tomatoes, sharp feta cheese, briny kalamata olives, and a tangy Greek dressing."
 },
 {
@@ -284,7 +284,7 @@
 "category": "drink",
 "price": "$2",
 "dietaryOption": ["vegan"],
-"imgUrl": "../media/coke",
+"imgUrl": "../media/coke.png",
 "description": "Classic carbonated beverage with a sweet and refreshing taste."
 },
 {
@@ -292,7 +292,7 @@
 "category": "drink",
 "price": "$3",
 "dietaryOption": ["vegan"],
-"imgUrl": "../media/lemonade",
+"imgUrl": "../media/lemonade.png",
 "description": "Refreshing drink made with lemon juice, sugar, and water."
 },
 {
@@ -300,7 +300,7 @@
 "category": "drink",
 "price": "$2.5",
 "dietaryOption": ["vegan"],
-"imgUrl": "../media/iced-tea",
+"imgUrl": "../media/iced-tea.png",
 "description": "Refreshing drink made with tea and served over ice."
 },
 {
@@ -308,7 +308,7 @@
 "category": "drink",
 "price": "$4",
 "dietaryOption": ["vegetarian"],
-"imgUrl": "../media/hot-chocolate",
+"imgUrl": "../media/hot-chocolate.png",
 "description": "Hot and rich drink made with cocoa powder, milk, and sugar."
 },
 {
@@ -316,7 +316,7 @@
 "category": "drink",
 "price": "$3.5",
 "dietaryOption": ["vegan"],
-"imgUrl": "../media/espresso",
+"imgUrl": "../media/espresso.png",
 "description": "Strong and concentrated coffee served in a small shot."
 },
 {
@@ -324,7 +324,7 @@
 "category": "drink",
 "price": "$7",
 "dietaryOption": ["vegan"],
-"imgUrl": "../media/mojito",
+"imgUrl": "../media/mojito.png",
 "description": "Refreshing cocktail made with rum, lime juice, mint leaves, and soda water."
 },
 {
@@ -332,7 +332,7 @@
 "category": "drink",
 "price": "$5",
 "dietaryOption": ["vegetarian"],
-"imgUrl": "../media/milkshake",
+"imgUrl": "../media/milkshake.png",
 "description": "Thick and creamy drink made with milk, ice cream, and flavored syrup."
 },
 {
@@ -340,7 +340,7 @@
 "category": "drink",
 "price": "$2.5",
 "dietaryOption": ["vegan"],
-"imgUrl": "../media/sparkling-water",
+"imgUrl": "../media/sparkling-water.png",
 "description": "Carbonated water with a crisp and refreshing taste."
 },
 {
@@ -348,7 +348,7 @@
 "category": "drink",
 "price": "$4",
 "dietaryOption": ["vegan"],
-"imgUrl": "../media/apple-cider",
+"imgUrl": "../media/apple-cider.png",
 "description": "Warm and spicy drink made with apple juice, cinnamon, and other spices."
 },
 {
@@ -356,6 +356,6 @@
 "category": "drink",
 "price": "$3.5",
 "dietaryOption": ["vegan"],
-"imgUrl": "../media/orange-juice",
+"imgUrl": "../media/orange-juice.png",
 "description": "Freshly squeezed juice made with oranges and served cold."
 }]

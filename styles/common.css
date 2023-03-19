@@ -3,6 +3,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+#wrapper {
+    min-height:100%;
+    position:relative;
+}
 
 /* ------------------- Header tag styles -------------------*/
 header {
@@ -64,6 +68,9 @@ header nav li a:hover {
 /* ------------------- Footer tag styles -------------------*/
 
 footer {
+    width:100%;
+    bottom: 0;
+    flex-direction: column;
     background-image: url("../media/footer-background.png");
     background-size: cover;
     color: #ffffff;
