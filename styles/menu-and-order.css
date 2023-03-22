@@ -92,6 +92,10 @@ body {
     border-radius: 5px;
 }
 
+.to-cart-add {
+    margin:20px 60px;
+}
+
 .to-cart-fields label {
     display: none;
 }

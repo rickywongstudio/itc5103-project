@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/itc5103-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/itc5103-project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/find-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/find-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/nutrition.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/nutrition.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordering/menu-and-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/menu-and-order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/find-us.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/find-us.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/find-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/find-us.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/menu-and-order.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/menu-and-order.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -112,6 +122,14 @@
       <workItem from="1679150863211" duration="1316000" />
       <workItem from="1679153047762" duration="15694000" />
       <workItem from="1679200004344" duration="156000" />
+      <workItem from="1679200534933" duration="2577000" />
+      <workItem from="1679243502921" duration="6968000" />
+      <workItem from="1679253793481" duration="757000" />
+      <workItem from="1679255126150" duration="1126000" />
+      <workItem from="1679267097704" duration="11223000" />
+      <workItem from="1679280959687" duration="1789000" />
+      <workItem from="1679435290445" duration="1107000" />
+      <workItem from="1679505709443" duration="514000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>

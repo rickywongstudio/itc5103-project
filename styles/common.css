@@ -3,11 +3,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-#wrapper {
-    min-height:100%;
-    position:relative;
-}
-
 /* ------------------- Header tag styles -------------------*/
 header {
     background-color: #b61500;

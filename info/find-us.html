@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Store Locator</title>
-    <!-- metadata -->
+    <!-- metadata start-->
     <meta charset="UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta
@@ -11,36 +11,35 @@
     <meta
             content="Pizza Palace, pizzas, online ordering, delivery, menu, sides, desserts, drinks, restaurant, food, food delivery"
             name="keywords"/>
-
-
+    <!-- metadata ends-->
+    <!-- essential link for each page -->
     <link href="../media/favicon.ico" rel="icon"/>
     <link href="../styles/normalize.css" rel="stylesheet" type="text/css"/>
-    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <link href="../styles/common.css" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/nexa-bold" rel="stylesheet"/>
+
+    <!-- common script for each page -->
     <script
             crossorigin="anonymous"
             integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
             src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <!--  jQuery to inject header & footer  -->
-    <script>
-        $(function () {
-            $("#header").load("../common/header.html");
-            $("#footer").load("../common/footer.html");
-        });
-    </script>
+    <script src="../scripts/common.js" defer></script>
 
+    <!-- this file -->
     <link href="../styles/find-us.css" rel="stylesheet" type="text/css"/>
-    <link
-            crossorigin=""
-            href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-            integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-            rel="stylesheet"/>
-    <script
-            crossorigin=""
-            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-            src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" defer></script>
     <script src="../scripts/find-us.js" defer></script>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Leaflet Locate Control CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.css" />
+
+    <!-- Leaflet Locate Control JavaScript -->
+    <script src="https://unpkg.com/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.js"></script>
+
 </head>
 <body>
 
@@ -49,67 +48,67 @@
     <h1 class="heading">Store Locator</h1>
     <div class="container">
         <div id="sidebar">
-            <ul id="branches-list" class="branches">
-<!--                <li class="branch active">-->
-<!--                    <p class="branch-area">Downtown Toronto</p>-->
-<!--                    <p class="branch-distance">0.73 km</p>-->
-<!--                    <p class="branch-address">123 Main Street, Toronto, ON</p>-->
-<!--                    <p class="branch-hours">Monday-Sunday: 11:00am-11:00pm</p>-->
-<!--                </li>-->
-<!--                <li class="branch">-->
-<!--                    <p class="branch-area">North York</p>-->
-<!--                    <p class="branch-distance">5.00 km</p>-->
-<!--                    <p class="branch-address">456 Yonge Street, North York, ON</p>-->
-<!--                    <p class="branch-hours">Monday-Sunday: 11:00am-10:00pm</p>-->
-<!--                </li>-->
-<!--                <li class="branch">-->
-<!--                    <p class="branch-area">Scarborough</p>-->
-<!--                    <p class="branch-distance">10.00 km</p>-->
-<!--                    <p class="branch-address">789 Markham Road, Scarborough, ON</p>-->
-<!--                    <p class="branch-hours">Monday-Sunday: 11:00am-9:00pm</p>-->
-<!--                </li>-->
-<!--                <li class="branch">-->
-<!--                    <p class="branch-area">East York</p>-->
-<!--                    <p class="branch-distance">8.00 km</p>-->
-<!--                    <p class="branch-address">1010 Danforth Avenue, East York, ON</p>-->
-<!--                    <p class="branch-hours">Monday-Sunday: 11:00am-10:00pm</p>-->
-<!--                </li>-->
-<!--                <li class="branch">-->
-<!--                    <p class="branch-area">Etobicoke</p>-->
-<!--                    <p class="branch-distance">15.00 km</p>-->
-<!--                    <p class="branch-address">1111 Islington Avenue, Etobicoke, ON</p>-->
-<!--                    <p class="branch-hours">Monday-Sunday: 11:00am-9:00pm</p>-->
-<!--                </li>-->
-<!--                <li class="branch">-->
-<!--                    <p class="branch-area">York</p>-->
-<!--                    <p class="branch-distance">12.00 km</p>-->
-<!--                    <p class="branch-address">2222 Keele Street, York, ON</p>-->
-<!--                    <p class="branch-hours">Monday-Sunday: 11:00am-10:00pm</p>-->
-<!--                </li>-->
-<!--                <li class="branch">-->
-<!--                    <p class="branch-area">The Beaches</p>-->
-<!--                    <p class="branch-distance">7.00 km</p>-->
-<!--                    <p class="branch-address">3333 Queen Street East, The Beaches, ON</p>-->
-<!--                    <p class="branch-hours">Monday-Sunday: 11:00am-11:00pm</p>-->
-<!--                </li>-->
-<!--                <li class="branch">-->
-<!--                    <p class="branch-area">High Park</p>-->
-<!--                    <p class="branch-distance">10.00 km</p>-->
-<!--                    <p class="branch-address">4444 Bloor Street West, High Park, ON</p>-->
-<!--                    <p class="branch-hours">Monday-Sunday: 11:00am-9:00pm</p>-->
-<!--                </li>-->
-<!--                <li class="branch">-->
-<!--                    <p class="branch-area">High Park</p>-->
-<!--                    <p class="branch-distance">4.3 km</p>-->
-<!--                    <p class="branch-address">4444 Bloor Street West, Toronto, ON</p>-->
-<!--                    <p class="branch-hours">Monday-Sunday: 11:00am-9:00pm</p>-->
-<!--                </li>-->
-<!--                <li class="branch">-->
-<!--                    <p class="branch-area">Leslieville</p>-->
-<!--                    <p class="branch-distance">7.1 km</p>-->
-<!--                    <p class="branch-address">5555 Gerrard Street East, Toronto, ON</p>-->
-<!--                    <p class="branch-hours">Monday-Sunday: 11:00am-10:00pm</p>-->
-<!--                </li>-->
+            <ul class="branches" id="branches-list">
+                <!--                <li class="branch active">-->
+                <!--                    <p class="branch-area">Downtown Toronto</p>-->
+                <!--                    <p class="branch-distance">0.73 km</p>-->
+                <!--                    <p class="branch-address">123 Main Street, Toronto, ON</p>-->
+                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-11:00pm</p>-->
+                <!--                </li>-->
+                <!--                <li class="branch">-->
+                <!--                    <p class="branch-area">North York</p>-->
+                <!--                    <p class="branch-distance">5.00 km</p>-->
+                <!--                    <p class="branch-address">456 Yonge Street, North York, ON</p>-->
+                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-10:00pm</p>-->
+                <!--                </li>-->
+                <!--                <li class="branch">-->
+                <!--                    <p class="branch-area">Scarborough</p>-->
+                <!--                    <p class="branch-distance">10.00 km</p>-->
+                <!--                    <p class="branch-address">789 Markham Road, Scarborough, ON</p>-->
+                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-9:00pm</p>-->
+                <!--                </li>-->
+                <!--                <li class="branch">-->
+                <!--                    <p class="branch-area">East York</p>-->
+                <!--                    <p class="branch-distance">8.00 km</p>-->
+                <!--                    <p class="branch-address">1010 Danforth Avenue, East York, ON</p>-->
+                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-10:00pm</p>-->
+                <!--                </li>-->
+                <!--                <li class="branch">-->
+                <!--                    <p class="branch-area">Etobicoke</p>-->
+                <!--                    <p class="branch-distance">15.00 km</p>-->
+                <!--                    <p class="branch-address">1111 Islington Avenue, Etobicoke, ON</p>-->
+                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-9:00pm</p>-->
+                <!--                </li>-->
+                <!--                <li class="branch">-->
+                <!--                    <p class="branch-area">York</p>-->
+                <!--                    <p class="branch-distance">12.00 km</p>-->
+                <!--                    <p class="branch-address">2222 Keele Street, York, ON</p>-->
+                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-10:00pm</p>-->
+                <!--                </li>-->
+                <!--                <li class="branch">-->
+                <!--                    <p class="branch-area">The Beaches</p>-->
+                <!--                    <p class="branch-distance">7.00 km</p>-->
+                <!--                    <p class="branch-address">3333 Queen Street East, The Beaches, ON</p>-->
+                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-11:00pm</p>-->
+                <!--                </li>-->
+                <!--                <li class="branch">-->
+                <!--                    <p class="branch-area">High Park</p>-->
+                <!--                    <p class="branch-distance">10.00 km</p>-->
+                <!--                    <p class="branch-address">4444 Bloor Street West, High Park, ON</p>-->
+                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-9:00pm</p>-->
+                <!--                </li>-->
+                <!--                <li class="branch">-->
+                <!--                    <p class="branch-area">High Park</p>-->
+                <!--                    <p class="branch-distance">4.3 km</p>-->
+                <!--                    <p class="branch-address">4444 Bloor Street West, Toronto, ON</p>-->
+                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-9:00pm</p>-->
+                <!--                </li>-->
+                <!--                <li class="branch">-->
+                <!--                    <p class="branch-area">Leslieville</p>-->
+                <!--                    <p class="branch-distance">7.1 km</p>-->
+                <!--                    <p class="branch-address">5555 Gerrard Street East, Toronto, ON</p>-->
+                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-10:00pm</p>-->
+                <!--                </li>-->
             </ul>
         </div>
         <div id="map"></div>
