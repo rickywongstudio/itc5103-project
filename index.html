@@ -2,7 +2,6 @@
 
 <html lang="en">
   <head lang="en-CA">
-    <!-- metadata start-->
     <title>Pizza Palace | Online ordering and Delivery</title>
     <meta charset="UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -12,22 +11,43 @@
     <meta
             content="Pizza Palace, pizzas, online ordering, delivery, menu, sides, desserts, drinks, restaurant, food, food delivery"
             name="keywords"/>
-    <!-- metadata ends-->
-    <!-- essential link for each page -->
     <link href="media/favicon.ico" rel="icon"/>
     <link href="styles/normalize.css" rel="stylesheet" type="text/css"/>
     <link href="styles/common.css" rel="stylesheet">
-
-    <!-- common script for each page -->
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <script
             crossorigin="anonymous"
             integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
             src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <script src="scripts/common.js" defer></script>
+
+    <script src="scripts/index.js" defer></script>
     <link href="styles/index.css" rel="stylesheet" type="text/css">
+
   </head>
   <body>
-    <header id="header"></header>
+    <header id="header"><nav class="navbar">
+      <ul>
+        <li class="navbar-item"><a href="info/about-us.html">ABOUT US</a></li>
+        <li class="navbar-item"><a href="info/find-us.html">FIND US</a></li>
+        <li>
+          <a href=""><img src="media/logo.png" alt="Pizza Palace" class="logo"/></a>
+        </li>
+        <li class="navbar-item"><a href="ordering/menu-and-order.html">ORDER NOW</a></li>
+        <li class="navbar-item"><a href="login/sign-in.html">LOGIN <i style='font-size:16px' class='fas'>&#xf2f6;</i></a>
+          <br><a href="ordering/order-cart.html">CART <i style='font-size:16px' class='fas'>&#xf07a;</i></a></li>
+        <li class="nav-dropdown-toggle"><i class="fa fa-bars w3-xlarge" style="color:#ffffff"></i>
+        </li>
+      </ul>
+      <ul class="nav-dropdown-menu">
+        <li><a href="info/about-us.html">ABOUT US</a></li>
+        <li><a href="info/find-us.html">FIND US</a></li>
+        <li><a href="ordering/menu-and-order.html">ORDER NOW</a></li>
+        <li><a href="login/sign-in.html">LOGIN <i style='font-size:16px' class='fas'>&#xf2f6;</i></a></li>
+        <li><a href="ordering/order-cart.html">CART <i style='font-size:16px' class='fas'>&#xf07a;</i></a></li>
+      </ul>
+    </nav>
+    </header>
     <main>
       <section id="hero" class="hero-container">
         <div class="hero-text-container">
@@ -65,6 +85,47 @@
 <!--    </main> -->
 <!--    </section> -->
     </main>
-  <footer id="footer"></footer>
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>RESTAURANT</h3>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="info/about-us.html">About us</a></li>
+          <li><a href="info/find-us.html">Locations</a></li>
+          <li><a href="info/nutrition.html">Nutritional
+                                               Information</a></li>
+          <li><a href="info/find-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>CUSTOMER</h3>
+        <ul>
+          <li><a href="ordering/menu-and-order.html">Menu and Ordering</a></li>
+          <li><a href="login/sign-in.html">Login</a></li>
+          <li><a href="ordering/order-cart.html">Go to Order Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <div><a href=""><img src="media/logo.png" alt="Pizza Palace" class="logo"/></a></div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square share"></i></a>
+          <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square share"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square share"></i></a>
+          <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square share"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2023 Pizza Palace. All rights
+         reserved.</p>
+      <p>Disclaimer: This website is purely fictional and has been created solely for educational purposes.
+         All content, images, and information presented on this website are entirely fictitious and are not
+         intended to be taken as real.
+         Any resemblance to actual persons,
+         living or dead, is purely coincidental.</p>
+    </div>
+  </footer>
   </body>
 </html>
