@@ -1,38 +1,237 @@
-/* Set font family and size */
-body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+* {
+    max-width:100%;
 }
 
-/* Center the heading */
-h1 {
+.hero {
+    padding:0;
+    height:250px;
+    background-image: url("../media/about-us-hero-bg.png");
+    background-position: center;
+    /*background-repeat: no-repeat no-repeat;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 80px;
+}
+
+.hero-text {
+    margin:0;
+    color:#ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    list-style: none;
+    /*padding-left: 40px;*/
+    box-sizing: border-box;
+    /*width: 100%;*/
+    max-width: 100%;
+    flex: 1;
+    min-width: 1px;
     text-align: center;
 }
 
-/* Style the headings for the sections */
-h2, h3 {
-    color: #cc0000;
-    text-transform: uppercase;
+.hero-text > h1 {
+    text-align: center;
+    font-weight: normal;
+}
+
+.sound-bite-container > div {
+    font-size: large;
+    font-weight:bold;
+    display:inline-block;
+    border-left: 5px solid white;
+    padding-left: 5px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    font-weight:500;
+    line-height: 1.4;
+    list-style: none;
+    max-width:100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex:0 0 auto;
+}
+
+.column-1 {
+    padding:3%;
+    height:max-content;
+    box-sizing: border-box;
+}
+
+.column-2 {
+    height:max-content;
+    padding:5%;
+}
+
+
+.grid h2 {
+    font-weight:bolder;
+}
+
+.grid p {
+    font-size:16px;
+    font-weight:500;
+}
+
+.divider-small::after {
+    content: "";
+    display: inline-block;
+    width: 45px;
+    max-width: 100%;
+    border-top: 1px solid #000;
+    vertical-align: top;
+}
+
+
+
+.text-center {
+    text-align:center;
+}
+
+section.grid > div.row.row2 > div:nth-child(1) > div > img {
+    margin-bottom: 20px;
+}
+
+
+.offer-text-box {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
     margin-top: 30px;
+    position: relative;
+    transition: .1s ease-in-out;
+    /*background: #f5eaec; */
+    color: #000;
+    box-sizing: border-box;
+    max-width: 100%;
+    text-align: center!important;
+    margin-left: auto!important;
+    margin-bottom: 0;
+    padding: 70px 70px;
+    background: #f5e5da;
 }
 
-/* Add a margin to the list */
-ul {
-    margin-left: 20px;
-}
-
-/* Style the links */
-a {
-    color: #cc0000;
+.button-link, .button-link-2 {
+    font: inherit;
+    text-transform: none;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 25px;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
     text-decoration: none;
+    font-weight: 400;
+    background-origin: border-box;
 }
 
-a:hover {
-    text-decoration: underline;
+.button-link {
+    margin-top:50px;
+    background-color: transparent;
+    border: 1px solid #101010;
+    color: inherit;
+    overflow: visible;
 }
 
-/* Set width and margin for the page content */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+.pizza-and-friends {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 100% 0;
+}
+
+/* Section: find-restaurant */
+
+.find-restaurant {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*flex-direction: row;*/
+    width: 100%;
+    margin:5% 0;
+}
+
+.button-container {
+    text-align: center;
+    /*width:35%;*/
+    /*transform: translate(-270%, 30%);*/
+    /*position:absolute;*/
+}
+
+.text-container {
+    text-align: center;
+}
+.img-container {
+    /*width:60%;*/
+}
+
+
+.button-link-2 {
+    margin-top:50px;
+    background-color: black;
+    border: 1px solid #101010;
+    color: white;
+    overflow: visible;
+}
+
+.restaurant {
+    /*-webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);*/
+    /*clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);*/
+}
+
+@media screen and (min-width: 768px) {
+
+    * {
+        max-width:100%;
+    }
+
+    main {
+        max-width:1618px;
+        margin:0 auto;
+    }
+
+    .hero {
+        height:518px;
+    }
+
+    .sound-bite-container > div {
+        font-size: xx-large;
+        padding-left:20px;
+    }
+
+    .text-center {
+        text-align:left;
+    }
+
+    .column{
+        flex:1;
+    }
+
+    .divider-long {
+        content: "";
+        position: relative;
+        border-left: 1px solid #000;
+        margin:0 40px;
+    }
+
+    .offer-text-box {
+        margin: 70px auto 0;
+        max-width:404px;
+        box-sizing: content-box;
+    }
+
 }

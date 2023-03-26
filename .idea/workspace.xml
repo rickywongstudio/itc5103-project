@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/itc5103-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/itc5103-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Debug index header and footer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/about-us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info/find-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/find-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/nutrition.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/nutrition.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordering/menu-and-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/menu-and-order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/find-us.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/find-us.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/find-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/find-us.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/menu-and-order.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/menu-and-order.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/about-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/about-us.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -130,6 +123,9 @@
       <workItem from="1679280959687" duration="1789000" />
       <workItem from="1679435290445" duration="1107000" />
       <workItem from="1679505709443" duration="514000" />
+      <workItem from="1679783131543" duration="20127000" />
+      <workItem from="1679809291049" duration="4002000" />
+      <workItem from="1679841171439" duration="1645000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>
@@ -180,7 +176,28 @@
       <option name="project" value="LOCAL" />
       <updated>1678597962348</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated images">
+      <created>1679845812512</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679845812512</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Debug on font style">
+      <created>1679845923967</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679845923967</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Debug index header and footer">
+      <created>1679845956378</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679845956378</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +253,9 @@
     <MESSAGE value="Refine page &amp; header and footer" />
     <MESSAGE value="debug" />
     <MESSAGE value="Updated menu, find-us, about-us" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated menu, find-us, about-us" />
+    <MESSAGE value="Updated images" />
+    <MESSAGE value="Debug on font style" />
+    <MESSAGE value="Debug index header and footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug index header and footer" />
   </component>
 </project>
