@@ -1,4 +1,4 @@
-.hero-container {
+.hero {
     text-align:center;
     background-image: url('/media/hero.jpg');
     background-size: cover;
@@ -32,10 +32,10 @@
 }
 
 @media only screen and (min-width: 540px) {
-    .hero-container h1 {
+    .hero h1 {
         font-size: 4em;
     }
-    .hero-container p {
+    .hero p {
         font-size: 1.5em;
     }
 }
