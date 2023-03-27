@@ -41,4 +41,6 @@ loginForm.addEventListener("submit", function (event) {
 
     localStorage.setItem("user", JSON.stringify(newUser));
     alert("User Sign-Up Successfully");
+
+    window.location.href = '../membership/sign-in.html';
 });

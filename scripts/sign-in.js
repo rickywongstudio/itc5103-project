@@ -10,15 +10,13 @@ loginForm.addEventListener("submit", function (event) {
         return;
     }
 
-    const user = {
-        email: email,
-        password: password
-    };
 
-    const userName = localStorage.getItem(email);
-    const usrPassword = localStorage.getItem(password)
+    const user = JSON.parse(localStorage.getItem("user"));
 
-    if (userName === email && password === usrPassword) {
+
+    if (user.email === email && user.password === password) {
+        window.location.href = '../index.html';
+        localStorage.setItem("uName",email)
         alert("Login successful");
     } else {
         alert("User credentials are not correct ");
