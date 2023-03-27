@@ -1,15 +1,30 @@
 'use strict';
-const loadData = (actual_JSON) => {
-    let data = actual_JSON.data;
-    let htmlTemp = "";
 
-    data.forEach((x, i) => {
-        htmlTemp += `  <article class="menu-item">
+//Loading the json data dynamically
+const loadData = () => {
+    fetch("../db/menuitem.json")
+        .then(response => response.json())
+        .then(json => {
+            loadTemplate(json), localStorage.setItem("menu_data", JSON.stringify(json.data))
+        });
+}
+
+const loadTemplate = (jsonData) => {
+    let data = jsonData.data;
+    let htmlTemp = ""
+    let counter = 0;
+    let wrapperHtml = ""
+
+    for (let i = 1; i <= data.length; i++) {
+        let x = data[i - 1];
+
+
+        htmlTemp += `<article class="menu-item">
                 <div class="menu-item-img">
                     <img alt="Hawaiian Pizza" src="${x.imgUrl}"/>
                 </div>
                 <div class="menu-item-text">
-                    <h2>${x.name}</h2>
+                    <h2>${x.name}</h2><br>
                     <p>${x.ingredient}</p>
                 </div>
                 <div class="content-switch">
@@ -63,28 +78,47 @@ const loadData = (actual_JSON) => {
                     </section>
                 </div>
             </article>`
-
-    });
-
-    document.getElementById("tab-1").innerHTML = htmlTemp;
-    console.log(htmlTemp)
+        counter++;
+        if (counter % 4 === 0) {
+            wrapperHtml = wrapperHtml + `<div class="tab-content active" id="tab-${counter / 4}">` + htmlTemp + "</div>";
+            htmlTemp = "";
+        }
+    }
+    document.getElementById("menu").innerHTML = wrapperHtml;
 
 }
-fetch("../db/menuitem.json")
-    .then(response => response.json())
-    .then(json => loadData(json));
+
+loadData();
+
+//Filter Menu Function
+const filterMenu = () => {
+    let filteredPizzaNames = [];
+    let filteredPizza = [];
+    let dataArray = JSON.parse(localStorage.getItem("menu_data"));
+    console.log(dataArray)
+    let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+    for (let checkbox of markedCheckbox) {
+        dataArray.forEach(x => {
+            if (x.ingredient && x?.ingredient?.includes(checkbox) && !filteredPizzaNames.includes(x.name)) {
+                filteredPizza.push(x);
+                filteredPizzaNames.push(x.name);
+            }
+        })
+    }
+}
+
 // Tab switching
-// const tabs = document.querySelectorAll(".tab");
-// const tabContents = document.querySelectorAll(".tab-content");
-// tabs.forEach((tab) => {
-//     tab.addEventListener("click", () => {
-//         const tabId = tab.dataset.tab;
-//         tabContents.forEach((tabContent) => {
-//             tabContent.classList.remove("active");
-//         });
-//         document.querySelector(`#${tabId}`).classList.add("active");
-//     });
-// });
+const tabs = document.querySelectorAll(".tab");
+const tabContents = document.querySelectorAll(".tab-content");
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        const tabId = tab.dataset.tab;
+        tabContents.forEach((tabContent) => {
+            tabContent.classList.remove("active");
+        });
+        document.querySelector(`#${tabId}`).classList.add("active");
+    });
+});
 
 
 // Filtering widget expansion toggle
@@ -97,8 +131,8 @@ link.addEventListener('click', (event) => {
 });
 
 
-// // Ordering Switch Content
-const addButton = document.querySelector('.menu-item-order-btn');
+// // // Ordering Switch Content
+const addButton = document.querySelectorAll('.menu-item-order-btn');
 const toggleSection1 = document.querySelector('.content-switch-tab');
 const toggleSection2 = document.querySelector('.content-switch-tab.hidden');
 const cancelBtn = document.querySelector('.to-cart-cancel');
@@ -117,70 +151,10 @@ cancelBtn.addEventListener('click', (e) => {
     parentMenuitem.style.height = "";
     toggleSection1.classList.remove('hidden');
 });
-// $('.menu-item-order-btn').click(function {
-//     $('.content-switch-tab').addClass('hidden');
-//     $('.content-switch-tab.hidden').removeClass('hidden');
-//     $(this).closest('.content-swtich').parent().css("height","fit-content");
-// })
+$('.menu-item-order-btn').click(function () {
+    $('.content-switch-tab').addClass('hidden');
+    $('.content-switch-tab.hidden').removeClass('hidden');
+    $(this).closest('.content-swtich').parent().css("height", "fit-content");
+})
 
 
-
-
-function init() {
-    loadJSON(function (response) {
-        let actual_JSON = JSON.parse(response);
-        let data = actual_JSON.data;
-        console.log(data)
-        let strHml;
-        let tabCount = 1;
-        let articleWrap = "";
-        data.forEach((x, i) => {
-            if (i !== 0 && i % 4 === 0) {
-                tabCount += 1;
-            }
-            let htmlView = `
-      <article class="menu-item">
-        <div class="menu-item-img">
-          <img src="${x.imgUrl}" alt="Hawaiian Pizza" />
-        </div>
-        <div class="menu-item-text">
-          <h2>${x.name}</h2>
-          <p>${x.ingredient}</p>
-          <p>${x.price}</p>
-        </div>
-      </article>`
-
-            if (i === 0 || i % 4 !== 0) {
-                if (htmlView !== undefined) {
-                    articleWrap = articleWrap + htmlView
-                }
-            } else {
-                if (htmlView) {
-                    strHml = strHml + `<div class="tab-content active" id="tab-${tabCount}">` + articleWrap + "</div>";
-                    articleWrap = "";
-                }
-            }
-
-        })
-        // document.getElementById("pizza-widget").innerHTML = strHml;
-        console.log(strHml)
-
-    });
-
-
-}
-
-// init();
-//
-//
-// function loadJSON(callback) {
-//     var xobj = new XMLHttpRequest();
-//     xobj.overrideMimeType("application/json");
-//     xobj.open('GET', '../db/menuitem.json', true);
-//     xobj.onreadystatechange = function () {
-//         if (xobj.readyState === 4 && xobj.status === "200") {
-//             callback(xobj.responseText);
-//         }
-//     };
-//     xobj.send(null);
-// }

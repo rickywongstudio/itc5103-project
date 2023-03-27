@@ -42,7 +42,7 @@
             $("#footer").load("../common/footer.html");
         });
     </script>
-<!--    <script defer src="../scripts/menu-and-order.js"></script>-->
+    <!--    <script defer src="../scripts/menu-and-order.js"></script>-->
 
 
     <link href="../styles/menu-and-order.css" rel="stylesheet" type="text/css"/>
@@ -71,37 +71,38 @@
         <div class="filtering-widget">
             <a class="widget-link" href="#">Select your Dietary Needs <i class="fa fa-chevron-down"></i></a>
             <div class="options-container">
-                <form name="filter-by-dietary-needs">
+                <form name="filter-by-dietary-needs" onchange="filterMenu()">
                     <div class="form-check">
-                        <input class="form-check-input" id="gluten-free" type="checkbox"/>
+                        <input class="form-check-input" id="gluten-free" type="checkbox" name="ing" value="Gluten-free"
+                               "/>
                         <label class="form-check-label" for="gluten-free">Gluten-free</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="vegetarian" type="checkbox"/>
+                        <input class="form-check-input" id="vegetarian" value="vegetarian" type="checkbox"/>
                         <label class="form-check-label" for="vegetarian">Vegetarian</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="vegan" type="checkbox"/>
+                        <input class="form-check-input" id="vegan" value="vegan" type="checkbox"/>
                         <label class="form-check-label" for="vegan">Vegan</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="kosher" type="checkbox"/>
+                        <input class="form-check-input" id="kosher" value="kosher" type="checkbox"/>
                         <label class="form-check-label" for="kosher">Kosher</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="halal" type="checkbox"/>
+                        <input class="form-check-input" id="halal" value="halal" type="checkbox"/>
                         <label class="form-check-label" for="halal">Halal</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="low-carb" type="checkbox"/>
+                        <input class="form-check-input" id="low-carb" value="low-carb" type="checkbox"/>
                         <label class="form-check-label" for="low-carb">Low-carb</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="dairy-free" type="checkbox"/>
+                        <input class="form-check-input" id="dairy-free" value="dairy-free" type="checkbox"/>
                         <label class="form-check-label" for="dairy-free">Dairy-free</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="paleo" type="checkbox"/>
+                        <input class="form-check-input" id="paleo" value="paleo" type="checkbox"/>
                         <label class="form-check-label" for="paleo">Paleo</label>
                     </div>
                 </form>
@@ -109,19 +110,16 @@
         </div>
 
 
-        <div class="tab-content active" id="tab-1">
+        <div id="menu">
 
 
         </div>
-
     </section>
 
 
 </main>
 <footer id="footer"></footer>
 </body>
-<!--<script defer src="../scripts/order-menu.js"></script>-->
-
-<script  src="../scripts/menu-and-order.js">
+<script src="../scripts/menu-and-order.js">
 </script>
 </html>
