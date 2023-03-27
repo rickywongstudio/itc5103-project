@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Debug index header and footer">
-      <change afterPath="$PROJECT_DIR$/scripts/authentication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-03-25_12_53_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-03-25_12_53_a_m___Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-26_11_51_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-26_11_51_a_m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/sign-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/membership/sign-in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/membership/sign-up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sign-in.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sign-in.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sign-up.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sign-up.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/authentication.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
