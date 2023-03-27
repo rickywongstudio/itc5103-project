@@ -16,7 +16,7 @@ loginForm.addEventListener("submit", function (event) {
 
     if (user.email === email && user.password === password) {
         window.location.href = '../index.html';
-        localStorage.setItem("uName",email)
+        localStorage.setItem("usrName",email)
         alert("Login successful");
     } else {
         alert("User credentials are not correct ");
