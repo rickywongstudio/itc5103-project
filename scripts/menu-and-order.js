@@ -5,21 +5,28 @@ const loadData = () => {
     fetch("../db/menuitem.json")
         .then(response => response.json())
         .then(json => {
-            loadTemplate(json), localStorage.setItem("menu_data", JSON.stringify(json.data))
+            loadTemplate(json, "rawData"), localStorage.setItem("menu_data", JSON.stringify(json.data))
         });
 }
 
-const loadTemplate = (jsonData) => {
-    let data = jsonData.data;
+const loadTemplate = (jsonData, type) => {
+    let data;
     let htmlTemp = ""
     let counter = 0;
     let wrapperHtml = ""
+    if (type === "rawData") {
+        data = jsonData.data
+    } else {
+        data = jsonData;
+    }
+    if (!data || data.length === 0) {
+        document.getElementById("menu").innerHTML = "";
+    } else {
+        for (let i = 0; i < data.length; i++) {
+            let x = data[i];
 
-    for (let i = 1; i <= data.length; i++) {
-        let x = data[i - 1];
 
-
-        htmlTemp += `<article class="menu-item">
+            htmlTemp += `<article class="menu-item">
                 <div class="menu-item-img">
                     <img alt="Hawaiian Pizza" src="${x.imgUrl}"/>
                 </div>
@@ -78,33 +85,40 @@ const loadTemplate = (jsonData) => {
                     </section>
                 </div>
             </article>`
-        counter++;
-        if (counter % 4 === 0) {
-            wrapperHtml = wrapperHtml + `<div class="tab-content active" id="tab-${counter / 4}">` + htmlTemp + "</div>";
-            htmlTemp = "";
+            counter++;
+            if (counter % 4 === 0) {
+                wrapperHtml = wrapperHtml + `<div class="tab-content active" id="tab-${counter / 4}">` + htmlTemp + "</div>";
+                htmlTemp = "";
+            }
         }
+        document.getElementById("menu").innerHTML = wrapperHtml;
     }
-    document.getElementById("menu").innerHTML = wrapperHtml;
+
 
 }
 
-loadData();
+window.onload = loadData();
 
 //Filter Menu Function
 const filterMenu = () => {
     let filteredPizzaNames = [];
     let filteredPizza = [];
     let dataArray = JSON.parse(localStorage.getItem("menu_data"));
-    console.log(dataArray)
     let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
     for (let checkbox of markedCheckbox) {
         dataArray.forEach(x => {
-            if (x.ingredient && x?.ingredient?.includes(checkbox) && !filteredPizzaNames.includes(x.name)) {
+            if (x.dietaryOption && x.dietaryOption.includes(checkbox.value) && !filteredPizzaNames.includes(x.name)) {
                 filteredPizza.push(x);
                 filteredPizzaNames.push(x.name);
             }
         })
     }
+    if (!markedCheckbox || markedCheckbox.length === 0) {
+        loadTemplate(dataArray);
+    } else {
+        loadTemplate(filteredPizza)
+    }
+
 }
 
 // Tab switching

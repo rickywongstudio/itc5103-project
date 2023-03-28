@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Debug index header and footer">
-      <change afterPath="$PROJECT_DIR$/scripts/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/menuitem.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/menuitem.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordering/menu-and-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/menu-and-order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/menu-and-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu-and-order.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +141,7 @@
       <workItem from="1679809291049" duration="4002000" />
       <workItem from="1679841171439" duration="1645000" />
       <workItem from="1679927831848" duration="9016000" />
-      <workItem from="1679940025901" duration="16346000" />
+      <workItem from="1679940025901" duration="18456000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>
