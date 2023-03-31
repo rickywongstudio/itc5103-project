@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Finish about-us">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-us/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact-us/feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/find-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/find-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/nutrition.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/nutrition.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/feedback.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/feedback.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/find-us.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/find-us.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/contact-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/contact-us.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/find-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/find-us.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,27 +74,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "landing-page",
-    "last_opened_file_path": "C:/Users/ricky/OneDrive - The Hong Kong Polytechnic University/Documents/GitHub/jonas-js-course",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "terminal",
-    "two.files.diff.last.used.folder": "C:/Users/ricky/Documents/GitHub/pizzie-delish/itc5103-project",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;landing-page&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ricky/OneDrive - The Hong Kong Polytechnic University/Documents/GitHub/jonas-js-course&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/ricky/Documents/GitHub/pizzie-delish/itc5103-project&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ricky\OneDrive - The Hong Kong Polytechnic University\Documents\GitHub\itc5103-project\media\unused" />
@@ -143,7 +150,10 @@
       <workItem from="1680048769775" duration="952000" />
       <workItem from="1680149272429" duration="7327000" />
       <workItem from="1680193343085" duration="1405000" />
-      <workItem from="1680230151841" duration="11711000" />
+      <workItem from="1680230151841" duration="11743000" />
+      <workItem from="1680271731547" duration="2674000" />
+      <workItem from="1680274790096" duration="4772000" />
+      <workItem from="1680279628993" duration="1084000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>
@@ -243,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680243493702</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Finish about-us">
+      <created>1680243556971</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680243556971</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
