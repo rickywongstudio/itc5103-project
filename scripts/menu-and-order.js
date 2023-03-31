@@ -1,6 +1,13 @@
 'use strict';
 
 //Loading the json data dynamically
+const pizza = "pizza";
+const salad = "salad";
+const drink = "drink";
+const pasta = "pasta";
+const side = "side";
+
+
 const loadData = () => {
     fetch("../db/menuitem.json")
         .then(response => response.json())
@@ -11,9 +18,13 @@ const loadData = () => {
 
 const loadTemplate = (jsonData, type) => {
     let data;
-    let htmlTemp = ""
-    let counter = 0;
-    let wrapperHtml = ""
+    let wrapperHtml = "";
+    let pizzaHtml = "";
+    let pastaHtml = "";
+    let sideHtml = "";
+    let drinkHtml = "";
+    let saladHtml = "";
+
     if (type === "rawData") {
         data = jsonData.data
     } else {
@@ -25,8 +36,7 @@ const loadTemplate = (jsonData, type) => {
         for (let i = 0; i < data.length; i++) {
             let x = data[i];
 
-
-            htmlTemp += `<article class="menu-item">
+            let tempData = `<article class="menu-item">
                 <div class="menu-item-img">
                     <img alt="Hawaiian Pizza" src="${x.imgUrl}"/>
                 </div>
@@ -85,12 +95,26 @@ const loadTemplate = (jsonData, type) => {
                     </section>
                 </div>
             </article>`
-            counter++;
-            if (counter % 4 === 0) {
-                wrapperHtml = wrapperHtml + `<div class="tab-content active" id="tab-${counter / 4}">` + htmlTemp + "</div>";
-                htmlTemp = "";
+
+            if (x.category === pizza) {
+                pizzaHtml += tempData;
+            } else if (x.category === pasta) {
+                pastaHtml += tempData;
+            } else if (x.category === side) {
+                sideHtml += tempData;
+            } else if (x.category === drink) {
+                drinkHtml += tempData;
+            } else if (x.category === salad) {
+                saladHtml += tempData;
             }
         }
+
+        wrapperHtml = `<div class="tab-content active" id="tab-1">` + pizzaHtml + "</div>" +
+            `<div class="tab-content active" id="tab-2">` + pastaHtml + "</div>"
+            + `<div class="tab-content active" id="tab-3">` + sideHtml + "</div>"
+            + `<div class="tab-content active" id="tab-4">` + saladHtml + "</div>"
+            + `<div class="tab-content active" id="tab-5">` + drinkHtml + "</div>"
+
         document.getElementById("menu").innerHTML = wrapperHtml;
     }
 
