@@ -5,28 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Finish about-us">
-      <change afterPath="$PROJECT_DIR$/media/about-us-1-original.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/browse-menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/find-your-pizza-palace.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/kid-pizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/landing-page-hero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/pizza-with-friends-original.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/recruitment-promos-1300x400-en-serve-food-that-slaps.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/special-offer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/today-s-combo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/view-all-promotions.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/menuitem.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/menuitem.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/about-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/find-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/find-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/about-us-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/about-us-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/pizza-with-friends.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/pizza-with-friends.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/unused/stock2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/about-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/about-us.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/find-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/find-us.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +143,7 @@
       <workItem from="1680048769775" duration="952000" />
       <workItem from="1680149272429" duration="7327000" />
       <workItem from="1680193343085" duration="1405000" />
-      <workItem from="1680230151841" duration="11412000" />
+      <workItem from="1680230151841" duration="11711000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>
@@ -243,7 +222,28 @@
       <option name="project" value="LOCAL" />
       <updated>1679846006904</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Finish about-us">
+      <created>1680243391605</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680243391605</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Finish about-us">
+      <created>1680243423793</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680243423793</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Finish about-us">
+      <created>1680243493702</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680243493702</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
