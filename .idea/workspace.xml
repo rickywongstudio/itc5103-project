@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Finish about-us">
+    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Finish about-us, find-us">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact-us/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact-us/feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-us/feedback.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/info/find-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/find-us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info/nutrition.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/nutrition.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/feedback.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/feedback.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/find-us.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/find-us.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/contact-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/contact-us.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/find-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/find-us.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordering/menu-and-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/menu-and-order.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +151,8 @@
       <workItem from="1680230151841" duration="11743000" />
       <workItem from="1680271731547" duration="2674000" />
       <workItem from="1680274790096" duration="4772000" />
-      <workItem from="1680279628993" duration="1084000" />
+      <workItem from="1680279628993" duration="1265000" />
+      <workItem from="1680280971283" duration="3608000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>
@@ -260,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680243556971</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Finish about-us, find-us">
+      <created>1680280860290</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1680280860290</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +326,7 @@
     <MESSAGE value="Debug on font style" />
     <MESSAGE value="Debug index header and footer" />
     <MESSAGE value="Finish about-us" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish about-us" />
+    <MESSAGE value="Finish about-us, find-us" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish about-us, find-us" />
   </component>
 </project>
