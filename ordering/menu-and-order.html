@@ -36,12 +36,7 @@
             integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
             src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <!--  jQuery to inject header & footer  -->
-    <script>
-        $(function () {
-            $("#header").load("../common/header.html");
-            $("#footer").load("../common/footer.html");
-        });
-    </script>
+    <script defer src="../scripts/common.js"></script>
     <script defer src="../scripts/menu-and-order.js"></script>
 
 
@@ -69,7 +64,7 @@
         <!--------------------- filtering widget--------------------->
 
         <div class="filtering-widget">
-            <a class="widget-link" href="#">Select your Dietary Needs <i class="fa fa-chevron-down"></i></a>
+            <a class="widget-link" href="">Select your Dietary Needs <i class="fa fa-chevron-down"></i></a>
             <div class="options-container">
                 <form name="filter-by-dietary-needs">
                     <div class="form-check">
