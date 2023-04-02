@@ -1,198 +1,231 @@
-'use strict';
-
-//Loading the json data dynamically
-const pizza = "pizza";
-const salad = "salad";
-const drink = "drink";
-const pasta = "pasta";
-const side = "side";
-
-
-const loadData = () => {
-    fetch("../db/menuitem.json")
-        .then(response => response.json())
-        .then(json => {
-            loadTemplate(json, "rawData"), localStorage.setItem("menu_data", JSON.stringify(json.data))
-        });
-}
-
-const loadTemplate = (jsonData, type) => {
-    let data;
-    let wrapperHtml = "";
-    let pizzaHtml = "";
-    let pastaHtml = "";
-    let sideHtml = "";
-    let drinkHtml = "";
-    let saladHtml = "";
-
-    if (type === "rawData") {
-        data = jsonData.data
-    } else {
-        data = jsonData;
-    }
-    if (!data || data.length === 0) {
-        document.getElementById("menu").innerHTML = "";
-    } else {
-        for (let i = 0; i < data.length; i++) {
-            let x = data[i];
-
-            let tempData = `<article class="menu-item">
-                <div class="menu-item-img">
-                    <img alt="Hawaiian Pizza" src="${x.imgUrl}"/>
-                </div>
-                <div class="menu-item-text">
-                    <h2>${x.name}</h2><br>
-                    <p>${x.ingredient}</p>
-                </div>
-                <div class="content-switch">
-                    <section class="content-switch-tab">
-                        <a class="menu-item-order-btn">ADD TO ORDER</a>
-                    </section>
-                    <section class="content-switch-tab hidden">
-                        <form class="form-to-cart">
-                            <fieldset class="price-display-container">
-                                <span class="price-display">$<span class="price-display-target">${x.price}</span></span>
-                            </fieldset>
-                            <input name="pizza_name" type="hidden" value={$x.name}>
-                            <fieldset class="to-cart-fields">
-                                <div class="field-container size-container select-parent">
-                                    <label for="size">Select size</label>
-                                    <select autocomplete="off" class="select-size" name="size">
-                                        <option class="placeholder" disabled="disabled" selected="selected" value="">
-                                            Select size
-                                        </option>
-                                        <option value="2">Small</option>
-                                        <option value="3">Medium</option>
-                                        <option value="4">Large</option>
-                                        <option value="20">18" Jumbo</option>
-                                        <option value="21">21" X 15" Party</option>
-                                    </select>
-                                </div>
-                                <div class="field-container quantity-container select-parent">
-                                    <label for="quantity">Quantity</label>
-                                    <select autocomplete="off" class="select-quantity" name="quantity">
-                                        <option class="placeholder" disabled="disabled" value="">Select quantity
-                                        </option>
-                                        <option selected="selected" value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </div>
-                            </fieldset>
-                            <div class="calories-display-container"> 180 - 320 Calories/Slice</div>
-                            <fieldset class="form-actions">
-                                <input class="to-cart-add" type="submit" value="Add to order"/>
-                                <a class="to-cart-cancel">Cancel</a>
-                            </fieldset>
-                        </form>
-                    </section>
-                </div>
-            </article>`
-
-            if (x.category === pizza) {
-                pizzaHtml += tempData;
-            } else if (x.category === pasta) {
-                pastaHtml += tempData;
-            } else if (x.category === side) {
-                sideHtml += tempData;
-            } else if (x.category === drink) {
-                drinkHtml += tempData;
-            } else if (x.category === salad) {
-                saladHtml += tempData;
-            }
-        }
-
-        wrapperHtml = `<div class="tab-content active" id="tab-1">` + pizzaHtml + "</div>" +
-            `<div class="tab-content active" id="tab-2">` + pastaHtml + "</div>"
-            + `<div class="tab-content active" id="tab-3">` + sideHtml + "</div>"
-            + `<div class="tab-content active" id="tab-4">` + saladHtml + "</div>"
-            + `<div class="tab-content active" id="tab-5">` + drinkHtml + "</div>"
-
-        document.getElementById("menu").innerHTML = wrapperHtml;
-    }
-
-
-}
-
-window.onload = loadData();
-
-//Filter Menu Function
-const filterMenu = () => {
-    let filteredPizzaNames = [];
-    let filteredPizza = [];
-    let dataArray = JSON.parse(localStorage.getItem("menu_data"));
-    let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
-    for (let checkbox of markedCheckbox) {
-        dataArray.forEach(x => {
-            if (x.dietaryOption && x.dietaryOption.includes(checkbox.value) && !filteredPizzaNames.includes(x.name)) {
-                filteredPizza.push(x);
-                filteredPizzaNames.push(x.name);
-            }
-        })
-    }
-    if (!markedCheckbox || markedCheckbox.length === 0) {
-        loadTemplate(dataArray);
-    } else {
-        loadTemplate(filteredPizza)
-    }
-
-}
-
-// Tab switching
-const tabs = document.querySelectorAll(".tab");
-const tabContents = document.querySelectorAll(".tab-content");
-tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-        const tabId = tab.dataset.tab;
-        tabContents.forEach((tabContent) => {
-            tabContent.classList.remove("active");
-        });
-        document.querySelector(`#${tabId}`).classList.add("active");
-    });
-});
-
-
-// Filtering widget expansion toggle
-const link = document.querySelector('.widget-link');
+"use strict";
+const widgetLink = document.querySelector('.widget-link');
 const container = document.querySelector('.options-container');
+const tabs = document.querySelectorAll(".tab");
+const checkboxes = document.querySelectorAll(".form-check-input");
+const menuContainer = document.getElementById('menu-container');
 
-link.addEventListener('click', (event) => {
-    event.preventDefault();
-    container.classList.toggle('expanded');
-});
+let menuItems;
+let filteredItems;
+let selectedCategory = "";
+let selectedDietaryNeeds = [];
+
+async function fetchMenuItems() {
+    const response = await fetch('../db/menuItems.json');
+    const menuItems = await response.json();
+    return menuItems.data;
+}
+
+function createMenuItem(item) {
+    // item img, name, text
+    const menuItem = document.createElement("article");
+    menuItem.className = "menu-item";
+
+    const menuItemImg = document.createElement("div");
+    menuItemImg.className = "menu-item-img";
+    const img = document.createElement("img");
+    img.alt = item.name;
+    img.src = item.imgUrl;
+    menuItemImg.appendChild(img);
+
+    const menuItemText = document.createElement("div");
+    menuItemText.className = "menu-item-text";
+    const h2 = document.createElement("h2");
+    h2.textContent = item.name;
+    const p = document.createElement("p");
+    p.textContent = item.ingredient.length > 0 ? item.ingredient.join(", ") : item.description;
+    menuItemText.appendChild(h2);
+    menuItemText.appendChild(p);
+
+    menuItem.appendChild(menuItemImg);
+    menuItem.appendChild(menuItemText);
+
+    // item addToCartBtn, form
+    const contentSwitch = document.createElement('div');
+    contentSwitch.className = 'content-switch';
+
+    const contentSwitchTab1 = document.createElement('section');
+    contentSwitchTab1.className = 'content-switch-tab';
+
+    const addToOrderBtn = document.createElement('a');
+    addToOrderBtn.className = 'menu-item-order-btn';
+    addToOrderBtn.textContent = 'ADD TO ORDER';
+
+    const contentSwitchTab2 = document.createElement('section');
+    contentSwitchTab2.className = 'content-switch-tab order-form hidden';
+
+    const formToCart = document.createElement('form');
+    formToCart.className = 'form-to-cart';
+    formToCart.innerHTML = `
+        <fieldset class="price-display-container">
+            <span class="price-display">$<span class="price-display-target">${item.price}</span></span>
+        </fieldset>
+    `;
+
+    if (item.category === 'pizza') {
+        formToCart.innerHTML += `
+            <fieldset class="to-cart-fields">
+                <div class="field-container size-container select-parent">
+                    <label for="size">Select size</label>
+                    <select autocomplete="off" class="select-size" name="size">
+                        <option class="placeholder" disabled="disabled" selected="selected" value="">
+                            Select size
+                        </option>
+                        <option value="2">Small</option>
+                        <option value="3">Medium</option>
+                        <option value="4">Large</option>
+                        <option value="20">18" Jumbo</option>
+                        <option value="21">21" X 15" Party</option>
+                    </select>
+                </div>
+            </fieldset>
+        `;
+    }
+
+    const quantityContainer = document.createElement("div");
+    quantityContainer.className = "field-container quantity-container select-parent";
+
+    const quantityLabel = document.createElement("label");
+    quantityLabel.setAttribute("for", "quantity");
+    quantityLabel.textContent = "Quantity";
+    quantityContainer.appendChild(quantityLabel);
+
+    const quantitySelect = document.createElement("select");
+    quantitySelect.setAttribute("autocomplete", "off");
+    quantitySelect.className = "select-quantity";
+    quantitySelect.name = "quantity";
+    quantityContainer.appendChild(quantitySelect);
+
+    const quantityOptions = [
+        { value: "", text: "Select quantity", disabled: true, selected: true },
+        ...Array.from({ length: 10 }, (_, i) => ({
+            value: i + 1,
+            text: (i + 1).toString(),
+            disabled: false,
+            selected: false,
+        })),
+    ];
+
+    quantityOptions.forEach(({ value, text, disabled, selected }) => {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = text;
+        option.disabled = disabled;
+        option.selected = selected;
+        quantitySelect.appendChild(option);
+    });
 
 
-// // // Ordering Switch Content
-const addButton = document.querySelectorAll('.menu-item-order-btn');
-const toggleSection1 = document.querySelector('.content-switch-tab');
-const toggleSection2 = document.querySelector('.content-switch-tab.hidden');
-const cancelBtn = document.querySelector('.to-cart-cancel');
-const parentMenuitem = toggleSection1?.parentElement?.parentElement
+    const formActions = document.createElement("fieldset");
+    formActions.className = "form-actions";
 
-addButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (toggleSection1) toggleSection1?.classList?.add('hidden');
-    if (parentMenuitem) parentMenuitem.style.height = "fit-content";
-    if (toggleSection2) toggleSection2?.classList?.remove('hidden');
-});
+    const addToOrderInput = document.createElement("input");
+    addToOrderInput.className = "to-cart-add";
+    addToOrderInput.type = "submit";
+    addToOrderInput.value = "ADD TO CART";
 
-cancelBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    toggleSection2.classList.add('hidden');
-    parentMenuitem.style.height = "";
-    toggleSection1.classList.remove('hidden');
-});
-$('.menu-item-order-btn').click(function () {
-    $('.content-switch-tab').addClass('hidden');
-    $('.content-switch-tab.hidden').removeClass('hidden');
-    $(this).closest('.content-swtich').parent().css("height", "fit-content");
-})
+    const cancelButton = document.createElement('a');
+    cancelButton.className = 'to-cart-cancel';
+    cancelButton.textContent = 'Cancel';
+
+    formActions.appendChild(addToOrderInput);
+    formActions.appendChild(cancelButton);
+    formToCart.appendChild(quantityContainer);
+    formToCart.appendChild(formActions);
+    contentSwitchTab2.appendChild(formToCart);
+    contentSwitchTab1.appendChild(addToOrderBtn);
+    contentSwitch.appendChild(contentSwitchTab1);
+    contentSwitch.appendChild(contentSwitchTab2);
+    menuItem.appendChild(contentSwitch);
+
+    // event listener
+    addToOrderBtn.addEventListener('click', () => {
+        contentSwitchTab2.classList.remove('hidden');
+        contentSwitch.classList.add('shift-left');
+    });
+
+    // Add event listener to the cancel button
+    cancelButton.addEventListener('click', () => {
+        contentSwitch.classList.remove('shift-left');
+
+        setTimeout(() => {
+            contentSwitchTab2.classList.add('hidden');
+        }, 300);
+    });
+
+
+    return menuItem;
+}
+
+function filterMenuItems(menuItems, category, dietaryNeeds) {
+    let filteredItems = menuItems;
+
+    if (category) {
+        filteredItems = filteredItems.filter(item => item.category === category);
+    }
+
+    if (dietaryNeeds.length > 0) {
+        filteredItems = filteredItems.filter(item => dietaryNeeds.every(need => item.dietaryOption.includes(need)));
+    }
+
+    return filteredItems;
+}
+
+
+function displayMenuItems(items) {
+    menuContainer.innerHTML = '';
+    items.forEach(item => {
+        const menuItem = createMenuItem(item);
+        menuContainer.appendChild(menuItem);
+    });
+}
+
+function filterAndUpdateItems() {
+    filteredItems = filterMenuItems(menuItems, selectedCategory, selectedDietaryNeeds);
+    displayMenuItems(filteredItems);
+}
+
+async function renderMenu() {
+    menuItems = await fetchMenuItems();
+    displayMenuItems(menuItems);
+}
+
+async function init() {
+
+    renderMenu();
+
+    // Reset all checkboxes
+    $(function () {
+        $('input[type=checkbox]').prop("checked", false);
+    });
+
+    // Event listeners
+    // Filtering widget expansion toggle
+    widgetLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        container.classList.toggle('expanded');
+    });
+
+    // Tab
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            selectedCategory = tab.dataset.category;
+            filterAndUpdateItems();
+        });
+    })
+
+    // Checkbox
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", () => {
+            selectedDietaryNeeds = Array.from(checkboxes)
+                .filter(i => i.checked)
+                .map(i => i.value);
+            filterAndUpdateItems();
+        });
+    });
+}
+
+// Call the init function when the DOM content is loaded
+document.addEventListener('DOMContentLoaded', init);
 
 

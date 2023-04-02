@@ -12,54 +12,36 @@
             content="Pizza Palace, pizzas, online ordering, delivery, menu, sides, desserts, drinks, restaurant, food, food delivery"
             name="keywords"/>
     <!-- metadata ends-->
-    <!-- essential link for each page -->
-    <link href="../media/favicon.ico" rel="icon"/>
-    <link href="../styles/normalize.css" rel="stylesheet" type="text/css"/>
-    <link href="../styles/common.css" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
-
-    <!-- common script for each page -->
-    <script
-            crossorigin="anonymous"
-            integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-            src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <script src="../scripts/common.js" defer></script>
-
 
     <link href="../media/favicon.ico" rel="icon"/>
     <link href="../styles/normalize.css" rel="stylesheet" type="text/css"/>
     <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <link href="../styles/common.css" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/nexa-bold" rel="stylesheet"/>
+    <link href="../styles/menu-and-order.css" rel="stylesheet" type="text/css"/>
+
+    <!-- common script for each page -->
     <script
             crossorigin="anonymous"
             integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
             src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <!--  jQuery to inject header & footer  -->
-    <script>
-        $(function () {
-            $("#header").load("../common/header.html");
-            $("#footer").load("../common/footer.html");
-        });
-    </script>
-    <!--    <script defer src="../scripts/menu-and-order.js"></script>-->
+    <script defer src="../scripts/common.js"></script>
+    <script defer src="../scripts/menu-and-order.js"></script>
 
 
-    <link href="../styles/menu-and-order.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 <header id="header"></header>
-
 <main class="section2">
 
     <aside class="secondary">
         <div class="category" id="tabs">
-            <div class="tab" data-tab="tab-1">Pizzas</div>
-            <div class="tab" data-tab="tab-2">Pastas</div>
-            <div class="tab" data-tab="tab-3">Sides</div>
-            <div class="tab" data-tab="tab-4">Salads</div>
-            <div class="tab" data-tab="tab-5">Drinks</div>
+            <div class="tab" data-category="pizza" >Pizzas</div>
+            <div class="tab" data-category="pasta">Pastas</div>
+            <div class="tab" data-category="side">Sides</div>
+            <div class="tab" data-category="salad">Salads</div>
+            <div class="tab" data-category="drink">Drinks</div>
         </div>
     </aside>
 
@@ -71,38 +53,38 @@
         <div class="filtering-widget">
             <a class="widget-link" href="#">Select your Dietary Needs <i class="fa fa-chevron-down"></i></a>
             <div class="options-container">
-                <form name="filter-by-dietary-needs" onchange="filterMenu()">
+                <form name="filter-by-dietary-needs">
                     <div class="form-check">
-                        <input class="form-check-input" id="gluten-free" type="checkbox" name="ing" value="Gluten-free"
-                               "/>
+                        <input class="form-check-input" id="gluten-free" name="ing" type="checkbox" value="gluten-free"
+                        />
                         <label class="form-check-label" for="gluten-free">Gluten-free</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="vegetarian" value="vegetarian" type="checkbox"/>
+                        <input class="form-check-input" id="vegetarian" type="checkbox" value="vegetarian"/>
                         <label class="form-check-label" for="vegetarian">Vegetarian</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="vegan" value="vegan" type="checkbox"/>
+                        <input class="form-check-input" id="vegan" type="checkbox" value="vegan"/>
                         <label class="form-check-label" for="vegan">Vegan</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="kosher" value="kosher" type="checkbox"/>
+                        <input class="form-check-input" id="kosher" type="checkbox" value="kosher"/>
                         <label class="form-check-label" for="kosher">Kosher</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="halal" value="halal" type="checkbox"/>
+                        <input class="form-check-input" id="halal" type="checkbox" value="halal"/>
                         <label class="form-check-label" for="halal">Halal</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="low-carb" value="low-carb" type="checkbox"/>
+                        <input class="form-check-input" id="low-carb" type="checkbox" value="low-carb"/>
                         <label class="form-check-label" for="low-carb">Low-carb</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="dairy-free" value="dairy-free" type="checkbox"/>
+                        <input class="form-check-input" id="dairy-free" type="checkbox" value="dairy-free"/>
                         <label class="form-check-label" for="dairy-free">Dairy-free</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" id="paleo" value="paleo" type="checkbox"/>
+                        <input class="form-check-input" id="paleo" type="checkbox" value="paleo"/>
                         <label class="form-check-label" for="paleo">Paleo</label>
                     </div>
                 </form>
@@ -110,7 +92,7 @@
         </div>
 
 
-        <div id="menu">
+        <div id="menu-container">
 
 
         </div>
@@ -120,6 +102,4 @@
 </main>
 <footer id="footer"></footer>
 </body>
-<script src="../scripts/menu-and-order.js">
-</script>
 </html>

@@ -11,7 +11,7 @@
         "red onion",
         "bacon"
       ],
-      "price": "$12",
+      "price": "12",
       "dietaryOption": [
         "gluten-free",
         "vegan"
@@ -27,7 +27,7 @@
         "mozzarella cheese",
         "pepperoni"
       ],
-      "price": "$10",
+      "price": "10",
       "dietaryOption": [
         "gluten-free",
         "dairy-free",
@@ -44,7 +44,7 @@
         "mozzarella cheese",
         "fresh basil"
       ],
-      "price": "$9",
+      "price": "9",
       "dietaryOption": [
         "gluten-free",
         "vegan",
@@ -64,7 +64,7 @@
         "mushrooms",
         "olives"
       ],
-      "price": "$11",
+      "price": "11",
       "dietaryOption": [
         "gluten-free",
         "vegetarian",
@@ -84,7 +84,7 @@
         "bacon",
         "ham"
       ],
-      "price": "$13",
+      "price": "13",
       "dietaryOption": [
         "halal"
       ],
@@ -101,7 +101,7 @@
         "spinach",
         "mushrooms"
       ],
-      "price": "$13",
+      "price": "13",
       "dietaryOption": [
         "gluten-free",
         "dairy-free",
@@ -121,7 +121,7 @@
         "bacon",
         "jalapeno peppers"
       ],
-      "price": "$12",
+      "price": "12",
       "dietaryOption": [
         "gluten-free",
         "dairy-free",
@@ -140,7 +140,7 @@
         "parmesan cheese",
         "gorgonzola cheese"
       ],
-      "price": "$10",
+      "price": "10",
       "dietaryOption": [
         "gluten-free",
         "vegetarian"
@@ -158,7 +158,7 @@
         "red onion",
         "jalapeno peppers"
       ],
-      "price": "$12",
+      "price": "12",
       "dietaryOption": [
         "gluten-free",
         "dairy-free"
@@ -179,7 +179,7 @@
         "mushrooms",
         "olives"
       ],
-      "price": "$14",
+      "price": "14",
       "dietaryOption": [
         "kosher"
       ],
@@ -198,7 +198,7 @@
         "pickles",
         "red onion"
       ],
-      "price": "$13",
+      "price": "13",
       "dietaryOption": [
         "dairy-free"
       ],
@@ -215,7 +215,7 @@
         "parmesan cheese",
         "black pepper"
       ],
-      "price": "$11",
+      "price": "11",
       "dietaryOption": [
         "kosher"
       ],
@@ -232,7 +232,7 @@
         "garlic",
         "olive oil"
       ],
-      "price": "$9",
+      "price": "9",
       "dietaryOption": [
         "vegan",
         "dairy-free"
@@ -249,7 +249,7 @@
         "butter",
         "parmesan cheese"
       ],
-      "price": "$12",
+      "price": "12",
       "dietaryOption": [
         "vegetarian"
       ],
@@ -267,7 +267,7 @@
         "butter",
         "lemon juice"
       ],
-      "price": "$14",
+      "price": "14",
       "dietaryOption": [
         "dairy-free"
       ],
@@ -284,7 +284,7 @@
         "heavy cream",
         "garlic"
       ],
-      "price": "$10",
+      "price": "10",
       "dietaryOption": [
         "vegetarian"
       ],
@@ -302,7 +302,7 @@
         "olive oil",
         "parmesan cheese"
       ],
-      "price": "$10",
+      "price": "10",
       "dietaryOption": [
         "vegetarian"
       ],
@@ -320,7 +320,7 @@
         "pecorino romano cheese",
         "red pepper flakes"
       ],
-      "price": "$12",
+      "price": "12",
       "dietaryOption": [
         "dairy-free"
       ],
@@ -337,7 +337,7 @@
         "red pepper flakes",
         "parsley"
       ],
-      "price": "$9",
+      "price": "9",
       "dietaryOption": [
         "vegan"
       ],
@@ -354,7 +354,7 @@
         "ricotta salata cheese",
         "basil"
       ],
-      "price": "$11",
+      "price": "11",
       "dietaryOption": [
         "vegetarian"
       ],
@@ -373,7 +373,7 @@
         "mozzarella cheese",
         "parmesan cheese"
       ],
-      "price": "$14",
+      "price": "14",
       "dietaryOption": [
         "kosher"
       ],
@@ -389,7 +389,7 @@
         "butter",
         "parsley"
       ],
-      "price": "$3",
+      "price": "3",
       "dietaryOption": [
         "vegetarian"
       ],
@@ -404,7 +404,7 @@
         "vegetable oil",
         "salt"
       ],
-      "price": "$4",
+      "price": "4",
       "dietaryOption": [
         "vegan"
       ],
@@ -421,7 +421,7 @@
         "olive oil",
         "basil"
       ],
-      "price": "$6",
+      "price": "6",
       "dietaryOption": [
         "vegetarian"
       ],
@@ -439,7 +439,7 @@
         "pepper",
         "lemon wedges"
       ],
-      "price": "$8",
+      "price": "8",
       "dietaryOption": [
         "dairy-free"
       ],
@@ -458,7 +458,7 @@
         "salt",
         "black pepper"
       ],
-      "price": "$9",
+      "price": "9",
       "dietaryOption": [],
       "imgUrl": "../media/chicken-wings.png",
       "description": "Crispy chicken wings tossed in a spicy sauce made with hot sauce, butter, garlic powder, paprika, salt, and black pepper."
@@ -477,7 +477,7 @@
         "blue cheese dressing",
         "celery sticks"
       ],
-      "price": "$9",
+      "price": "9",
       "dietaryOption": [],
       "imgUrl": "../media/buffalo-wings.png",
       "description": "Crispy chicken wings tossed in a spicy sauce made with hot sauce, butter, garlic powder, paprika, salt, and black pepper, served with blue cheese dressing and celery sticks."
@@ -491,7 +491,7 @@
         "parmesan cheese",
         "caesar dressing"
       ],
-      "price": "$8",
+      "price": "8",
       "dietaryOption": [
         "vegetarian"
       ],
@@ -508,7 +508,7 @@
         "olive oil",
         "balsamic glaze"
       ],
-      "price": "$10",
+      "price": "10",
       "dietaryOption": [
         "vegetarian"
       ],
@@ -528,7 +528,7 @@
         "blue cheese",
         "ranch dressing"
       ],
-      "price": "$12",
+      "price": "12",
       "dietaryOption": [],
       "imgUrl": "../media/cobb-salad.png",
       "description": "A hearty Cobb salad with grilled chicken, crispy bacon, hard-boiled eggs, creamy avocado, juicy tomatoes, tangy blue cheese, and a side of ranch dressing."
@@ -545,7 +545,7 @@
         "kalamata olives",
         "greek dressing"
       ],
-      "price": "$9",
+      "price": "9",
       "dietaryOption": [
         "vegetarian"
       ],
@@ -555,101 +555,111 @@
     {
       "name": "Coca-Cola",
       "category": "drink",
-      "price": "$2",
+      "price": "2",
       "dietaryOption": [
         "vegan"
       ],
+      "ingredient": [],
       "imgUrl": "../media/coke.png",
       "description": "Classic carbonated beverage with a sweet and refreshing taste."
     },
     {
       "name": "Lemonade",
       "category": "drink",
-      "price": "$3",
+      "price": "3",
       "dietaryOption": [
         "vegan"
       ],
+      "ingredient": [],
       "imgUrl": "../media/lemonade.png",
       "description": "Refreshing drink made with lemon juice, sugar, and water."
     },
     {
       "name": "Iced Tea",
       "category": "drink",
-      "price": "$2.5",
+      "price": "2.5",
       "dietaryOption": [
         "vegan"
       ],
-      "imgUrl": "../media/iced-tea",
+      "ingredient": [],
+      "imgUrl": "../media/iced-tea.png",
       "description": "Refreshing drink made with tea and served over ice."
     },
     {
       "name": "Hot Chocolate",
       "category": "drink",
-      "price": "$4",
+      "price": "4",
       "dietaryOption": [
         "vegetarian"
       ],
+      "ingredient": [],
       "imgUrl": "../media/hot-chocolate.png",
       "description": "Hot and rich drink made with cocoa powder, milk, and sugar."
     },
     {
       "name": "Espresso",
       "category": "drink",
-      "price": "$3.5",
+      "price": "3.5",
       "dietaryOption": [
         "vegan"
       ],
-      "imgUrl": "../media/espresso",
+      "ingredient": [],
+      "imgUrl": "../media/espresso.png",
       "description": "Strong and concentrated coffee served in a small shot."
     },
     {
       "name": "Mojito",
       "category": "drink",
-      "price": "$7",
+      "price": "7",
       "dietaryOption": [
         "vegan"
       ],
-      "imgUrl": "../media/mojito",
+      "ingredient": [],
+      "imgUrl": "../media/mojito.png",
       "description": "Refreshing cocktail made with rum, lime juice, mint leaves, and soda water."
     },
     {
       "name": "Milkshake",
       "category": "drink",
-      "price": "$5",
+      "price": "5",
       "dietaryOption": [
         "vegetarian"
       ],
-      "imgUrl": "../media/milkshake",
+      "ingredient": [],
+      "imgUrl": "../media/milkshake.png",
       "description": "Thick and creamy drink made with milk, ice cream, and flavored syrup."
     },
     {
       "name": "Sparkling Water",
       "category": "drink",
-      "price": "$2.5",
+      "price": "2.5",
       "dietaryOption": [
         "vegan"
       ],
-      "imgUrl": "../media/sparkling-water",
+      "ingredient": [],
+      "imgUrl": "../media/sparkling-water.png",
       "description": "Carbonated water with a crisp and refreshing taste."
     },
     {
       "name": "Apple Cider",
       "category": "drink",
-      "price": "$4",
+      "price": "4",
       "dietaryOption": [
         "vegan"
       ],
-      "imgUrl": "../media/apple-cider",
+      "ingredient": [],
+      "imgUrl": "../media/apple-cider.png",
       "description": "Warm and spicy drink made with apple juice, cinnamon, and other spices."
     },
     {
       "name": "Orange Juice",
       "category": "drink",
-      "price": "$3.5",
+      "price": "3.5",
       "dietaryOption": [
         "vegan"
       ],
-      "imgUrl": "../media/orange-juice",
+      "ingredient": [],
+      "imgUrl": "../media/orange-juice.png",
       "description": "Freshly squeezed juice made with oranges and served cold."
     }
   ]

@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Debug index header and footer">
-      <change afterPath="$PROJECT_DIR$/scripts/constants.js" afterDir="false" />
+    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="update nutrition.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/menuitem.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/menuItems.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/find-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/info/find-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordering/menu-and-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/menu-and-order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/menu-and-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu-and-order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/menu-and-order.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/menu-and-order.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,16 +20,29 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/json_data" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Menu" />
+        <entry key="$PROJECT_DIR$" value="landing-page" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,7 +79,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kajan/Documents/Semester 1/Web Programming/Group_Project/itc5103-project/ordering&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;order__menu__feature&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ricky/Documents/GitHub/pizzie-delish/itc5103-project/membership&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -77,12 +94,8 @@
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kajan\Documents\Semester 1\Web Programming\Group_Project\itc5103-project\ordering" />
-      <recent name="C:\Users\kajan\Documents\Semester 1\Web Programming\Group_Project\itc5103-project\scripts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kajan\Documents\Semester 1\Web Programming\Group_Project\itc5103-project\membership" />
+      <recent name="C:\Users\ricky\Documents\GitHub\pizzie-delish\itc5103-project\membership" />
       <recent name="C:\Users\ricky\OneDrive - The Hong Kong Polytechnic University\Documents\GitHub\itc5103-project\media\unused" />
     </key>
   </component>
@@ -140,14 +153,19 @@
       <workItem from="1679505709443" duration="514000" />
       <workItem from="1679783131543" duration="20127000" />
       <workItem from="1679809291049" duration="4002000" />
-      <workItem from="1679841171439" duration="1645000" />
-      <workItem from="1679927831848" duration="9016000" />
-      <workItem from="1679940025901" duration="20158000" />
-      <workItem from="1679972289103" duration="2000" />
-      <workItem from="1680023609628" duration="1508000" />
-      <workItem from="1680044798057" duration="43000" />
-      <workItem from="1680047932290" duration="1182000" />
-      <workItem from="1680141089962" duration="1207000" />
+      <workItem from="1679841171439" duration="3966000" />
+      <workItem from="1679880682641" duration="2189000" />
+      <workItem from="1679948646100" duration="16523000" />
+      <workItem from="1680048769775" duration="952000" />
+      <workItem from="1680149272429" duration="7327000" />
+      <workItem from="1680193343085" duration="1405000" />
+      <workItem from="1680230151841" duration="11743000" />
+      <workItem from="1680271731547" duration="2674000" />
+      <workItem from="1680274790096" duration="4772000" />
+      <workItem from="1680279628993" duration="1265000" />
+      <workItem from="1680280971283" duration="6634000" />
+      <workItem from="1680410814491" duration="2931000" />
+      <workItem from="1680447563086" duration="18152000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>
@@ -219,13 +237,105 @@
       <option name="project" value="LOCAL" />
       <updated>1679845956378</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Finish about-us">
+      <created>1679846006904</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679846006904</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Finish about-us">
+      <created>1680243391605</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680243391605</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Finish about-us">
+      <created>1680243423793</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680243423793</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Finish about-us">
+      <created>1680243493702</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680243493702</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Finish about-us">
+      <created>1680243556971</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680243556971</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Finish about-us, find-us">
+      <created>1680280860290</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1680280860290</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Debug">
+      <created>1680284850812</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1680284850812</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Deleted">
+      <created>1680284858270</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1680284858270</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Move login-related files to membership">
+      <created>1680284884091</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1680284884091</updated>
+    </task>
+    <task id="LOCAL-00020" summary="debug">
+      <created>1680284892277</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1680284892277</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update nutrition.html">
+      <created>1680284911369</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1680284911369</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -252,32 +362,23 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="HEAD" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="delete duplicates" />
     <MESSAGE value="re-state the href (testing)" />
     <MESSAGE value="Refine page &amp; header and footer" />
-    <MESSAGE value="debug" />
     <MESSAGE value="Updated menu, find-us, about-us" />
     <MESSAGE value="Updated images" />
     <MESSAGE value="Debug on font style" />
     <MESSAGE value="Debug index header and footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debug index header and footer" />
+    <MESSAGE value="Finish about-us" />
+    <MESSAGE value="Finish about-us, find-us" />
+    <MESSAGE value="Debug" />
+    <MESSAGE value="Deleted" />
+    <MESSAGE value="Move login-related files to membership" />
+    <MESSAGE value="debug" />
+    <MESSAGE value="update nutrition.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="update nutrition.html" />
   </component>
 </project>
