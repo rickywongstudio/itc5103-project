@@ -3,9 +3,9 @@ body {
     display: grid;
 }
 
-main {
-    max-width: 1080px;
-}
+/*main {*/
+/*    max-width: 1080px;*/
+/*}*/
 
 /* ------------------- Main tag styles ------------------- */
 
@@ -45,9 +45,9 @@ main {
     display: block;
 }
 
-/*.menu-item-text > h2 {*/
-/*  font-size: 1rem;*/
-/*}*/
+.menu-item-text {
+    height:100px;
+}
 
 .menu-item-text > p {
     font-size: 1rem;
@@ -112,7 +112,7 @@ main {
 }
 
 .to-cart-fields select {
-    width: 80%;
+    width: 50%;
     margin: 5px;
     border: 2px solid #b61500;
     border-radius: 5px;
@@ -127,10 +127,6 @@ main {
 }
 
 .quantity-container > label {
-
-}
-
-.quantity-container > label {
     display:none;
     margin-bottom: 5px;
     width:100%;
@@ -139,7 +135,7 @@ main {
 .select-quantity {
     border: 2px solid #b61500;
     border-radius: 5px;
-    width:80%;
+    width:46%;
 }
 
 .to-cart-cancel {
@@ -156,6 +152,7 @@ main {
     border-radius: 14px;
     display: flex;
     justify-content: space-evenly;
+    margin:0 auto;
 }
 
 .tab {
@@ -292,8 +289,6 @@ main {
         background-color: #f2f2f2;
         border: 5px solid #f2f2f2;
         border-radius: 14px;
-        margin-right: 10%;
-        margin-left: 10%;
         padding: 30px 10px;
         left: 180px;
         box-sizing: border-box;
@@ -304,14 +299,29 @@ main {
     .tab {
         border-bottom: 1px solid #d9d9d9;
         font-size: 1rem;
-        text-align: center;
+        text-align: right;
         padding: 10px;
         cursor: pointer;
         font-weight: 900;
+        display: flex;
+    }
+
+
+    .tab span:first-child {
+        /*display: inline-block;*/
+        width:40px;
+        text-align: center;
+    }
+
+    .tab span:last-child {
+        /*display: inline-block;*/
+        /*width:70px;*/
+        /*text-align: left;*/
     }
 
     .tab:hover {
-        margin-right: -10%;
+        margin: 0 -10%;
+        font-size: 1.1rem;
     }
 
     .primary {
@@ -328,19 +338,28 @@ main {
     .options-container > form {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .to-cart-fields select {
+        width: 74%;
+    }
+    .select-quantity {
+        width:65%
+    }
 }
 
 /* laptop responsive */
 @media only screen and (min-width: 1200px) {
     main {
-        max-width: 1200px;
+        /*max-width: 1200px;*/
         margin: 0 auto;
     }
 
     .menu-item {
         /*display: inline-grid;*/
-        /*width: 26%;*/
+        width: 26%;
     }
+
+
 }
 
 

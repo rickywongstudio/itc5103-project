@@ -369,9 +369,7 @@
         "ground beef",
         "tomato sauce",
         "béchamel sauce",
-        "ricotta cheese",
-        "mozzarella cheese",
-        "parmesan cheese"
+        "ricotta cheese"
       ],
       "price": "14",
       "dietaryOption": [
@@ -471,9 +469,6 @@
         "hot sauce",
         "butter",
         "garlic powder",
-        "paprika",
-        "salt",
-        "black pepper",
         "blue cheese dressing",
         "celery sticks"
       ],

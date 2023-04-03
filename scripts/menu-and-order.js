@@ -5,10 +5,18 @@ const tabs = document.querySelectorAll(".tab");
 const checkboxes = document.querySelectorAll(".form-check-input");
 const menuContainer = document.getElementById('menu-container');
 
+
 let menuItems;
-let filteredItems;
 let selectedCategory = "";
 let selectedDietaryNeeds = [];
+
+const pizzaSizePrices = {
+    "2": 1,    // Small - 100% of base price
+    "3": 1.25, // Medium - 125% of base price
+    "4": 1.5,  // Large - 150% of base price
+    "20": 2,   // 18" Jumbo - 200% of base price
+    "21": 2.5, // 21" X 15" Party - 250% of base price
+};
 
 async function fetchMenuItems() {
     const response = await fetch('../db/menuItems.json');
@@ -58,28 +66,49 @@ function createMenuItem(item) {
     formToCart.className = 'form-to-cart';
     formToCart.innerHTML = `
         <fieldset class="price-display-container">
-            <span class="price-display">$<span class="price-display-target">${item.price}</span></span>
+            <span class="price-display">$<span class="price-display-target">${item.price + ".00"}</span></span>
         </fieldset>
     `;
 
+    const fieldset = document.createElement("fieldset");
+    fieldset.className = "to-cart-fields";
+
     if (item.category === 'pizza') {
-        formToCart.innerHTML += `
-            <fieldset class="to-cart-fields">
-                <div class="field-container size-container select-parent">
-                    <label for="size">Select size</label>
-                    <select autocomplete="off" class="select-size" name="size">
-                        <option class="placeholder" disabled="disabled" selected="selected" value="">
-                            Select size
-                        </option>
-                        <option value="2">Small</option>
-                        <option value="3">Medium</option>
-                        <option value="4">Large</option>
-                        <option value="20">18" Jumbo</option>
-                        <option value="21">21" X 15" Party</option>
-                    </select>
-                </div>
-            </fieldset>
-        `;
+
+        const sizeContainer = document.createElement("div");
+        sizeContainer.className = "field-container size-container select-parent";
+
+        const sizeLabel = document.createElement("label");
+        sizeLabel.setAttribute("for", "size");
+        sizeLabel.textContent = "Select size";
+        sizeContainer.appendChild(sizeLabel);
+
+        const sizeSelect = document.createElement("select");
+        sizeSelect.setAttribute("autocomplete", "off");
+        sizeSelect.className = "select-size";
+        sizeSelect.name = "size";
+
+        const sizeOptions = [
+            { value: "", text: "Select size", disabled: true, selected: true },
+            { value: "2", text: "Small", disabled: false, selected: false },
+            { value: "3", text: "Medium", disabled: false, selected: false },
+            { value: "4", text: "Large", disabled: false, selected: false },
+            { value: "20", text: '18" Jumbo', disabled: false, selected: false },
+            { value: "21", text: '21" X 15" Party', disabled: false, selected: false },
+        ];
+
+        sizeOptions.forEach(({ value, text, disabled, selected }) => {
+            const option = document.createElement("option");
+            option.value = value;
+            option.textContent = text;
+            option.disabled = disabled;
+            option.selected = selected;
+            sizeSelect.appendChild(option);
+        });
+
+        sizeContainer.appendChild(sizeSelect);
+        fieldset.appendChild(sizeContainer);
+        formToCart.appendChild(fieldset);
     }
 
     const quantityContainer = document.createElement("div");
@@ -130,7 +159,7 @@ function createMenuItem(item) {
 
     formActions.appendChild(addToOrderInput);
     formActions.appendChild(cancelButton);
-    formToCart.appendChild(quantityContainer);
+    fieldset.appendChild(quantityContainer);
     formToCart.appendChild(formActions);
     contentSwitchTab2.appendChild(formToCart);
     contentSwitchTab1.appendChild(addToOrderBtn);
@@ -138,7 +167,7 @@ function createMenuItem(item) {
     contentSwitch.appendChild(contentSwitchTab2);
     menuItem.appendChild(contentSwitch);
 
-    // event listener
+    // Event listener to order btn
     addToOrderBtn.addEventListener('click', () => {
         contentSwitchTab2.classList.remove('hidden');
         contentSwitch.classList.add('shift-left');
@@ -153,6 +182,12 @@ function createMenuItem(item) {
         }, 300);
     });
 
+    // Event listener to the price calculation
+    quantitySelect.addEventListener("change", () => updatePrice(formToCart, item, quantitySelect));
+    if (item.category === "pizza") {
+        const sizeSelect = formToCart.querySelector(".select-size");
+        sizeSelect.addEventListener("change", () => updatePrice(formToCart, item, quantitySelect));
+    }
 
     return menuItem;
 }
@@ -171,7 +206,6 @@ function filterMenuItems(menuItems, category, dietaryNeeds) {
     return filteredItems;
 }
 
-
 function displayMenuItems(items) {
     menuContainer.innerHTML = '';
     items.forEach(item => {
@@ -180,19 +214,30 @@ function displayMenuItems(items) {
     });
 }
 
-function filterAndUpdateItems() {
-    filteredItems = filterMenuItems(menuItems, selectedCategory, selectedDietaryNeeds);
-    displayMenuItems(filteredItems);
+function updatePrice(formToCart, item, quantitySelect) {
+    let basePrice = item.price;
+    let quantity = isNaN(parseInt(quantitySelect.value)) ? 1 : parseInt(quantitySelect.value);
+
+    if (item.category === "pizza") {
+        const sizeSelect = formToCart.querySelector(".select-size");
+        const selectedSize = sizeSelect.value;
+        const sizePercentage = pizzaSizePrices[selectedSize] || 1;
+        basePrice = item.price * sizePercentage;
+    }
+
+    const totalPrice = basePrice * quantity;
+    updatePriceDisplay(formToCart, totalPrice);
 }
 
-async function renderMenu() {
-    menuItems = await fetchMenuItems();
-    displayMenuItems(menuItems);
+function updatePriceDisplay(formToCart, price) {
+    const priceDisplayTarget = formToCart.querySelector(".price-display-target");
+    priceDisplayTarget.textContent = price.toFixed(2);
 }
+
 
 async function init() {
-
-    renderMenu();
+    menuItems = await fetchMenuItems();
+    displayMenuItems(menuItems);
 
     // Reset all checkboxes
     $(function () {
@@ -210,7 +255,7 @@ async function init() {
     tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
             selectedCategory = tab.dataset.category;
-            filterAndUpdateItems();
+            displayMenuItems(filterMenuItems(menuItems, selectedCategory, selectedDietaryNeeds));
         });
     })
 
@@ -220,7 +265,7 @@ async function init() {
             selectedDietaryNeeds = Array.from(checkboxes)
                 .filter(i => i.checked)
                 .map(i => i.value);
-            filterAndUpdateItems();
+            displayMenuItems(filterMenuItems(menuItems, selectedCategory, selectedDietaryNeeds));
         });
     });
 }
