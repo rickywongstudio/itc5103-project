@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Finish menu logic">
-      <change afterPath="$PROJECT_DIR$/styles/all.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-26_11_51_a_m__[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-26_11_51_a_m___Changes_.xml" beforeDir="false" />
+    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Finish menu css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/menuItems.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/menuItems.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordering/menu-and-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/menu-and-order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/authentication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/menu-and-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu-and-order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/menu-and-order.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/menu-and-order.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +165,8 @@
       <workItem from="1680466661036" duration="227000" />
       <workItem from="1680489302742" duration="973000" />
       <workItem from="1680537015171" duration="5830000" />
-      <workItem from="1680542929249" duration="2737000" />
+      <workItem from="1680542929249" duration="2957000" />
+      <workItem from="1680549054914" duration="27000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>
@@ -331,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680466147727</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Finish menu css">
+      <created>1680545916360</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1680545916360</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,6 +395,7 @@
     <MESSAGE value="debug" />
     <MESSAGE value="update nutrition.html" />
     <MESSAGE value="Finish menu logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish menu logic" />
+    <MESSAGE value="Finish menu css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish menu css" />
   </component>
 </project>
