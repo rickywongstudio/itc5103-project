@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Finish menu css">
+    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Finish menu logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/locations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordering/menuitem.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +42,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="landing-page" />
+        <entry key="$PROJECT_DIR$" value="rickywong" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -167,6 +172,9 @@
       <workItem from="1680537015171" duration="5830000" />
       <workItem from="1680542929249" duration="2957000" />
       <workItem from="1680549054914" duration="27000" />
+      <workItem from="1680556992074" duration="118000" />
+      <workItem from="1680557189908" duration="820000" />
+      <workItem from="1680561791456" duration="593000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>

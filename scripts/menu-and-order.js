@@ -247,7 +247,7 @@ async function init() {
     // Event listeners
     // Filtering widget expansion toggle
     widgetLink.addEventListener('click', (e) => {
-        e.preventDefault();
+        // e.preventDefault(); // BUG: causing mobile menu non-working
         container.classList.toggle('expanded');
     });
 
