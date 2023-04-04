@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Finish menu logic">
+    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Debug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/locations.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordering/menuitem.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/menu-and-order.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/menu-and-order.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +172,10 @@
       <workItem from="1680556992074" duration="118000" />
       <workItem from="1680557189908" duration="820000" />
       <workItem from="1680561791456" duration="593000" />
+      <workItem from="1680575504229" duration="1034000" />
+      <workItem from="1680619973701" duration="34000" />
+      <workItem from="1680646433095" duration="55000" />
+      <workItem from="1680646512177" duration="987000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>
@@ -337,7 +338,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680545916360</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Debug">
+      <created>1680576108138</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1680576108138</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Debug">
+      <created>1680576535773</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1680576535773</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,13 +412,13 @@
     <MESSAGE value="Debug index header and footer" />
     <MESSAGE value="Finish about-us" />
     <MESSAGE value="Finish about-us, find-us" />
-    <MESSAGE value="Debug" />
     <MESSAGE value="Deleted" />
     <MESSAGE value="Move login-related files to membership" />
     <MESSAGE value="debug" />
     <MESSAGE value="update nutrition.html" />
     <MESSAGE value="Finish menu logic" />
     <MESSAGE value="Finish menu css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish menu css" />
+    <MESSAGE value="Debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug" />
   </component>
 </project>
