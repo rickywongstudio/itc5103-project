@@ -1,63 +1,728 @@
-<!--    <section id="nutrition">-->
-<!--      <table>-->
-<!--        <caption>-->
-<!--          Nutrition Information-->
-<!--        </caption>-->
-<!--        <tr>-->
-<!--          <th>Ingredient</th>-->
-<!--          <th>Serving Size (g)</th>-->
-<!--          <th>Calories (kcal)</th>-->
-<!--          <th>Fat (g)</th>-->
-<!--          <th>Carbs (g)</th>-->
-<!--          <th>Protein (g)</th>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>Tomato Sauce</td>-->
-<!--          <td>100</td>-->
-<!--          <td>40</td>-->
-<!--          <td>0.5</td>-->
-<!--          <td>9</td>-->
-<!--          <td>1.5</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>Mozzarella Cheese</td>-->
-<!--          <td>100</td>-->
-<!--          <td>280</td>-->
-<!--          <td>22</td>-->
-<!--          <td>2</td>-->
-<!--          <td>25</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>Pepperoni</td>-->
-<!--          <td>100</td>-->
-<!--          <td>400</td>-->
-<!--          <td>35</td>-->
-<!--          <td>1</td>-->
-<!--          <td>30</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>Pineapple</td>-->
-<!--          <td>100</td>-->
-<!--          <td>50</td>-->
-<!--          <td>0.5</td>-->
-<!--          <td>13</td>-->
-<!--          <td>1</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>Bell Peppers</td>-->
-<!--          <td>100</td>-->
-<!--          <td>30</td>-->
-<!--          <td>0.3</td>-->
-<!--          <td>7</td>-->
-<!--          <td>1</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>Mushrooms</td>-->
-<!--          <td>100</td>-->
-<!--          <td>22</td>-->
-<!--          <td>0.3</td>-->
-<!--          <td>4</td>-->
-<!--          <td>3</td>-->
-<!--        </tr>-->
-<!--      </table>-->
-<!--    </section>-->
+<!DOCTYPE html>
+
+<html lang="en">
+<head lang="en-CA">
+    <title>Pizza Palace | Online ordering and Delivery</title>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta
+            content="Order the best pizzas online from Pizza Palace. Enjoy our delicious menu of handcrafted pizzas, sides, desserts, and drinks delivered straight to your door."
+            name="description"/>
+    <meta
+            content="Pizza Palace, pizzas, online ordering, delivery, menu, sides, desserts, drinks, restaurant, food, food delivery"
+            name="keywords"/>
+    <link href="../media/favicon.ico" rel="icon"/>
+    <link href="../styles/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="../styles/common.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+    <!--  jQuery to inject header & footer  -->
+    <script
+            crossorigin="anonymous"
+            integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+            src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script defer src="../scripts/common.js"></script>
+</head>
+<body>
+<header id="header"></header>
+<main>
+
+    <section id="nutrition">
+        <table id="nutrition-table">
+            <caption>
+                Nutrition Information
+            </caption>
+            <tr>
+                <th>Ingredient</th>
+                <th>Serving Size (g)</th>
+                <th>Calories (kcal)</th>
+                <th>Fat (g)</th>
+                <th>Carbs (g)</th>
+                <th>Protein (g)</th>
+                <th>Gluten-free</th>
+                <th>Vegetarian</th>
+                <th>Vegan</th>
+                <th>Kosher</th>
+                <th>Halal</th>
+                <th>Low-carb</th>
+                <th>Dairy-free</th>
+                <th>Paleo</th>
+            </tr>
+            <tr>
+                <td>Tomato Sauce</td>
+                <td>100</td>
+                <td>40</td>
+                <td>0.5</td>
+                <td>9</td>
+                <td>1.5</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td></td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Mozzarella Cheese</td>
+                <td>100</td>
+                <td>280</td>
+                <td>22</td>
+                <td>2</td>
+                <td>25</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td></td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ham</td>
+                <td>100</td>
+                <td>135</td>
+                <td>4</td>
+                <td>4</td>
+                <td>20</td>
+                <td>&check;</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Pineapple</td>
+                <td>100</td>
+                <td>50</td>
+                <td>0.5</td>
+                <td>13</td>
+                <td>1</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td></td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Red Onion</td>
+                <td>100</td>
+                <td>40</td>
+                <td>0.2</td>
+                <td>9</td>
+                <td>1.1</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Bacon</td>
+                <td>100</td>
+                <td>541</td>
+                <td>48</td>
+                <td>0</td>
+                <td>30</td>
+                <td>&check;</td>
+                <td></td>
+                <td></td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Jalapeno Peppers</td>
+                <td>100</td>
+                <td>27</td>
+                <td>0.3</td>
+                <td>5</td>
+                <td>1.2</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Bell Peppers</td>
+                <td>100</td>
+                <td>30</td>
+                <td>0.3</td>
+                <td>7</td>
+                <td>1</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Mushrooms</td>
+                <td>100</td>
+                <td>22</td>
+                <td>0.3</td>
+                <td>4</td>
+                <td>3</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            <tr>
+                <td>Olives</td>
+                <td>100</td>
+                <td>115</td>
+                <td>11</td>
+                <td>6</td>
+                <td>1</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Pepperoni</td>
+                <td>100</td>
+                <td>400</td>
+                <td>35</td>
+                <td>1</td>
+                <td>30</td>
+                <td>&check;</td>
+                <td></td>
+                <td></td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Canadian Bacon</td>
+                <td>100</td>
+                <td>120</td>
+                <td>3.5</td>
+                <td>2</td>
+                <td>21</td>
+                <td>&check;</td>
+                <td></td>
+                <td></td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Sweet Corn</td>
+                <td>100</td>
+                <td>86</td>
+                <td>1</td>
+                <td>18</td>
+                <td>3</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td></td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Sausage</td>
+                <td>100</td>
+                <td>375</td>
+                <td>36</td>
+                <td>2</td>
+                <td>13</td>
+                <td>&check;</td>
+                <td></td>
+                <td></td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Ground Beef</td>
+                <td>100</td>
+                <td>250</td>
+                <td>20</td>
+                <td>0</td>
+                <td>17</td>
+                <td>&check;</td>
+                <td></td>
+                <td></td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Pickles</td>
+                <td>100</td>
+                <td>12</td>
+                <td>0.2</td>
+                <td>2.5</td>
+                <td>0.5</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Spinach</td>
+                <td>100</td>
+                <td>23</td>
+                <td>0.4</td>
+                <td>3.6</td>
+                <td>2.9</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+                <td>&check;</td>
+            </tr>
+            <tr>
+                <td>Spaghetti</td>
+                <td>100</td>
+                <td>158</td>
+                <td>0.8</td>
+                <td>32</td>
+                <td>6</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Pancetta</td>
+                <td>100</td>
+                <td>370</td>
+                <td>30</td>
+                <td>1</td>
+                <td>20</td>
+                <td>✓</td>
+                <td></td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Egg Yolks</td>
+                <td>100</td>
+                <td>317</td>
+                <td>27</td>
+                <td>3</td>
+                <td>16</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Penne Pasta</td>
+                <td>100</td>
+                <td>157</td>
+                <td>0.7</td>
+                <td>32</td>
+                <td>5</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Red Pepper Flakes</td>
+                <td>100</td>
+                <td>318</td>
+                <td>16</td>
+                <td>37</td>
+                <td>11</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Fettuccine Pasta</td>
+                <td>100</td>
+                <td>158</td>
+                <td>0.8</td>
+                <td>32</td>
+                <td>6</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Linguine Pasta</td>
+                <td>100</td>
+                <td>157</td>
+                <td>0.7</td>
+                <td>32</td>
+                <td>5</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Heavy Cream</td>
+                <td>100</td>
+                <td>340</td>
+                <td>36</td>
+                <td>3</td>
+                <td>2</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Shrimp</td>
+                <td>100</td>
+                <td>99</td>
+                <td>0.3</td>
+                <td>0.9</td>
+                <td>23</td>
+                <td>✓</td>
+                <td></td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>White Wine</td>
+                <td>100</td>
+                <td>82</td>
+                <td>0</td>
+                <td>2.6</td>
+                <td>0.1</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Bucatini Pasta</td>
+                <td>100</td>
+                <td>158</td>
+                <td>0.8</td>
+                <td>32</td>
+                <td>6</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Pecorino Romano Cheese</td>
+                <td>100</td>
+                <td>387</td>
+                <td>27</td>
+                <td>2.8</td>
+                <td>32</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Rigatoni Pasta</td>
+                <td>100</td>
+                <td>157</td>
+                <td>0.7</td>
+                <td>32</td>
+                <td>5</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Eggplant</td>
+                <td>100</td>
+                <td>25</td>
+                <td>0.2</td>
+                <td>6</td>
+                <td>1</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Ricotta Salata Cheese</td>
+                <td>100</td>
+                <td>308</td>
+                <td>21</td>
+                <td>1.7</td>
+                <td>21</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Lasagna Noodles</td>
+                <td>100</td>
+                <td>158</td>
+                <td>0.8</td>
+                <td>32</td>
+                <td>6</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Béchamel Sauce</td>
+                <td>100</td>
+                <td>220</td>
+                <td>18</td>
+                <td>11</td>
+                <td>5</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td></td>
+                <td>✓</td>
+            </tr>
+        </table>
+
+    </section>
+</main>
+<footer id="footer"></footer>
+</body>
+<script>
+    const tableBody = document.getElementById("nutrition-table");
+
+    function getTableData() {
+
+        const tableData = [];
+        const rows = tableBody.getElementsByTagName("tr");
+        console.log(rows)
+
+        for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            const rowData = {}; // Object to store data for the current row
+            console.log(rowData);
+            const cells = row.getElementsByTagName("td");
+
+            // Assign the cell values to the rowData object properties
+            rowData.ingredient = cells[0].textContent;
+            rowData.servingSize = parseFloat(cells[1].textContent);
+            rowData.calories = parseFloat(cells[2].textContent);
+            rowData.fat = parseFloat(cells[3].textContent);
+            rowData.carbs = parseFloat(cells[4].textContent);
+            rowData.protein = parseFloat(cells[5].textContent);
+            rowData.glutenFree = cells[6].textContent === "✓";
+            rowData.vegetarian = cells[7].textContent === "✓";
+            rowData.vegan = cells[8].textContent === "✓";
+            rowData.kosher = cells[9].textContent === "✓";
+            rowData.halal = cells[10].textContent === "✓";
+            rowData.lowCarb = cells[11].textContent === "✓";
+            rowData.dairyFree = cells[12].textContent === "✓";
+            rowData.paleo = cells[13].textContent === "✓";
+
+            tableData.push(rowData);
+        }
+
+        console.log(tableData);
+        return tableData;
+    }
+
+    function clearTableBody() {
+        while (tableBody.firstChild) {
+            tableBody.removeChild(tableBody.firstChild);
+        }
+    }
+
+
+    function rebuildTable(sortedData) {
+
+        function createHeaderRow() {
+            const headerRow = document.createElement("tr");
+            const headers = [
+                "Ingredient", "Serving Size (g)", "Calories (kcal)", "Fat (g)", "Carbs (g)", "Protein (g)",
+                "Gluten-free", "Vegetarian", "Vegan", "Kosher", "Halal", "Low-carb", "Dairy-free", "Paleo"
+            ];
+
+            headers.forEach(header => {
+                const th = document.createElement("th");
+                th.textContent = header;
+                headerRow.appendChild(th);
+            });
+
+            return headerRow;
+        }
+
+        tableBody.appendChild(createHeaderRow());
+
+        sortedData.forEach((rowData) => {
+            const row = document.createElement("tr");
+
+            for (let key in rowData) {
+                const cell = document.createElement("td");
+                cell.textContent = rowData[key] === true ? "✓" : rowData[key] === false ? "" : rowData[key];
+                row.appendChild(cell);
+            }
+
+            tableBody.appendChild(row);
+        });
+    }
+
+    function applyCssEffects() {
+        const css = `
+    #nutrition {
+        text-align: center;
+    }
+
+    #nutrition-table {
+        width: 100%;
+    }
+
+    td {
+        padding: 10px 0;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #ededed;
+        color: #000;
+    }
+  `;
+
+        const styleElement = document.createElement('style');
+        styleElement.textContent = css;
+        document.head.appendChild(styleElement);
+    }
+
+    function setup() {
+        const tableData = getTableData();
+        clearTableBody();
+
+        const sortedData = tableData.sort((a, b) => a.ingredient.localeCompare(b.ingredient));
+        rebuildTable(sortedData);
+        applyCssEffects();
+    }
+
+    setup();
+</script>
+<style>
+    #nutrition {
+        text-align: center;
+    }
+
+    tbody td {
+        padding: 10px 0;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #ededed;
+        color: #000;
+    }
+</style>
+</html>
