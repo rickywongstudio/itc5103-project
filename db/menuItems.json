@@ -149,24 +149,6 @@
       "description": "This Four Cheese Pizza is a cheesy delight with tomato sauce, mozzarella, ricotta, parmesan, and gorgonzola cheeses on a gluten-free and vegetarian crust."
     },
     {
-      "name": "Buffalo Chicken Pizza",
-      "category": "pizza",
-      "ingredient": [
-        "buffalo sauce",
-        "mozzarella cheese",
-        "grilled chicken",
-        "red onion",
-        "jalapeno peppers"
-      ],
-      "price": "12",
-      "dietaryOption": [
-        "gluten-free",
-        "dairy-free"
-      ],
-      "imgUrl": "../media/buffalo-chicken-pizza.png",
-      "description": "This Buffalo Chicken Pizza is a spicy treat with buffalo sauce, grilled chicken, red onions, and jalapeno peppers on a gluten-free and dairy-free crust."
-    },
-    {
       "name": "Supreme Pizza",
       "category": "pizza",
       "ingredient": [
@@ -324,7 +306,7 @@
       "dietaryOption": [
         "dairy-free"
       ],
-      "imgUrl": "../media/bucatini-amatriciana",
+      "imgUrl": "../media/bucatini-amatriciana.png",
       "description": "A traditional Italian pasta dish with bucatini noodles served in a spicy tomato sauce made with pancetta, onion, and red pepper flakes. This dairy-free option is perfect for those who prefer a touch of heat in their pasta."
     },
     {
@@ -603,17 +585,6 @@
       "description": "Strong and concentrated coffee served in a small shot."
     },
     {
-      "name": "Mojito",
-      "category": "drink",
-      "price": "7",
-      "dietaryOption": [
-        "vegan"
-      ],
-      "ingredient": [],
-      "imgUrl": "../media/mojito.png",
-      "description": "Refreshing cocktail made with rum, lime juice, mint leaves, and soda water."
-    },
-    {
       "name": "Milkshake",
       "category": "drink",
       "price": "5",
@@ -623,17 +594,6 @@
       "ingredient": [],
       "imgUrl": "../media/milkshake.png",
       "description": "Thick and creamy drink made with milk, ice cream, and flavored syrup."
-    },
-    {
-      "name": "Sparkling Water",
-      "category": "drink",
-      "price": "2.5",
-      "dietaryOption": [
-        "vegan"
-      ],
-      "ingredient": [],
-      "imgUrl": "../media/sparkling-water.png",
-      "description": "Carbonated water with a crisp and refreshing taste."
     },
     {
       "name": "Apple Cider",

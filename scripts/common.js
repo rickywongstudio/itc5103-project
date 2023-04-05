@@ -1,7 +1,7 @@
-function addMobileMenu(toggle, menu) {
-    // jQuery for the navbar-dropdown menu in Mobile view
+function mobileMenuToggling(toggle, menu) {
     $(document).ready(function () {
-        $(toggle).click(function () {
+        $(toggle).click(function (e) {
+            e.stopImmediatePropagation();
             $(menu).toggle(function () {
                 $(this).animate();
             });
@@ -9,7 +9,7 @@ function addMobileMenu(toggle, menu) {
     });
 }
 
-function switchHeaderView(screenSize, menu) {
+function switchMobileHeader(screenSize, menu) {
     if (screenSize.matches) menu.style.display = "none";
 }
 
@@ -29,9 +29,9 @@ async function setup() {
     await insertHeaderAndFooter();
     const toggle = document.querySelector(".nav-dropdown-toggle");
     const menu = document.querySelector(".nav-dropdown-menu");
-    addMobileMenu(toggle, menu);
+    mobileMenuToggling(toggle, menu);
     const screenSize = window.matchMedia("(min-width: 540px)");
-    screenSize.addEventListener("change", () => switchHeaderView(screenSize, menu));
+    screenSize.addEventListener("change", () => switchMobileHeader(screenSize, menu));
 }
 
 setup();
