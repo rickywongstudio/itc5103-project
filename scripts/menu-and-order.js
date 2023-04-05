@@ -160,6 +160,7 @@ function createMenuItem(item) {
     formActions.appendChild(addToOrderInput);
     formActions.appendChild(cancelButton);
     fieldset.appendChild(quantityContainer);
+    formToCart.append(fieldset);
     formToCart.appendChild(formActions);
     contentSwitchTab2.appendChild(formToCart);
     contentSwitchTab1.appendChild(addToOrderBtn);
