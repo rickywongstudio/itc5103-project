@@ -113,6 +113,7 @@ footer {
 
 div .social-icons a {
     margin-right: 20px;
+    width:100%;
 }
 
 .social-icons a:last-child {
