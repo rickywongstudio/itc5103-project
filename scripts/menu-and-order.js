@@ -9,7 +9,7 @@ const menuContainer = document.getElementById('menu-container');
 let menuItems;
 let selectedCategory = "";
 let selectedDietaryNeeds = [];
-
+let orders=[];
 const pizzaSizePrices = {
     "2": 1,    // Small - 100% of base price
     "3": 1.25, // Medium - 125% of base price
@@ -66,7 +66,7 @@ function createMenuItem(item) {
     formToCart.className = 'form-to-cart';
     formToCart.innerHTML = `
         <fieldset class="price-display-container">
-            <span class="price-display">$<span class="price-display-target">${item.price + ".00"}</span></span>
+            <span class="price-display">$<span id="price-display" class="price-display-target">${item.price + ".00"}</span></span>
         </fieldset>
     `;
 
@@ -86,18 +86,19 @@ function createMenuItem(item) {
         const sizeSelect = document.createElement("select");
         sizeSelect.setAttribute("autocomplete", "off");
         sizeSelect.className = "select-size";
+        sizeSelect.id = "select-size";
         sizeSelect.name = "size";
 
         const sizeOptions = [
-            { value: "", text: "Select size", disabled: true, selected: true },
-            { value: "2", text: "Small", disabled: false, selected: false },
-            { value: "3", text: "Medium", disabled: false, selected: false },
-            { value: "4", text: "Large", disabled: false, selected: false },
-            { value: "20", text: '18" Jumbo', disabled: false, selected: false },
-            { value: "21", text: '21" X 15" Party', disabled: false, selected: false },
+            {value: "", text: "Select size", disabled: true, selected: true},
+            {value: "2", text: "Small", disabled: false, selected: false},
+            {value: "3", text: "Medium", disabled: false, selected: false},
+            {value: "4", text: "Large", disabled: false, selected: false},
+            {value: "20", text: '18" Jumbo', disabled: false, selected: false},
+            {value: "21", text: '21" X 15" Party', disabled: false, selected: false},
         ];
 
-        sizeOptions.forEach(({ value, text, disabled, selected }) => {
+        sizeOptions.forEach(({value, text, disabled, selected}) => {
             const option = document.createElement("option");
             option.value = value;
             option.textContent = text;
@@ -126,8 +127,8 @@ function createMenuItem(item) {
     quantityContainer.appendChild(quantitySelect);
 
     const quantityOptions = [
-        { value: "", text: "Select quantity", disabled: true, selected: true },
-        ...Array.from({ length: 10 }, (_, i) => ({
+        {value: "", text: "Select quantity", disabled: true, selected: true},
+        ...Array.from({length: 10}, (_, i) => ({
             value: i + 1,
             text: (i + 1).toString(),
             disabled: false,
@@ -135,7 +136,7 @@ function createMenuItem(item) {
         })),
     ];
 
-    quantityOptions.forEach(({ value, text, disabled, selected }) => {
+    quantityOptions.forEach(({value, text, disabled, selected}) => {
         const option = document.createElement("option");
         option.value = value;
         option.textContent = text;
@@ -150,7 +151,7 @@ function createMenuItem(item) {
 
     const addToOrderInput = document.createElement("input");
     addToOrderInput.className = "to-cart-add";
-    addToOrderInput.type = "submit";
+    addToOrderInput.type = "button";
     addToOrderInput.value = "ADD TO CART";
 
     const cancelButton = document.createElement('a');
@@ -176,11 +177,12 @@ function createMenuItem(item) {
     // Add event listener to the cancel button
     cancelButton.addEventListener('click', () => {
         contentSwitch.classList.remove('shift-left');
-
+        console.log("HI")
         setTimeout(() => {
             contentSwitchTab2.classList.add('hidden');
         }, 300);
     });
+
 
     // Event listener to the price calculation
     quantitySelect.addEventListener("change", () => updatePrice(formToCart, item, quantitySelect));
@@ -189,6 +191,17 @@ function createMenuItem(item) {
         sizeSelect.addEventListener("change", () => updatePrice(formToCart, item, quantitySelect));
     }
 
+    addToOrderInput.addEventListener('click', (e) => {
+        e.preventDefault();
+        let price = document.getElementById("price-display").innerHTML;
+        const quantity = !quantitySelect.value ? 1 : quantitySelect.value;
+        let selectSize = document.getElementById("select-size");
+        selectSize = selectSize.textContent
+        item.quantity = quantity;
+        item.sellingPrice = price;
+        item.selectedSize = quantity;
+        onFormSubmit(e, item);
+    });
     return menuItem;
 }
 
@@ -274,3 +287,36 @@ async function init() {
 document.addEventListener('DOMContentLoaded', init);
 
 
+const onFormSubmit = (e, item) => {
+    console.log(JSON.stringify(item));
+    let obj = new OrderItem(item.name, item.img, item.quantity,item.category, item.price, item.selectedSize)
+    orders.push(obj);
+    localStorage.setItem("orders",orders);
+    e.preventDefault();
+    console.log("Hey, there" + JSON.stringify(obj))
+    // console.log(price)
+}
+
+
+class OrderItem {
+    name
+
+    image
+    quantity
+
+    category
+
+    price
+
+    size
+
+
+    constructor(name, image, quantity, category, price, size) {
+        this.name = name;
+        this.image = image;
+        this.quantity = quantity;
+        this.category=category;
+        this.price = price;
+        this.size = size;
+    }
+}
