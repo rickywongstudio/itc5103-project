@@ -287,6 +287,12 @@ document.addEventListener('DOMContentLoaded', init);
 
 
 const onFormSubmit = (e, item) => {
+    let isUserLoggined = localStorage.getItem("usrName");
+    if (!isUserLoggined || isUserLoggined === undefined) {
+        alert("Inorder to process with your order, please sign to your website");
+        return;
+    }
+
     let isItemAlreadyExistInCart = 0;
     let obj;
     if (orders && orders.length > 0) {

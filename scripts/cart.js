@@ -1,20 +1,15 @@
-// Get the elements
-const minusBtn = document.querySelector(".minus-btn");
-const plusBtn = document.querySelector(".plus-btn");
-const quantityInput = document.querySelector(".quantity-input");
-let orders=[];
-// Add click event listeners to the buttons
+let orders = [];
 
-
-//Item loading to cart
 function loadingItemsToCart() {
-
-    let ordersHtmlContent = "";
-
+    orders = JSON.parse(localStorage.getItem("orders"));
     if (!orders || orders.length === 0) {
         return
     }
+    document.getElementById("noOfOrders").innerHTML = "( " + orders.length + " Items )";
     let tbody = document.getElementById("orderItems");
+    if (tbody.hasChildNodes()) {
+        tbody.innerHTML = '';
+    }
     orders.forEach(item => {
         const tableRow = document.createElement("tr");
         const tabledata1 = document.createElement("td");
@@ -58,15 +53,11 @@ function loadingItemsToCart() {
         tabledata5.innerHTML = "$" + parseInt(item.price) * parseInt(item.quantity);
         tableRow.appendChild(tabledata5);
         const tabledata6 = document.createElement("td")
-        // tabledata6.innerHTML = "$" + parseInt(item.price) * parseInt(item.quantity);
-
-        // const tabledata7 = document.createElement("td")
         const removeImg = document.createElement("img")
         removeImg.src = "./remove-bin-delete-trash-svgrepo-com.svg";
         removeImg.className = "rounded float-start img-styles";
         tabledata6.appendChild(removeImg);
         tableRow.appendChild(tabledata6);
-        // let orItem = item;
         removeImg.addEventListener('click', () => {
             removeOrder(item)
         });
@@ -79,12 +70,10 @@ function loadingItemsToCart() {
         tbody.appendChild(tableRow);
     })
 
-
     loadPrice();
 }
 
 function loadPrice() {
-
     let subTotal = 0;
     let tax = 0;
     orders.forEach(item => {
@@ -95,8 +84,8 @@ function loadPrice() {
     tax = subTotal * 0.13;
     let grandTotal = subTotal + tax;
     document.getElementById("subTotal").innerHTML = "$" + subTotal;
-    document.getElementById("salesTax").innerHTML = "$" + tax;
-    document.getElementById("grandTotal").innerHTML = "$" + grandTotal;
+    document.getElementById("salesTax").innerHTML = "$" + tax.toFixed(2);
+    document.getElementById("grandTotal").innerHTML = "$" + grandTotal.toFixed(2);
 }
 
 function removeOrder(item) {
@@ -108,16 +97,19 @@ function removeOrder(item) {
 
     localStorage.setItem("orders", JSON.stringify(orders));
     loadingItemsToCart();
-
-    // location.reload();
 }
 
 $(document).ready(function () {
-    orders = JSON.parse(localStorage.getItem("orders"));
-    loadingItemsToCart();
+    let isUserLoggined = localStorage.getItem("usrName");
+    if (!isUserLoggined || isUserLoggined === undefined) {
+        alert("Please sign-in to our website, to view your orders");
+        return;
+    }
+    else{
+        loadingItemsToCart();
+    }
 });
 
-// Define the functions
 function decreaseQuantity(item) {
     let orders = JSON.parse(localStorage.getItem("orders"));
     orders.forEach((x, i) => {
@@ -128,32 +120,22 @@ function decreaseQuantity(item) {
             x.quantity -= 1;
         }
 
-
     })
     localStorage.setItem("orders", JSON.stringify(orders));
-// setInterval(loadingItemsToCart, 3000);
-    // location.reload();
-
+    loadingItemsToCart();
 }
 
 function increaseQuantity(item) {
     let orders = JSON.parse(localStorage.getItem("orders"));
     orders.forEach((x, i) => {
-
         if (item.size && item.name === x.name && item.size === x.size) {
             x.quantity += 1;
         } else if (!item.size && item.name === x.name) {
             x.quantity += 1;
         }
-
-
     })
-
     localStorage.setItem("orders", JSON.stringify(orders));
-
-
-    location.reload();
-
+    loadingItemsToCart();
 }
 
 
