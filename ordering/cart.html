@@ -34,57 +34,24 @@
             <th scope="col" class="item-col">Remove</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-            <th scope="row">
-                <div>
-                    <img
-                            src="./Logo SVG-01 1.jpg"
-                            class="rounded float-start img-styles"
-                    />
-                    <div>
-                        <p class="item-name">Pizza Oven</p>
-                        <p class="item-description">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
-                    </div>
-                </div>
-            </th>
-            <td>$146.90</td>
-            <td>
-                <div class="item-quantity">
-                    <button class="minus-btn">-</button>
-                    <button class="quantity-input">0</button>
-                    <button class="plus-btn">+</button>
-                </div>
-            </td>
-            <td>
-
-            </td>
-            <td>$146.90</td>
-            <td><img
-                     src="./remove-bin-delete-trash-svgrepo-com.svg"
-                     class="rounded float-start img-styles"
-                     onclick="deleteRow(this)"
-            /></td>
-        </tr>
+        <tbody id="orderItems">
         </tbody>
     </table>
 </div>
 <div class="checkout">
     <div class="row">
         <p class="col-8 subtotal">Subtotal</p>
-        <p class="col-4">$566</p>
+        <p class="col-4" id="subTotal">$0</p>
     </div>
     <hr/>
     <div class="row">
         <p class="col-8 subtotal">Sales Tax</p>
-        <p class="col-4">$566</p>
+        <p class="col-4" id="salesTax">$0</p>
     </div>
     <hr/>
     <div class="row">
         <p class="col-8 subtotal">Grand Total</p>
-        <p class="col-4 grand-total">$566</p>
+        <p class="col-4 grand-total" id="grandTotal">$0</p>
     </div>
     <hr/>
     <div class="checkout-btn">

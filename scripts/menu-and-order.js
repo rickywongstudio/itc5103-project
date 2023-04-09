@@ -9,7 +9,7 @@ const menuContainer = document.getElementById('menu-container');
 let menuItems;
 let selectedCategory = "";
 let selectedDietaryNeeds = [];
-let orders=[];
+let orders = [];
 const pizzaSizePrices = {
     "2": 1,    // Small - 100% of base price
     "3": 1.25, // Medium - 125% of base price
@@ -177,7 +177,6 @@ function createMenuItem(item) {
     // Add event listener to the cancel button
     cancelButton.addEventListener('click', () => {
         contentSwitch.classList.remove('shift-left');
-        console.log("HI")
         setTimeout(() => {
             contentSwitchTab2.classList.add('hidden');
         }, 300);
@@ -195,11 +194,11 @@ function createMenuItem(item) {
         e.preventDefault();
         let price = document.getElementById("price-display").innerHTML;
         const quantity = !quantitySelect.value ? 1 : quantitySelect.value;
-        let selectSize = document.getElementById("select-size");
-        selectSize = selectSize.textContent
+        let sizeSel = formToCart.querySelector(".select-size");
+
         item.quantity = quantity;
         item.sellingPrice = price;
-        item.selectedSize = quantity;
+        item.selectedSize = sizeSel.value;
         onFormSubmit(e, item);
     });
     return menuItem;
@@ -288,15 +287,50 @@ document.addEventListener('DOMContentLoaded', init);
 
 
 const onFormSubmit = (e, item) => {
-    console.log(JSON.stringify(item));
-    let obj = new OrderItem(item.name, item.img, item.quantity,item.category, item.price, item.selectedSize)
+    let isItemAlreadyExistInCart = 0;
+    let obj;
+    if (orders && orders.length > 0) {
+        orders.forEach((order, i) => {
+            let newItem = orders[i];
+            //Added logic to increase the quantity for Pizza
+            if (order.name === item.name && order.selectedSize === item.selectedSize) {
+                isItemAlreadyExistInCart = 1;
+                newItem.quantity += parseInt(item.quantity);
+                orders[i] = newItem;
+                //Added logic to increase the quantity for Other Item, which doesn't have size
+            } else if (order.name === item.name && !order.selectedSize) {
+                isItemAlreadyExistInCart = 1;
+                newItem.quantity += parseInt(item.quantity);
+                orders[i] = newItem;
+            }
+        })
+    }
+    if (!isItemAlreadyExistInCart) {
+        obj = getItemObject(item.name, item.imgUrl, parseInt(item.quantity), item.category, item.price, item.selectedSize);
+    }
     orders.push(obj);
-    localStorage.setItem("orders",orders);
+    localStorage.setItem("orders", JSON.stringify(orders));
     e.preventDefault();
-    console.log("Hey, there" + JSON.stringify(obj))
-    // console.log(price)
 }
 
+function getItemObject(name, img, quantity, category, price, selectedSize) {
+
+    const Item = {
+        name: "",
+        img: "",
+        quantity: 0,
+        category: "",
+        price: 0.0,
+        size: 0
+    }
+    Item.name = name;
+    Item.img = img;
+    Item.quantity = quantity;
+    Item.category = category;
+    Item.price = price;
+    Item.size = selectedSize;
+    return Item;
+}
 
 class OrderItem {
     name
@@ -315,7 +349,7 @@ class OrderItem {
         this.name = name;
         this.image = image;
         this.quantity = quantity;
-        this.category=category;
+        this.category = category;
         this.price = price;
         this.size = size;
     }
