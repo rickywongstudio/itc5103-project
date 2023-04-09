@@ -97,7 +97,12 @@ function removeOrder(item) {
     })
 
     localStorage.setItem("orders", JSON.stringify(orders));
-    loadingItemsToCart();
+    if (orders.length > 0) {
+        loadingItemsToCart();
+    } else {
+        location.reload();
+    }
+
 }
 
 $(document).ready(function () {
@@ -105,8 +110,7 @@ $(document).ready(function () {
     if (!isUserLoggined || isUserLoggined === undefined) {
         alert("Please sign-in to our website, to view your orders");
         return;
-    }
-    else{
+    } else {
         loadingItemsToCart();
     }
 });
@@ -142,7 +146,7 @@ function increaseQuantity(item) {
 
 function getPizzaSize(size) {
     const pizzaSizePrices = {
-        "0":"-",
+        "0": "-",
         "2": "Small",
         "3": "Medium",
         "4": "Large",
