@@ -63,6 +63,7 @@ function createMenuItem(item) {
     contentSwitchTab2.className = 'content-switch-tab order-form hidden';
 
     const formToCart = document.createElement('form');
+    formToCart.id = "formToCart";
     formToCart.className = 'form-to-cart';
     formToCart.innerHTML = `
         <fieldset class="price-display-container">
@@ -198,13 +199,18 @@ function createMenuItem(item) {
 
         item.quantity = quantity;
         item.sellingPrice = price;
-        if(item.category==="pizza"){
+        if (item.category === "pizza") {
             item.selectedSize = sizeSel.value
-        }else{
-            item.selectedSize= "0";
+        } else {
+            item.selectedSize = "0";
         }
+
         onFormSubmit(e, item);
-        // formToCart.reset();
+        $('#formToCart')[0].reset();
+        contentSwitch.classList.remove('shift-left');
+        setTimeout(() => {
+            contentSwitchTab2.classList.add('hidden');
+        }, 300);
     });
     return menuItem;
 }
