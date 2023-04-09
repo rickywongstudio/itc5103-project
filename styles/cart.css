@@ -34,13 +34,21 @@
 }
 
 .img-styles {
-  height: 25px;
-  width: 30px;
+  height: 100px;
+  width: 100px;
   display: block;
 }
 
+.rmImg-styles{
+  height: 35px;
+  width: 35px;
+}
+
 .item-name {
-  font-size: 30px;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Comic Sans MS";
 }
 .item-description {
   font-size: 15px;

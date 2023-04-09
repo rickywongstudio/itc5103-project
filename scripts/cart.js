@@ -24,6 +24,7 @@ function loadingItemsToCart() {
         imgDiv.appendChild(img);
         itemDiv.appendChild(itemName)
         tabledata1.appendChild(imgDiv)
+        tabledata1.appendChild(itemDiv)
         tableRow.appendChild(tabledata1);
         const tabledata2 = document.createElement("td")
         tabledata2.innerHTML = "$" + item.price;
@@ -55,7 +56,7 @@ function loadingItemsToCart() {
         const tabledata6 = document.createElement("td")
         const removeImg = document.createElement("img")
         removeImg.src = "../media/remove-bin-delete-trash-svgrepo-com.svg";
-        removeImg.className = "rounded float-start img-styles";
+        removeImg.className = "rounded float-start rmImg-styles";
         tabledata6.appendChild(removeImg);
         tableRow.appendChild(tabledata6);
         removeImg.addEventListener('click', () => {

@@ -206,7 +206,7 @@ function createMenuItem(item) {
         }
 
         onFormSubmit(e, item);
-        $('#formToCart')[0].reset();
+        // $('#formToCart')[0].reset();
         contentSwitch.classList.remove('shift-left');
         setTimeout(() => {
             contentSwitchTab2.classList.add('hidden');
