@@ -198,8 +198,13 @@ function createMenuItem(item) {
 
         item.quantity = quantity;
         item.sellingPrice = price;
-        item.selectedSize = sizeSel.value;
+        if(item.category==="pizza"){
+            item.selectedSize = sizeSel.value
+        }else{
+            item.selectedSize= "0";
+        }
         onFormSubmit(e, item);
+        // formToCart.reset();
     });
     return menuItem;
 }
@@ -292,29 +297,34 @@ const onFormSubmit = (e, item) => {
         alert("Inorder to process with your order, please sign to your website");
         return;
     }
-
     let isItemAlreadyExistInCart = 0;
     let obj;
     if (orders && orders.length > 0) {
         orders.forEach((order, i) => {
-            let newItem = orders[i];
             //Added logic to increase the quantity for Pizza
-            if (order.name === item.name && order.selectedSize === item.selectedSize) {
+            if (order.name === item.name && item.category !== "pizza") {
                 isItemAlreadyExistInCart = 1;
-                newItem.quantity += parseInt(item.quantity);
-                orders[i] = newItem;
-                //Added logic to increase the quantity for Other Item, which doesn't have size
-            } else if (order.name === item.name && !order.selectedSize) {
+                orders[i].quantity += parseInt(item.quantity);
+            } else if ((item.category === "pizza" && order.size === item.selectedSize) && order.name === item.name) {
+                console.log(item)
                 isItemAlreadyExistInCart = 1;
-                newItem.quantity += parseInt(item.quantity);
-                orders[i] = newItem;
+                orders[i].quantity += parseInt(item.quantity);
             }
+
+            // if (order.selectedSize && order.name === item.name && order.selectedSize === item.selectedSize) {
+            //     isItemAlreadyExistInCart = 1;
+            //     newItem.quantity += parseInt(item.quantity);
+            //     orders[i] = newItem;
+            //     //Added logic to increase the quantity for Other Item, which doesn't have size
+            // }
         })
     }
     if (!isItemAlreadyExistInCart) {
         obj = getItemObject(item.name, item.imgUrl, parseInt(item.quantity), item.category, item.price, item.selectedSize);
+        orders.push(obj);
     }
-    orders.push(obj);
+
+    alert("Your order is successfully added to cart");
     localStorage.setItem("orders", JSON.stringify(orders));
     e.preventDefault();
 }

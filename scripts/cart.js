@@ -54,7 +54,7 @@ function loadingItemsToCart() {
         tableRow.appendChild(tabledata5);
         const tabledata6 = document.createElement("td")
         const removeImg = document.createElement("img")
-        removeImg.src = "./remove-bin-delete-trash-svgrepo-com.svg";
+        removeImg.src = "../media/remove-bin-delete-trash-svgrepo-com.svg";
         removeImg.className = "rounded float-start img-styles";
         tabledata6.appendChild(removeImg);
         tableRow.appendChild(tabledata6);
@@ -141,6 +141,7 @@ function increaseQuantity(item) {
 
 function getPizzaSize(size) {
     const pizzaSizePrices = {
+        "0":"-",
         "2": "Small",
         "3": "Medium",
         "4": "Large",
