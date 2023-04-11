@@ -37,7 +37,8 @@
                 <a href=""><img alt="Pizza Palace" class="logo" src="media/logo.png"/></a>
             </li>
             <li class="navbar-item"><a href="ordering/menu-and-order.html">ORDER NOW</a></li>
-            <li class="navbar-item"><a href="membership/sign-in.html" onclick="">Logout <i class='fas'
+            <li class="navbar-item"><a  id="loginId" onclick="authentication('index')">
+                <i class='fas'
                                                                                            style='font-size:16px'>&#xf2f6;</i></a>
                 <br><a href="ordering/order-cart.html">CART <i class='fas' style='font-size:16px'>&#xf07a;</i></a></li>
             <li class="nav-dropdown-toggle"><i class="fa fa-bars w3-xlarge" style="color:#ffffff"></i>
@@ -47,7 +48,7 @@
             <li><a href="info/about-us.html">ABOUT US</a></li>
             <li><a href="info/find-us.html">FIND US</a></li>
             <li><a href="ordering/menu-and-order.html">ORDER NOW</a></li>
-            <li><a href="membership/sign-in.html">LOGIN <i class='fas' style='font-size:16px'>&#xf2f6;</i></a></li>
+<!--            <li><a id="login" href="membership/sign-in.html" onclick="authentication()"><i class='fas' style='font-size:16px'>&#xf2f6;</i></a></li>-->
             <li><a href="ordering/order-cart.html">CART <i class='fas' style='font-size:16px'>&#xf07a;</i></a></li>
         </ul>
     </nav>
@@ -283,5 +284,5 @@
     </div>
 </footer>
 </body>
-<!--<script src=scripts/authentication.js></script>-->
+<script src=scripts/authentication.js></script>
 </html>
