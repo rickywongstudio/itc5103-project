@@ -294,8 +294,15 @@ async function init() {
 }
 
 // Call the init function when the DOM content is loaded
-document.addEventListener('DOMContentLoaded', init);
-
+$(document).ready(function () {
+    init();
+    let orderData = JSON.parse(localStorage.getItem("orders"));
+    if (orderData && orderData.length > 0) {
+        orderData.forEach(it => {
+            orders.push(it);
+        })
+    }
+})
 
 const onFormSubmit = (e, item) => {
     let isUserLoggined = localStorage.getItem("usrName");
@@ -317,12 +324,6 @@ const onFormSubmit = (e, item) => {
                 orders[i].quantity += parseInt(item.quantity);
             }
 
-            // if (order.selectedSize && order.name === item.name && order.selectedSize === item.selectedSize) {
-            //     isItemAlreadyExistInCart = 1;
-            //     newItem.quantity += parseInt(item.quantity);
-            //     orders[i] = newItem;
-            //     //Added logic to increase the quantity for Other Item, which doesn't have size
-            // }
         })
     }
     if (!isItemAlreadyExistInCart) {
