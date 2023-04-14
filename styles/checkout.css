@@ -1,0 +1,92 @@
+* {
+    font-family: "Nexa Bold", sans-serif;
+  }
+  body {
+    display: grid;
+  }
+  
+  .secondary {
+    top: 180px;
+    position: sticky;
+    width: 20%;
+  }
+  .category {
+    background-color: #f2f2f2;
+    width: 60%;
+    color: #373737;
+    border-radius: 14px;
+    box-sizing: border-box;
+  }
+  
+  .tabs {
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 30px;
+    left: 180px;
+  }
+  
+  .tab {
+    padding: 15px 0px 15px 0px;  
+    border-bottom: 1px solid #d9d9d9;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 900;
+  }
+  .primary {
+    background-color: #fff;
+    width: 80%;
+    margin-left: 15%;
+    /*box-sizing: border-box;*/
+    /* padding: 20px 0 20px 20px; */
+    /*margin-right: 20px;*/
+  }
+  #order-form{
+    font-size: small;
+  }
+  fieldset{
+    background-color: #f2f2f2;
+    margin: 20px;
+    padding: 0 10px 10px;
+    border: 1px solid #666;
+    padding-top: 10px;
+  }
+  #field_a{
+    /* float: left; */
+    padding-left: 50px;
+  }
+  #field_b{
+    float: right;
+    background-color:#fff;
+    padding-bottom: 300px;
+  }
+  #email{
+    padding-right: 20px;
+    margin-right: 120px;
+  }
+  .card_border{
+    border-style: solid;
+    border-color:darkgray;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 15px;
+  }
+  .pp_border{
+    border-style: solid;
+    border-color:darkgray;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 15px;
+  }
+  #img_card{
+    margin-top: 5px;
+  }
+  #card1, #card2, #card3, #card4{
+    width: 35px;
+    padding-left: 5px;
+    margin-right: 4px;
+  }
+  #submit1{
+    width: 450px;
+    height: 40px;
+  }
