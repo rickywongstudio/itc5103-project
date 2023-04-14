@@ -1,10 +1,10 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pizzie Delish</title>
+    <title>Checkout</title>
     <meta
       name="description"
       content="Order the best pizzas online from Pizzie Delish. Enjoy our delicious menu of handcrafted pizzas, sides, desserts, and drinks delivered straight to your door." />
@@ -12,62 +12,93 @@
       name="keywords"
       content="Pizzie Delish, pizzas, online ordering, delivery, menu, sides, desserts, drinks, restaurant, food, food delivery" />
     <link rel="icon" href="../media/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../styles\checkout.css" />
   </head>
   <body>
-    <h1>Pizzie Delish Order Form</h1>
+    <main class="section2">
+    
+    <section class="primary">
+    <h1 style="margin-left: 20px;" >Pizzie Delish Order Form</h1>
     <form id="order-form">
-      <fieldset style="width: 60%">
-        <legend>Personal Information</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required /><br /><br />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required /><br /><br />
+      <fieldset id="field_a" style="width: 80%">
+        <h2>Billing details</h2>
+        <fieldset id="field_b" style="width: 35%; float: right;">
+          <img src="..\media\cart.jpg" style="float: right; margin-top: 10px;" height="40px" width="60px"><h2>Cart summary</h2>
+          <h3 style="display: inline;">Items</h3>
+          
+          <br /><br />
+        </fieldset>
+        <label for="name">First and last name:</label><br>
+        <input type="text" style="width: 430px; height: 20px;" id="name" name="name" required /><br /><br />
+        <label for="email">Email address:</label><br>
+        <input type="email" style="width: 412px; height: 20px;" id="email" name="email" required /><br><br>
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required /><br /><br />
+        <input id="phone" type="tel" name="phone" required style="margin-left: 70px; height: 20px;"><br /><br />
+        <label for="dd_province" style="margin-right: 54px;">Province:</label>
+        <SELECT style="margin-left: 4px; padding-right:20px; height: 20px;" NAME="dd_province" id="dd_province">
+        <OPTION VALUE="0">Select Province</OPTION>
+        <OPTION VALUE="AB">Alberta</OPTION>
+        <OPTION VALUE="BC">British Columbia</OPTION>
+        <OPTION VALUE="MB">Manitoba</OPTION>
+        <OPTION VALUE="NB">New Brunswick</OPTION>
+        <OPTION VALUE="NF">Newfoundland</OPTION>
+        <OPTION VALUE="NT">Northwest Territories</OPTION>
+        <OPTION VALUE="NS">Nova Scotia</OPTION>
+        <OPTION VALUE="ON">Ontario</OPTION>
+        <OPTION VALUE="PE">Prince Edward Island</OPTION>
+        <OPTION VALUE="PQ">Quebec</OPTION>
+        <OPTION VALUE="SK">Saskatchewan</OPTION>
+        </SELECT><br><br>
+        <label for="zip">ZIP/Postal Code: </label>
+        <input type="text" style="margin-left: 15px;" name="zip" id="zip">
+        <br><br>
+        <h2>Payment Method</h2>
+        <span class="card_border">
+          <input type="radio" id="card" name="pay" value="card">
+          <label for="card">Credit/Debit</label>
+          <img id="img_card" style="margin-left: 170px;" src="..\media\card.png" alt="boo" height="30px" width="150px">
+        </span>
+        <br><br><br>
+        <label for="noc">Name on card</label><br>
+        <input type="text" style="width: 440px; height: 20px;" name="noc" id="noc" required>
+        <br /><br />
+        <label for="card">Card Number</label><br>
+        <input type="text" maxlength="4" style="height: 20px;" name="card1" id="card1" pattern="^0[1-9]|[1-9]\d$" required>-
+        <input type="text" maxlength="4" style="height: 20px;" name="card2" id="card2" pattern="^0[1-9]|[1-9]\d$" required>-
+        <input type="text" maxlength="4" style="height: 20px;" name="card3" id="card3" pattern="^0[1-9]|[1-9]\d$" required>-
+        <input type="text" maxlength="4" style="height: 20px;" name="card4" id="card4" pattern="^0[1-9]|[1-9]\d$" required>
+        <br /><br />
+        <label for="start">Expiration date </label>
+        <label for="security" class="zip" style="margin-left: 300px;" required>CVV</label><br>
+        
+        <input type="month" id="start" name="start" min="2023-03" value="2023-03" style="height: 20px;">
+        <input type="text" name="security" maxlength="3" id="security" required style="margin-left: 245px; width: 30px; height: 20px;">
+        <br><br><br>
+        <span class="pp_border">
+          <input type="radio" id="pp" name="pay" value="pp">
+          <label for="pp" >Paypal</label>
+          <img id="img_pp" style="margin-left: 250px;" src="..\media\pp2.png" alt="boo" height="25px" width="100px">
+        </span>
+        <br><br><br>
+        <p style="margin-left: 35px;" >By clicking the button below, you agree to the <a href="">Terms and conditions</a></p>
+        <input id="submit1" style="background-color:yellowgreen; color: black; margin-bottom: 40px;" type="submit" value="Place Order" />
       </fieldset>
-      <fieldset style="width: 60%">
-        <legend>Order Information</legend>
-        <label for="pizza">Select Pizza:</label>
-        <select id="pizza" name="pizza">
-          <option value="Margherita">Margherita</option>
-          <option value="Pepperoni">Pepperoni</option>
-          <option value="Vegetarian">Vegetarian</option>
-          <option value="BBQ Chicken">BBQ Chicken</option></select
-        ><br /><br />
-        <label for="size">Select Size:</label>
-        <input type="radio" id="small" name="size" value="Small" />
-        <label for="small">Small</label>
-        <input type="radio" id="medium" name="size" value="Medium" />
-        <label for="medium">Medium</label>
-        <input type="radio" id="large" name="size" value="Large" />
-        <label for="large">Large</label><br /><br />
-        <label for="toppings">Select Toppings:</label>
-        <input type="checkbox" id="mushroom" name="toppings" value="Mushroom" />
-        <label for="mushroom">Mushroom</label>
-        <input type="checkbox" id="olives" name="toppings" value="Olives" />
-        <label for="olives">Olives</label>
-        <input type="checkbox" id="onions" name="toppings" value="Onions" />
-        <label for="onions">Onions</label><br /><br />
-        <label for="delivery">Delivery Method:</label>
-        <input type="radio" id="pickup" name="delivery" value="Pickup" />
-        <label for="pickup">Pickup</label>
-        <input type="radio" id="delivery" name="delivery" value="Delivery" />
-        <label for="delivery">Delivery</label><br /><br />
-        <label for="delivery-date">Delivery Date:</label>
-        <input type="date" id="delivery-date" name="delivery-date" />
-
-        <label for="delivery-time">Delivery Time:</label>
-        <input
-          type="time"
-          id="delivery-time"
-          name="delivery-time" /><br /><br />
-        <label for="requests">Additional Requests:</label><br />
-        <textarea id="requests" name="requests" rows="4" cols="50"></textarea
-        ><br /><br />
-      </fieldset>
-      <br />
-      <input type="submit" value="Submit Order" />
     </form>
+    </section>
+    </main>
+    <script>
+      document.getElementById('card1').onkeydown = function() {
+  if (this.value.length == this.maxLength)
+   document.getElementById('card2').focus();
+}
+document.getElementById('card2').onkeydown = function() {
+  if (this.value.length == this.maxLength)
+   document.getElementById('card3').focus();
+}
+document.getElementById('card3').onkeydown = function() {
+  if (this.value.length == this.maxLength)
+   document.getElementById('card4').focus();
+}
+    </script>
   </body>
-</html> -->
+  </html>
