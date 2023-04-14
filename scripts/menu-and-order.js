@@ -9,7 +9,7 @@ const menuContainer = document.getElementById('menu-container');
 let menuItems;
 let selectedCategory = "";
 let selectedDietaryNeeds = [];
-
+let orders = [];
 const pizzaSizePrices = {
     "2": 1,    // Small - 100% of base price
     "3": 1.25, // Medium - 125% of base price
@@ -63,10 +63,11 @@ function createMenuItem(item) {
     contentSwitchTab2.className = 'content-switch-tab order-form hidden';
 
     const formToCart = document.createElement('form');
+    formToCart.id = "formToCart";
     formToCart.className = 'form-to-cart';
     formToCart.innerHTML = `
         <fieldset class="price-display-container">
-            <span class="price-display">$<span class="price-display-target">${item.price + ".00"}</span></span>
+            <span class="price-display">$<span id="price-display" class="price-display-target">${item.price + ".00"}</span></span>
         </fieldset>
     `;
 
@@ -86,18 +87,19 @@ function createMenuItem(item) {
         const sizeSelect = document.createElement("select");
         sizeSelect.setAttribute("autocomplete", "off");
         sizeSelect.className = "select-size";
+        sizeSelect.id = "select-size";
         sizeSelect.name = "size";
 
         const sizeOptions = [
-            { value: "", text: "Select size", disabled: true, selected: true },
-            { value: "2", text: "Small", disabled: false, selected: false },
-            { value: "3", text: "Medium", disabled: false, selected: false },
-            { value: "4", text: "Large", disabled: false, selected: false },
-            { value: "20", text: '18" Jumbo', disabled: false, selected: false },
-            { value: "21", text: '21" X 15" Party', disabled: false, selected: false },
+            {value: "", text: "Select size", disabled: true, selected: true},
+            {value: "2", text: "Small", disabled: false, selected: false},
+            {value: "3", text: "Medium", disabled: false, selected: false},
+            {value: "4", text: "Large", disabled: false, selected: false},
+            {value: "20", text: '18" Jumbo', disabled: false, selected: false},
+            {value: "21", text: '21" X 15" Party', disabled: false, selected: false},
         ];
 
-        sizeOptions.forEach(({ value, text, disabled, selected }) => {
+        sizeOptions.forEach(({value, text, disabled, selected}) => {
             const option = document.createElement("option");
             option.value = value;
             option.textContent = text;
@@ -126,8 +128,8 @@ function createMenuItem(item) {
     quantityContainer.appendChild(quantitySelect);
 
     const quantityOptions = [
-        { value: "", text: "Select quantity", disabled: true, selected: true },
-        ...Array.from({ length: 10 }, (_, i) => ({
+        {value: "", text: "Select quantity", disabled: true, selected: true},
+        ...Array.from({length: 10}, (_, i) => ({
             value: i + 1,
             text: (i + 1).toString(),
             disabled: false,
@@ -135,7 +137,7 @@ function createMenuItem(item) {
         })),
     ];
 
-    quantityOptions.forEach(({ value, text, disabled, selected }) => {
+    quantityOptions.forEach(({value, text, disabled, selected}) => {
         const option = document.createElement("option");
         option.value = value;
         option.textContent = text;
@@ -150,7 +152,7 @@ function createMenuItem(item) {
 
     const addToOrderInput = document.createElement("input");
     addToOrderInput.className = "to-cart-add";
-    addToOrderInput.type = "submit";
+    addToOrderInput.type = "button";
     addToOrderInput.value = "ADD TO CART";
 
     const cancelButton = document.createElement('a');
@@ -177,11 +179,11 @@ function createMenuItem(item) {
     // Add event listener to the cancel button
     cancelButton.addEventListener('click', () => {
         contentSwitch.classList.remove('shift-left');
-
         setTimeout(() => {
             contentSwitchTab2.classList.add('hidden');
         }, 300);
     });
+
 
     // Event listener to the price calculation
     quantitySelect.addEventListener("change", () => updatePrice(formToCart, item, quantitySelect));
@@ -190,6 +192,27 @@ function createMenuItem(item) {
         sizeSelect.addEventListener("change", () => updatePrice(formToCart, item, quantitySelect));
     }
 
+    addToOrderInput.addEventListener('click', (e) => {
+        e.preventDefault();
+        let price = document.getElementById("price-display").innerHTML;
+        const quantity = !quantitySelect.value ? 1 : quantitySelect.value;
+        let sizeSel = formToCart.querySelector(".select-size");
+
+        item.quantity = quantity;
+        item.sellingPrice = price;
+        if (item.category === "pizza") {
+            item.selectedSize = sizeSel.value
+        } else {
+            item.selectedSize = "0";
+        }
+
+        onFormSubmit(e, item);
+        // $('#formToCart')[0].reset();
+        contentSwitch.classList.remove('shift-left');
+        setTimeout(() => {
+            contentSwitchTab2.classList.add('hidden');
+        }, 300);
+    });
     return menuItem;
 }
 
@@ -272,6 +295,86 @@ async function init() {
 }
 
 // Call the init function when the DOM content is loaded
-document.addEventListener('DOMContentLoaded', init);
+$(document).ready(function () {
+    init();
+    let orderData = JSON.parse(localStorage.getItem("orders"));
+    if (orderData && orderData.length > 0) {
+        orderData.forEach(it => {
+            orders.push(it);
+        })
+    }
+})
+
+const onFormSubmit = (e, item) => {
+    let isUserLoggined = localStorage.getItem("usrName");
+    if (!isUserLoggined || isUserLoggined === undefined) {
+        alert("Inorder to process with your order, please sign to your website");
+        return;
+    }
+    let isItemAlreadyExistInCart = 0;
+    let obj;
+    if (orders && orders.length > 0) {
+        orders.forEach((order, i) => {
+            //Added logic to increase the quantity for Pizza
+            if (order.name === item.name && item.category !== "pizza") {
+                isItemAlreadyExistInCart = 1;
+                orders[i].quantity += parseInt(item.quantity);
+            } else if ((item.category === "pizza" && order.size === item.selectedSize) && order.name === item.name) {
+                console.log(item)
+                isItemAlreadyExistInCart = 1;
+                orders[i].quantity += parseInt(item.quantity);
+            }
+
+        })
+    }
+    if (!isItemAlreadyExistInCart) {
+        obj = getItemObject(item.name, item.imgUrl, parseInt(item.quantity), item.category, item.price, item.selectedSize);
+        orders.push(obj);
+    }
+
+    alert("Your order is successfully added to cart");
+    localStorage.setItem("orders", JSON.stringify(orders));
+    e.preventDefault();
+}
+
+function getItemObject(name, img, quantity, category, price, selectedSize) {
+
+    const Item = {
+        name: "",
+        img: "",
+        quantity: 0,
+        category: "",
+        price: 0.0,
+        size: 0
+    }
+    Item.name = name;
+    Item.img = img;
+    Item.quantity = quantity;
+    Item.category = category;
+    Item.price = price;
+    Item.size = selectedSize;
+    return Item;
+}
+
+class OrderItem {
+    name
+
+    image
+    quantity
+
+    category
+
+    price
+
+    size
 
 
+    constructor(name, image, quantity, category, price, size) {
+        this.name = name;
+        this.image = image;
+        this.quantity = quantity;
+        this.category = category;
+        this.price = price;
+        this.size = size;
+    }
+}
