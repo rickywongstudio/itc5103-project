@@ -1,66 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="../styles/sign-in.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-            crossorigin="anonymous"></script>
-    <script defer src="../scripts/sign-up.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" href="../styles/login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
+
 <body>
-<div class="container">
-    <form id="sign-up">
-        <h2 class="topic">Sign Up</h2>
-        <div class="input-box ">
-            <label class="form-label"  for="firstName">First Name</label>
-            <input type="text" name="firstName" id="firstName" class="form-control" required/>
+<div class="container mr-0 regcontainer">
+    <div class="logo inline logoInline">
+        <img src="../media/pizza.svg" alt="">
+    </div>
+    <form class="form_form" id="form" method="post">
+        <h2>Sign Up</h2>
+        <div class="input-control">
+            <input id="firstName" name="firstName" type="text" placeholder="First Name"
+            >
+            <div class="error"></div>
         </div>
-        <div class="input-box">
-            <label class="form-label" for="lastName">Last Name</label>
-            <input type="text" name="lastName" id="lastName" class="form-control" required/>
+        <div class="input-control">
+            <input id="lastName" name="lastName" type="text" placeholder="Last Name"
+            >
+            <div class="error"></div>
         </div>
-        <div class="input-box">
-            <label class="form-label" for="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control" required/>
+        <div class="input-control">
+            <input id="email" name="email" type="text" placeholder="Email Adress"
+            >
+            <div class="error"></div>
         </div>
-        <div class="input-box">
-            <label class="form-label" for="date">DOB</label>
-            <input type="date" name="email" id="date" class="form-control" required/>
-        </div>
-
-        <div class="input-box">
-            <label class="form-label" for="email">City</label>
-            <select class="form-select" id="city" aria-label="Select your city" required>
-                <option value="">Select your city</option>
-                <option value="Toronto">Toronto</option>
-                <option value="Markham">Markham</option>
-                <option value="Hamilton">Hamilton</option>
-                <option value="Mississauga">Mississauga</option>
-                <option value="Waterloo">Waterloo</option>
-            </select>
-
+        <div class="input-control">
+            <input type="date" name="date" id="date" placeholder="Date of Birth"
+            >
+            <div class="error"></div>
         </div>
 
-        <div class="input-box">
-            <label class="form-label" for="Password">Password</label>
-            <input type="password" name="password" id="password" class="form-control" required/>
+        <select class="input-control-select" id="city" name="city" type="text" placeholder="City">
+            <option value="">Select your city</option>
+            <option value="Toronto">Toronto</option>
+            <option value="Markham">Markham</option>
+            <option value="Hamilton">Hamilton</option>
+            <option value="Mississauga">Mississauga</option>
+            <option value="Waterloo">Waterloo</option>
+        </select>
+        <div class="input-control">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <div class="error"></div>
         </div>
-        <div class="input-box">
-            <label class="form-label" for="confirm-password">Confirm Password</label>
-            <input type="password" name="confirmPassword" id="confirm-password" class="form-control" required/>
+        <div class="input-control">
+            <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
+            <div class="error"></div>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-block submit-style" >Sign Up</button>
+        <div class="inline d-flex justify-content-between">
+            <div class="agree row">
+                <label for=""><input required type="checkbox" name="" id="">I accept the Terms of Use</label>
+            </div>
 
+        </div>
+
+        <button type="submit ">Get Started</button>
+
+        <div class="sign-up">
+            <h6 class="mt-4">Already have an Account? <a href="./sign-in.html" style="color:#2B684C">Login</a></h6>
+        </div>
+
+        <div class="copyright">
+            <h6>
+
+                © 2023. All RIGHTS RESERVED
+                <br>
+                <a href="">Terms of use</a> | <a href="">Privacy Policy</a>
+            </h6>
+        </div>
     </form>
 </div>
-
 </body>
+<script src="../scripts/sign-up.js"></script>
 </html>
