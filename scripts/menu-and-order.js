@@ -312,6 +312,9 @@ const onFormSubmit = (e, item) => {
     }
     let isItemAlreadyExistInCart = 0;
     let obj;
+    if (item.category === 'pizza') {
+        item.price = item.price * pizzaSizePrices[item.selectedSize]
+    }
     if (orders && orders.length > 0) {
         orders.forEach((order, i) => {
             //Added logic to increase the quantity for Pizza
