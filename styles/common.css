@@ -31,6 +31,7 @@ header nav li a {
     text-align: center;
     font-weight: 900;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .navbar-item {
