@@ -1,10 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Profile</title>
+    <!-- metadata start-->
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta
+            content="Order the best pizzas online from Pizza Palace. Enjoy our delicious menu of handcrafted pizzas, sides, desserts, and drinks delivered straight to your door."
+            name="description"/>
+    <meta
+            content="Pizza Palace, pizzas, online ordering, delivery, menu, sides, desserts, drinks, restaurant, food, food delivery"
+            name="keywords"/>
+    <!-- metadata ends-->
+
+    <link href="../media/favicon.ico" rel="icon"/>
+    <link href="../styles/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="../styles/common.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+    <link href="../styles/profile.css" rel="stylesheet" type="text/css">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/5664689d5b.js"></script>
+    <script
+            crossorigin="anonymous"
+            integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+            src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script defer src="../scripts/common.js"></script>
+<!--    <script src="../scripts/authentication.js"></script>-->
 </head>
 <body>
+<header id="header"></header>
+<main>
+<div class="main-container">
+    <img class="member-icon" src="../media/default-profile.png">
+    <div class="member-name" id="member-name"><h4>New User</h4></div>
+    <div class="member-email" id="member-email"><p>abc@abc.com</p></div>
+</div>
+
+
+<section class="section invite-section">
+    <i class="fa-solid fa-plus" id="invite-section-header"> Invite/Add members</i>
+    <!-- <span>Invite/Add members</span> -->
+    <ul>
+        <li><a href=""> Invite and Add New Members </a></li>
+        <li><a href=""> Manage Your Added Members </a></li>
+    </ul>
+</section>
+
+
+<section class="section billing-section">
+    <i class="fa-regular fa-credit-card" id="billing-section-header"> Billing Settings</i>
+    <!-- <span>Billing Settings</span> -->
+
+    <ul>
+        <li><a href=""> Update/Add New credit card information </a></li>
+        <li><a href=""> View order History </a></li>
+    </ul>
+</section>
+
+
+<section class="section email-section">
+
+    <form>
+        <i class="fa-solid fa-envelope" id="email-section-header"> Update Your Email Address</i>
+        <!-- <span>Update Your Email Address</span> -->
+        <p>Update your Email Address by entering your Old E-mail and New E-mail twice.
+            This will change the E-mail that you require to log in. </p>
+        <br>
+        <label class="email-box1">Old E-mail Address: </label><br>
+        <input class="email-inputbox1" type="email"><br>
+        <br>
+        <label class="email-box2">New E-mail Address: </label><br>
+        <input class="email-inputbox2" type="email"><br>
+        <br>
+        <label class="email-box3">Re-enter New E-mail Address: </label><br>
+        <input class="email-inputbox3"  type="email"><br>
+        <br>
+        <button type="submit">Change E-mail</button>
+    </form>
+</section>
+
+<section class="section update-section">
+    <form>
+        <i class="fa-solid fa-pen" id="update-section-header"> Update Password</i>
+        <p>You can update your password below: </p>
+
+        <label class="old-password" for="old-password">Old password: </label><br>
+        <input class="old-password" type="password" required id="old-password"><br><br>
+        <label class="new-password" for="new-password">New password: </label><br>
+        <input class="new-password" type="password" required id="new-password"><br><br>
+        <button type="submit">Update</button>
+    </form>
+</section>
+</main>
+<footer id="footer"></footer>
 
 </body>
+<script>
+    function displayUser() {
+        const storedUser = localStorage.getItem("user");
+        if (storedUser) {
+            const user = JSON.parse(storedUser);
+            const fullName = user.firstName + " " + user.lastName;
+            const email = user.email;
+            document.getElementById("member-name").querySelector("h4").innerText = fullName;
+            document.getElementById("member-email").querySelector("p").innerText = email;
+        }
+    }
+
+    displayUser();
+</script>
 </html>

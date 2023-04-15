@@ -1,0 +1,96 @@
+main {
+    margin: 5% 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.main-container {
+    font-size: large;
+    width: 100%;
+    /*margin: 0 auto;*/
+    /*display: flex;*/
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #b61500;
+    padding: 20px 0;
+    color: #ffffff;
+    margin-bottom:5%;
+}
+
+.member-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member-email {
+    font-size: small;
+}
+
+section {
+    flex-basis: calc(50% - 20px);
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display:block;
+}
+
+.billing-section {
+    background-color: whitesmoke;
+    padding-bottom: 5px;
+}
+
+
+.invite-section {
+    background-color: whitesmoke;
+    padding-left: 20px;
+}
+
+
+.email-section {
+    background-color: whitesmoke;
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+
+
+.email-inputbox1 {
+    /*margin-left: 65px;*/
+}
+
+.email-inputbox2 {
+    /*margin-left: 59px;*/
+}
+
+
+.update-section {
+    background-color: whitesmoke;
+    padding-left: 20px;
+    padding-bottom: 90px;
+}
+
+#billing-section-header {
+    padding-left: 20px;
+    color: #b61500;
+
+}
+
+#invite-section-header {
+    padding-left: 20px;
+    color: #b61500;
+}
+
+#update-section-header {
+    color: #b61500;
+}
+
+#email-section-header {
+    color: #b61500;
+}
+
+
