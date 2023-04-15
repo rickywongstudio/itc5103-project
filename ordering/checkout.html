@@ -1,104 +1,116 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+
     <title>Checkout</title>
+    <!-- metadata start-->
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta
-      name="description"
-      content="Order the best pizzas online from Pizzie Delish. Enjoy our delicious menu of handcrafted pizzas, sides, desserts, and drinks delivered straight to your door." />
+            content="Order the best pizzas online from Pizza Palace. Enjoy our delicious menu of handcrafted pizzas, sides, desserts, and drinks delivered straight to your door."
+            name="description"/>
     <meta
-      name="keywords"
-      content="Pizzie Delish, pizzas, online ordering, delivery, menu, sides, desserts, drinks, restaurant, food, food delivery" />
-    <link rel="icon" href="../media/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="../styles\checkout.css" />
-  </head>
-  <body>
-    <main class="section2">
-    
-    <section class="primary">
-    <h1 style="margin-left: 20px;" >Pizzie Delish Order Form</h1>
-    <form id="order-form">
-      <fieldset id="field_a" style="width: 80%">
-        <h2>Billing details</h2>
-        <fieldset id="field_b" style="width: 35%; float: right;">
-          <img src="..\media\cart.jpg" style="float: right; margin-top: 10px;" height="40px" width="60px"><h2>Cart summary</h2>
-          <h3 style="display: inline;">Items</h3>
-          
-          <br /><br />
-        </fieldset>
-        <label for="name">First and last name:</label><br>
-        <input type="text" style="width: 430px; height: 20px;" id="name" name="name" required /><br /><br />
-        <label for="email">Email address:</label><br>
-        <input type="email" style="width: 412px; height: 20px;" id="email" name="email" required /><br><br>
-        <label for="phone">Phone:</label>
-        <input id="phone" type="tel" name="phone" required style="margin-left: 70px; height: 20px;"><br /><br />
-        <label for="dd_province" style="margin-right: 54px;">Province:</label>
-        <SELECT style="margin-left: 4px; padding-right:20px; height: 20px;" NAME="dd_province" id="dd_province">
-        <OPTION VALUE="0">Select Province</OPTION>
-        <OPTION VALUE="AB">Alberta</OPTION>
-        <OPTION VALUE="BC">British Columbia</OPTION>
-        <OPTION VALUE="MB">Manitoba</OPTION>
-        <OPTION VALUE="NB">New Brunswick</OPTION>
-        <OPTION VALUE="NF">Newfoundland</OPTION>
-        <OPTION VALUE="NT">Northwest Territories</OPTION>
-        <OPTION VALUE="NS">Nova Scotia</OPTION>
-        <OPTION VALUE="ON">Ontario</OPTION>
-        <OPTION VALUE="PE">Prince Edward Island</OPTION>
-        <OPTION VALUE="PQ">Quebec</OPTION>
-        <OPTION VALUE="SK">Saskatchewan</OPTION>
-        </SELECT><br><br>
-        <label for="zip">ZIP/Postal Code: </label>
-        <input type="text" style="margin-left: 15px;" name="zip" id="zip">
-        <br><br>
-        <h2>Payment Method</h2>
-        <span class="card_border">
-          <input type="radio" id="card" name="pay" value="card">
-          <label for="card">Credit/Debit</label>
-          <img id="img_card" style="margin-left: 170px;" src="..\media\card.png" alt="boo" height="30px" width="150px">
-        </span>
-        <br><br><br>
-        <label for="noc">Name on card</label><br>
-        <input type="text" style="width: 440px; height: 20px;" name="noc" id="noc" required>
-        <br /><br />
-        <label for="card">Card Number</label><br>
-        <input type="text" maxlength="4" style="height: 20px;" name="card1" id="card1" pattern="^0[1-9]|[1-9]\d$" required>-
-        <input type="text" maxlength="4" style="height: 20px;" name="card2" id="card2" pattern="^0[1-9]|[1-9]\d$" required>-
-        <input type="text" maxlength="4" style="height: 20px;" name="card3" id="card3" pattern="^0[1-9]|[1-9]\d$" required>-
-        <input type="text" maxlength="4" style="height: 20px;" name="card4" id="card4" pattern="^0[1-9]|[1-9]\d$" required>
-        <br /><br />
-        <label for="start">Expiration date </label>
-        <label for="security" class="zip" style="margin-left: 300px;" required>CVV</label><br>
-        
-        <input type="month" id="start" name="start" min="2023-03" value="2023-03" style="height: 20px;">
-        <input type="text" name="security" maxlength="3" id="security" required style="margin-left: 245px; width: 30px; height: 20px;">
-        <br><br><br>
-        <span class="pp_border">
-          <input type="radio" id="pp" name="pay" value="pp">
-          <label for="pp" >Paypal</label>
-          <img id="img_pp" style="margin-left: 250px;" src="..\media\pp2.png" alt="boo" height="25px" width="100px">
-        </span>
-        <br><br><br>
-        <p style="margin-left: 35px;" >By clicking the button below, you agree to the <a href="">Terms and conditions</a></p>
-        <input id="submit1" style="background-color:yellowgreen; color: black; margin-bottom: 40px;" type="submit" value="Place Order" />
-      </fieldset>
-    </form>
+            content="Pizza Palace, pizzas, online ordering, delivery, menu, sides, desserts, drinks, restaurant, food, food delivery"
+            name="keywords"/>
+    <!-- metadata ends-->
+
+    <link href="../media/favicon.ico" rel="icon"/>
+    <link href="../styles/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="../styles/common.css" rel="stylesheet">
+    <script crossorigin="anonymous" defer
+            integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+            src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+
+    <script
+            crossorigin="anonymous"
+            integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+            src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script defer src="../scripts/common.js"></script>
+
+    <link href="../media/favicon.ico" rel="icon"/>
+    <link href="../styles/checkout.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header id="header"></header>
+<main>
+    <section class="billing">
+        <form id="order-form">
+            <h2>Billing details</h2>
+            <div class="input-row">
+            <label for="first_name">First name</label>
+            <input id="first_name" name="first_name" required type="text" />
+            </div>
+            <div class="input-row">
+            <label for="last_name">Last name</label>
+            <input id="last_name" name="last_name" required type="text" />
+            </div>
+            <div class="input-row">
+            <label for="email">Email address</label>
+            <input id="email" name="email" required type="email"/>
+            </div>
+            <div class="input-row">
+            <label for="phone">Mobile Number</label>
+            <input id="phone" name="phone" required type="tel" />
+            </div>
+            <label for="address_line1">Address Line 1</label>
+            <input id="address_line1" name="address_line1" required type="text" />
+            <label for="address_line2">Address Line 2 (optional)</label>
+            <input id="address_line2" name="address_line2" type="text" />
+            <div class="input-row">
+            <label for="city">City</label>
+            <input id="city" name="city" required type="text" />
+            </div>
+            <div class="input-row">
+            <label for="zip">Postal Code</label>
+            <input id="zip" name="zip" type="text">
+            </div>
+
+            <h2>Payment Method</h2>
+            <span class="card_border">
+      <input id="card" name="pay" type="radio" value="card">
+      <label for="card">Credit/Debit</label>
+      <img alt="boo" height="30px" id="img_card" src="..\media\card.png" width="150px">
+    </span>
+
+            <label for="noc">Name on card</label>
+            <input id="noc" name="noc" required type="text">
+            <label for="card">Card Number</label>
+            <div class="card-number-row">
+            <input id="card1" maxlength="4" name="card1" pattern="^0[1-9]|[1-9]\d$" required type="text">-
+            <input id="card2" maxlength="4" name="card2" pattern="^0[1-9]|[1-9]\d$" required type="text">-
+            <input id="card3" maxlength="4" name="card3" pattern="^0[1-9]|[1-9]\d$" required type="text">-
+            <input id="card4" maxlength="4" name="card4" pattern="^0[1-9]|[1-9]\d$" required type="text">
+            </div>
+            <div class="input-row">
+            <label for="start">Expiration date </label>
+                <input id="start" min="2023-03" name="start" type="month" value="2023-03">
+            </div>
+            <div class="input-row">
+            <label class="zip" for="security">CVV</label>
+            <input id="security" maxlength="3" name="security" required type="text">
+            </div>
+            <span class="pp_border">
+      <input id="pp" name="pay" type="radio" value="pp">
+      <label for="pp">Paypal</label>
+      <img alt="boo" height="25px" id="img_pp" src="..\media\pp2.png" width="100px"></span>
+            <p>By clicking the button below, you agree to the <a href="">Terms and
+                conditions</a></p>
+            <input id="submit1" style="background-color:#b61500; color: white;" type="submit" value="Place Order"/>
+        </form>
+
     </section>
-    </main>
-    <script>
-      document.getElementById('card1').onkeydown = function() {
-  if (this.value.length == this.maxLength)
-   document.getElementById('card2').focus();
-}
-document.getElementById('card2').onkeydown = function() {
-  if (this.value.length == this.maxLength)
-   document.getElementById('card3').focus();
-}
-document.getElementById('card3').onkeydown = function() {
-  if (this.value.length == this.maxLength)
-   document.getElementById('card4').focus();
-}
-    </script>
-  </body>
-  </html>
+    <section class="cart">
+        <div class="cart-summary">
+            <div class="summary-and-total" style="margin-bottom: 40px;">
+                <img src="..\media\cart.jpg" height="20px"> <h3 style="display:inline;">Cart Items summary</h3>
+            </div>
+        </div>
+        <div class="orders"></div>
+    </section>
+</main>
+<footer id="footer"></footer>
+</body>
+<script src="../scripts/checkout.js"></script>
+</html>
