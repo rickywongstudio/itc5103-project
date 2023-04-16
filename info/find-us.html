@@ -16,30 +16,40 @@
     <link href="../media/favicon.ico" rel="icon"/>
     <link href="../styles/normalize.css" rel="stylesheet" type="text/css"/>
     <link href="../styles/common.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
 
     <!-- common script for each page -->
     <script
             crossorigin="anonymous"
             integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
             src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <script src="../scripts/common.js" defer></script>
+    <script defer src="../scripts/common.js"></script>
 
     <!-- this file -->
     <link href="../styles/find-us.css" rel="stylesheet" type="text/css"/>
-    <script src="../scripts/find-us.js" defer></script>
+    <script defer src="../scripts/find-us.js"></script>
 
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet"/>
 
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
     <!-- Leaflet Locate Control CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.css" />
+    <link href="https://unpkg.com/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.css" rel="stylesheet"/>
 
     <!-- Leaflet Locate Control JavaScript -->
     <script src="https://unpkg.com/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.js"></script>
+
+    <!-- Bootstrap-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"-->
+<!--          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -50,70 +60,70 @@
     <div class="container">
         <div id="sidebar">
             <ul class="branches" id="branches-list">
-                <!--                <li class="branch active">-->
-                <!--                    <p class="branch-area">Downtown Toronto</p>-->
-                <!--                    <p class="branch-distance">0.73 km</p>-->
-                <!--                    <p class="branch-address">123 Main Street, Toronto, ON</p>-->
-                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-11:00pm</p>-->
-                <!--                </li>-->
-                <!--                <li class="branch">-->
-                <!--                    <p class="branch-area">North York</p>-->
-                <!--                    <p class="branch-distance">5.00 km</p>-->
-                <!--                    <p class="branch-address">456 Yonge Street, North York, ON</p>-->
-                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-10:00pm</p>-->
-                <!--                </li>-->
-                <!--                <li class="branch">-->
-                <!--                    <p class="branch-area">Scarborough</p>-->
-                <!--                    <p class="branch-distance">10.00 km</p>-->
-                <!--                    <p class="branch-address">789 Markham Road, Scarborough, ON</p>-->
-                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-9:00pm</p>-->
-                <!--                </li>-->
-                <!--                <li class="branch">-->
-                <!--                    <p class="branch-area">East York</p>-->
-                <!--                    <p class="branch-distance">8.00 km</p>-->
-                <!--                    <p class="branch-address">1010 Danforth Avenue, East York, ON</p>-->
-                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-10:00pm</p>-->
-                <!--                </li>-->
-                <!--                <li class="branch">-->
-                <!--                    <p class="branch-area">Etobicoke</p>-->
-                <!--                    <p class="branch-distance">15.00 km</p>-->
-                <!--                    <p class="branch-address">1111 Islington Avenue, Etobicoke, ON</p>-->
-                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-9:00pm</p>-->
-                <!--                </li>-->
-                <!--                <li class="branch">-->
-                <!--                    <p class="branch-area">York</p>-->
-                <!--                    <p class="branch-distance">12.00 km</p>-->
-                <!--                    <p class="branch-address">2222 Keele Street, York, ON</p>-->
-                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-10:00pm</p>-->
-                <!--                </li>-->
-                <!--                <li class="branch">-->
-                <!--                    <p class="branch-area">The Beaches</p>-->
-                <!--                    <p class="branch-distance">7.00 km</p>-->
-                <!--                    <p class="branch-address">3333 Queen Street East, The Beaches, ON</p>-->
-                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-11:00pm</p>-->
-                <!--                </li>-->
-                <!--                <li class="branch">-->
-                <!--                    <p class="branch-area">High Park</p>-->
-                <!--                    <p class="branch-distance">10.00 km</p>-->
-                <!--                    <p class="branch-address">4444 Bloor Street West, High Park, ON</p>-->
-                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-9:00pm</p>-->
-                <!--                </li>-->
-                <!--                <li class="branch">-->
-                <!--                    <p class="branch-area">High Park</p>-->
-                <!--                    <p class="branch-distance">4.3 km</p>-->
-                <!--                    <p class="branch-address">4444 Bloor Street West, Toronto, ON</p>-->
-                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-9:00pm</p>-->
-                <!--                </li>-->
-                <!--                <li class="branch">-->
-                <!--                    <p class="branch-area">Leslieville</p>-->
-                <!--                    <p class="branch-distance">7.1 km</p>-->
-                <!--                    <p class="branch-address">5555 Gerrard Street East, Toronto, ON</p>-->
-                <!--                    <p class="branch-hours">Monday-Sunday: 11:00am-10:00pm</p>-->
-                <!--                </li>-->
             </ul>
         </div>
         <div id="map"></div>
     </div>
+
+    <div class="cmp-container">
+        <div class="cmp-box">
+            <div class="cmp-content">
+                <div class="cmp-content-header">
+                    <h2 class="cmp-title__text">REGIONAL OFFICES</h2>
+                </div>
+                <div class="cmp-content-text">
+                    <div>
+                        <p><b>Western Toronto</b></p>
+                        <p><i>Address:</i><br>
+                            85 Prologis Blvd, Unit 4<br>
+                            Mississauga, Ontario<br>
+                            L5W 0B3<br>
+                            905-848-2700</p>
+                        <p>&nbsp;</p>
+                        <p><b>Eastern Toronto</b></p>
+                        <p><i>Address:</i><br>
+                            125 Progress Ave, Unit 7<br>
+                            Scarborough, Ontario<br>
+                            M1P 5A8<br>
+                            416-292-1234</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="feedback-form" class="feedback-form">
+            <h2 class="topic">Contact Us</h2>
+            <form id="feedback">
+                <div class="input-box">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input type="text" id="email" class="form-control" />
+
+                </div>
+                <div class="input-box">
+                    <label class="form-label" for="city">City</label>
+                    <input type="text" id="city" class="form-control" />
+
+                </div>
+
+                <div class="form-group">
+
+                    <select id="category" class="form-select" aria-label="Default select example">
+                        <option value="">Select your category</option>
+                        <option value="Complaint">Complaint</option>
+                        <option value="FeedBack">FeedBack</option>
+                        <option value="Suggestion">Suggestion</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="comment">Comment</label>
+                    <textarea name="comment" class="form-control" id="comment" rows="8" required></textarea>
+                </div>
+                <input type="submit" class="btn btn-secondary submit-style" value="Submit"/>
+
+            </form>
+        </div>
+    </div>
+
 </main>
 <footer id="footer"></footer>
 </body>

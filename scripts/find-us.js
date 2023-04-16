@@ -74,54 +74,54 @@ const stores = [
 ];
 
 /////////////////////////////////////////////////////////////
-function insertBranches(stores){
-  const branchesList = document.getElementById('branches-list');
+function insertBranches(stores) {
+    const branchesList = document.getElementById('branches-list');
 
-  for (const store of stores) {
-      // Create a list item element
-      const listItem = document.createElement('li');
-      listItem.className = 'branch';
+    for (const store of stores) {
+        // Create a list item element
+        const listItem = document.createElement('li');
+        listItem.className = 'branch';
 
-      // Create a paragraph element for the branch area
-      const areaParagraph = document.createElement('p');
-      areaParagraph.className = 'branch-area';
-      areaParagraph.textContent = store.name;
-      listItem.appendChild(areaParagraph);
+        // Create a paragraph element for the branch area
+        const areaParagraph = document.createElement('p');
+        areaParagraph.className = 'branch-area';
+        areaParagraph.textContent = store.name;
+        listItem.appendChild(areaParagraph);
 
-      // Create a paragraph element for the branch address
-      const addressParagraph = document.createElement('p');
-      addressParagraph.className = 'branch-address';
-      addressParagraph.textContent = store.address;
-      listItem.appendChild(addressParagraph);
+        // Create a paragraph element for the branch address
+        const addressParagraph = document.createElement('p');
+        addressParagraph.className = 'branch-address';
+        addressParagraph.textContent = store.address;
+        listItem.appendChild(addressParagraph);
 
-      // Create a paragraph element for the branch hours
-      const hoursParagraph = document.createElement('p');
-      hoursParagraph.className = 'branch-hours';
-      hoursParagraph.textContent = store.hours;
-      listItem.appendChild(hoursParagraph);
+        // Create a paragraph element for the branch hours
+        const hoursParagraph = document.createElement('p');
+        hoursParagraph.className = 'branch-hours';
+        hoursParagraph.textContent = store.hours;
+        listItem.appendChild(hoursParagraph);
 
-      // Add the list item to the branches list
-      branchesList.appendChild(listItem);
-  }
-  return document.querySelectorAll('.branch');
+        // Add the list item to the branches list
+        branchesList.appendChild(listItem);
+    }
+    return document.querySelectorAll('.branch');
 }
 
-function loadMap(map){
-  L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
-      maxZoom: 18,
-      subdomains: ["mt0", "mt1", "mt2", "mt3"],
-  }).addTo(map);
-  //   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  //       maxZoom: 19,
-  //       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  //   }).addTo(map);
-  map.setView([43.6532, -79.3832], 13);
+function loadMap(map) {
+    L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
+        maxZoom: 18,
+        subdomains: ["mt0", "mt1", "mt2", "mt3"],
+    }).addTo(map);
+    //   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //       maxZoom: 19,
+    //       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    //   }).addTo(map);
+    map.setView([43.6532, -79.3832], 13);
 }
 
-function addAndGetMarkers(map, stores){
-  return stores.map(store=>{
-    return L.marker(store.location).addTo(map).bindPopup(store.name)
-  });
+function addAndGetMarkers(map, stores) {
+    return stores.map(store => {
+        return L.marker(store.location).addTo(map).bindPopup(store.name)
+    });
 }
 
 function getCurrentPosition() {
@@ -131,10 +131,10 @@ function getCurrentPosition() {
     });
 }
 
-function centerMapOnGeolocation(map ,position) {
+function centerMapOnGeolocation(map, position) {
     const lat = position.coords.latitude;
     const lng = position.coords.longitude;
-    console.log(lat,lng)
+    console.log(lat, lng)
     map.setView([lat, lng], 13);
     const redMarker = new L.Icon({
         iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
@@ -154,7 +154,7 @@ function addLocateControl(map) {
         drawCircle: true,
         follow: false,
         setView: true,
-        keepCurrentZoomLevel: false,
+        keepCurrentZoomLevel: true,
         markerStyle: {
             weight: 1,
             opacity: 0.8,
@@ -208,35 +208,88 @@ function insertDistanceHTML(stores) {
     });
 }
 
-function registerEvents(markers, map, stores){
-  const branches = document.querySelectorAll('.branch');
-  // Activate select branch
-  branches.forEach(branch => {
-      branch.addEventListener('click', () => {
-          branches.forEach(otherBranch => {
-              otherBranch.classList.remove('active');
-          });
-          branch.classList.add('active');
-          const location = branch.querySelector('.branch-area').textContent;
-          const index = stores.findIndex(branch => branch.name === location);
-          const storeLocation = stores[index];
-          markers[index].openPopup();
-          map.setView(storeLocation.location, 13);
-      });
-  });
+function registerEvents(markers, map, stores) {
+    const branches = document.querySelectorAll('.branch');
+    // Activate select branch
+    branches.forEach(branch => {
+        branch.addEventListener('click', () => {
+            branches.forEach(otherBranch => {
+                otherBranch.classList.remove('active');
+            });
+            branch.classList.add('active');
+            const location = branch.querySelector('.branch-area').textContent;
+            const index = stores.findIndex(branch => branch.name === location);
+            const storeLocation = stores[index];
+            markers[index].openPopup();
+            map.setView(storeLocation.location, 13);
+        });
+    });
 }
 
+
+function sortBranchesByDistance() {
+    const branchesList = document.getElementById("branches-list");
+    const branches = Array.from(branchesList.querySelectorAll(".branch"));
+
+    for (const branch of branches) {
+        const distance = parseFloat(branch.querySelector(".branch-distance").textContent);
+        if (isNaN(distance)) {
+            return;
+        }
+    }
+
+    branches.sort((a, b) => {
+        const distanceA = parseFloat(a.querySelector(".branch-distance").textContent);
+        const distanceB = parseFloat(b.querySelector(".branch-distance").textContent);
+        return distanceA - distanceB;
+    });
+
+    while (branchesList.firstChild) {
+        branchesList.removeChild(branchesList.firstChild);
+    }
+
+    branches.forEach((branch) => branchesList.appendChild(branch));
+}
+
+function submitFeedback() {
+
+    const feedback = document.getElementById("feedback");
+
+    feedback.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const email = document.getElementById("email").value;
+        const city = document.getElementById("city").value;
+        const category = document.getElementById("category").value;
+        const comment = document.getElementById("comment").value;
+        console.log(comment)
+
+
+        const contact = {
+            email: email,
+            city: city,
+            category: category,
+            comment: comment
+        };
+
+        localStorage.setItem("contact", JSON.stringify(contact));
+        alert("form submitted");
+    });
+}
+
+
 async function setup() {
-  insertBranches(stores);
-  const map = L.map("map");
-  loadMap(map);
-  const markers = addAndGetMarkers(map, stores);
-  registerEvents(markers, map, stores);
-  const currentPosition = await getCurrentPosition();
-  calculateDistances(stores, currentPosition);
-  insertDistanceHTML(stores);
-  centerMapOnGeolocation(map, currentPosition);
-  addLocateControl(map);
+    insertBranches(stores);
+    const map = L.map("map");
+    loadMap(map);
+    const markers = addAndGetMarkers(map, stores);
+    registerEvents(markers, map, stores);
+    const currentPosition = await getCurrentPosition();
+    calculateDistances(stores, currentPosition);
+    insertDistanceHTML(stores);
+    centerMapOnGeolocation(map, currentPosition);
+    addLocateControl(map);
+    sortBranchesByDistance();
+    submitFeedback();
 }
 
 setup().catch(console.error);

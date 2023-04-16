@@ -1,0 +1,110 @@
+main {
+    margin: 2%;
+    justify-content: space-evenly;
+}
+
+#order-form {
+    padding: 20px 20px 20px 30px;
+    margin: 0 auto;
+    display:block;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 200px));
+    grid-gap: 2%;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="month"],
+select {
+    width: 82%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin: 5px 10px;
+    vertical-align: middle;
+}
+
+.card_border,
+.pp_border {
+    display: inline-flex;
+    align-items: center;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+a {
+    color: #b61500;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.input-row {
+    display: inline-flex;
+    flex-direction: column;
+    width: 43%;
+    margin-right:3%;
+}
+
+.input-row:last-child {
+    margin-right: 0;
+}
+
+.card-number-row {
+    display:flex;
+}
+
+.card-number-row input[type="text"] {
+    width: 60px;
+    margin-right: 5px;
+}
+
+.order-item {
+    border-bottom: 1px solid gray;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+.cart {
+    margin: 0 5%;
+}
+
+@media screen and (min-width:768px) {
+    main {
+        display:flex;
+    }
+
+    .billing {
+        width:60%;
+    }
+
+    .cart {
+        width:35%;
+
+    }
+}

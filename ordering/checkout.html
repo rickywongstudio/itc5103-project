@@ -1,73 +1,116 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pizzie Delish</title>
-    <meta
-      name="description"
-      content="Order the best pizzas online from Pizzie Delish. Enjoy our delicious menu of handcrafted pizzas, sides, desserts, and drinks delivered straight to your door." />
-    <meta
-      name="keywords"
-      content="Pizzie Delish, pizzas, online ordering, delivery, menu, sides, desserts, drinks, restaurant, food, food delivery" />
-    <link rel="icon" href="../media/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
-  </head>
-  <body>
-    <h1>Pizzie Delish Order Form</h1>
-    <form id="order-form">
-      <fieldset style="width: 60%">
-        <legend>Personal Information</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required /><br /><br />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required /><br /><br />
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required /><br /><br />
-      </fieldset>
-      <fieldset style="width: 60%">
-        <legend>Order Information</legend>
-        <label for="pizza">Select Pizza:</label>
-        <select id="pizza" name="pizza">
-          <option value="Margherita">Margherita</option>
-          <option value="Pepperoni">Pepperoni</option>
-          <option value="Vegetarian">Vegetarian</option>
-          <option value="BBQ Chicken">BBQ Chicken</option></select
-        ><br /><br />
-        <label for="size">Select Size:</label>
-        <input type="radio" id="small" name="size" value="Small" />
-        <label for="small">Small</label>
-        <input type="radio" id="medium" name="size" value="Medium" />
-        <label for="medium">Medium</label>
-        <input type="radio" id="large" name="size" value="Large" />
-        <label for="large">Large</label><br /><br />
-        <label for="toppings">Select Toppings:</label>
-        <input type="checkbox" id="mushroom" name="toppings" value="Mushroom" />
-        <label for="mushroom">Mushroom</label>
-        <input type="checkbox" id="olives" name="toppings" value="Olives" />
-        <label for="olives">Olives</label>
-        <input type="checkbox" id="onions" name="toppings" value="Onions" />
-        <label for="onions">Onions</label><br /><br />
-        <label for="delivery">Delivery Method:</label>
-        <input type="radio" id="pickup" name="delivery" value="Pickup" />
-        <label for="pickup">Pickup</label>
-        <input type="radio" id="delivery" name="delivery" value="Delivery" />
-        <label for="delivery">Delivery</label><br /><br />
-        <label for="delivery-date">Delivery Date:</label>
-        <input type="date" id="delivery-date" name="delivery-date" />
+<head>
 
-        <label for="delivery-time">Delivery Time:</label>
-        <input
-          type="time"
-          id="delivery-time"
-          name="delivery-time" /><br /><br />
-        <label for="requests">Additional Requests:</label><br />
-        <textarea id="requests" name="requests" rows="4" cols="50"></textarea
-        ><br /><br />
-      </fieldset>
-      <br />
-      <input type="submit" value="Submit Order" />
-    </form>
-  </body>
-</html> -->
+    <title>Checkout</title>
+    <!-- metadata start-->
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta
+            content="Order the best pizzas online from Pizza Palace. Enjoy our delicious menu of handcrafted pizzas, sides, desserts, and drinks delivered straight to your door."
+            name="description"/>
+    <meta
+            content="Pizza Palace, pizzas, online ordering, delivery, menu, sides, desserts, drinks, restaurant, food, food delivery"
+            name="keywords"/>
+    <!-- metadata ends-->
+
+    <link href="../media/favicon.ico" rel="icon"/>
+    <link href="../styles/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="../styles/common.css" rel="stylesheet">
+    <script crossorigin="anonymous" defer
+            integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+            src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+
+    <script
+            crossorigin="anonymous"
+            integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+            src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script defer src="../scripts/common.js"></script>
+
+    <link href="../media/favicon.ico" rel="icon"/>
+    <link href="../styles/checkout.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header id="header"></header>
+<main>
+    <section class="billing">
+        <form id="order-form">
+            <h2>Billing details</h2>
+            <div class="input-row">
+            <label for="first_name">First name</label>
+            <input id="first_name" name="first_name" required type="text" />
+            </div>
+            <div class="input-row">
+            <label for="last_name">Last name</label>
+            <input id="last_name" name="last_name" required type="text" />
+            </div>
+            <div class="input-row">
+            <label for="email">Email address</label>
+            <input id="email" name="email" required type="email"/>
+            </div>
+            <div class="input-row">
+            <label for="phone">Mobile Number</label>
+            <input id="phone" name="phone" required type="tel" />
+            </div>
+            <label for="address_line1">Address Line 1</label>
+            <input id="address_line1" name="address_line1" required type="text" />
+            <label for="address_line2">Address Line 2 (optional)</label>
+            <input id="address_line2" name="address_line2" type="text" />
+            <div class="input-row">
+            <label for="city">City</label>
+            <input id="city" name="city" required type="text" />
+            </div>
+            <div class="input-row">
+            <label for="zip">Postal Code</label>
+            <input id="zip" name="zip" type="text">
+            </div>
+
+            <h2>Payment Method</h2>
+            <span class="card_border">
+      <input id="card" name="pay" type="radio" value="card">
+      <label for="card">Credit/Debit</label>
+      <img alt="boo" height="30px" id="img_card" src="..\media\card.png" width="150px">
+    </span>
+
+            <label for="noc">Name on card</label>
+            <input id="noc" name="noc" required type="text">
+            <label for="card">Card Number</label>
+            <div class="card-number-row">
+            <input id="card1" maxlength="4" name="card1" pattern="^0[1-9]|[1-9]\d$" required type="text">-
+            <input id="card2" maxlength="4" name="card2" pattern="^0[1-9]|[1-9]\d$" required type="text">-
+            <input id="card3" maxlength="4" name="card3" pattern="^0[1-9]|[1-9]\d$" required type="text">-
+            <input id="card4" maxlength="4" name="card4" pattern="^0[1-9]|[1-9]\d$" required type="text">
+            </div>
+            <div class="input-row">
+            <label for="start">Expiration date </label>
+                <input id="start" min="2023-03" name="start" type="month" value="2023-03">
+            </div>
+            <div class="input-row">
+            <label class="zip" for="security">CVV</label>
+            <input id="security" maxlength="3" name="security" required type="text">
+            </div>
+            <span class="pp_border">
+      <input id="pp" name="pay" type="radio" value="pp">
+      <label for="pp">Paypal</label>
+      <img alt="boo" height="25px" id="img_pp" src="..\media\pp2.png" width="100px"></span>
+            <p>By clicking the button below, you agree to the <a href="">Terms and
+                conditions</a></p>
+            <input id="submit1" style="background-color:#b61500; color: white;" type="submit" value="Place Order"/>
+        </form>
+
+    </section>
+    <section class="cart">
+        <div class="cart-summary">
+            <div class="summary-and-total" style="margin-bottom: 40px;">
+                <img src="..\media\cart.jpg" height="20px"> <h3 style="display:inline;">Cart Items summary</h3>
+            </div>
+        </div>
+        <div class="orders"></div>
+    </section>
+</main>
+<footer id="footer"></footer>
+</body>
+<script src="../scripts/checkout.js"></script>
+</html>

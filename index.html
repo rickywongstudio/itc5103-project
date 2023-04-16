@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head lang="en-CA">
+<head>
     <title>Pizza Palace | Online ordering and Delivery</title>
     <meta charset="UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -37,10 +37,7 @@
                 <a href=""><img alt="Pizza Palace" class="logo" src="media/logo.png"/></a>
             </li>
             <li class="navbar-item"><a href="ordering/menu-and-order.html">ORDER NOW</a></li>
-            <li class="navbar-item"><a  id="loginId" onclick="authentication('index')">
-                <i class='fas'
-                                                                                           style='font-size:16px'>&#xf2f6;</i></a>
-                <br><a href="ordering/order-cart.html">CART <i class='fas' style='font-size:16px'>&#xf07a;</i></a></li>
+            <li class="navbar-item" id="loginId">
             <li class="nav-dropdown-toggle"><i class="fa fa-bars w3-xlarge" style="color:#ffffff"></i>
             </li>
         </ul>
@@ -48,8 +45,7 @@
             <li><a href="info/about-us.html">ABOUT US</a></li>
             <li><a href="info/find-us.html">FIND US</a></li>
             <li><a href="ordering/menu-and-order.html">ORDER NOW</a></li>
-<!--            <li><a id="login" href="membership/sign-in.html" onclick="authentication()"><i class='fas' style='font-size:16px'>&#xf2f6;</i></a></li>-->
-            <li><a href="ordering/order-cart.html">CART <i class='fas' style='font-size:16px'>&#xf07a;</i></a></li>
+            <li id="login"></li>
         </ul>
     </nav>
 </header>
@@ -72,8 +68,8 @@
                         <button class="close-modal">&times;</button>
                         <h1>Get the best deals on your favorite pizzas 🍕</h1>
                         <p>Looking for delicious and affordable pizza? Look no further than our online ordering website!
-                           We have some great deals and promotions running right now, so you can enjoy your favorite
-                           pizzas for less. Check out our current offers:</p>
+                            We have some great deals and promotions running right now, so you can enjoy your favorite
+                            pizzas for less. Check out our current offers:</p>
                         <ul>
                             <li>Buy one large pizza, get one free</li>
                             <li>$5 off any order over $25</li>
@@ -104,7 +100,7 @@
                             <div class="position-center">
                                 <h2 class="text-center text">Special Offer</h2>
                                 <p class="text-center text" style="margin-top: 30px;">Order our special offer - Italian
-                                                                                      Pizza Margherita Today!</p>
+                                    Pizza Margherita Today!</p>
                                 <a class="button" href="ordering/menu-and-order.html"
                                    style="padding: 10px 20px; display: inline-block;">Order</a>
                             </div>
@@ -115,8 +111,8 @@
                     <div class="deal-box">
                         <h2 class="text-center">Freshly Made Pizza & Homemade Sauces</h2>
                         <p class="text-center">Our selection of pasta includes four different kinds, which can be paired
-                                               with a choice of eight delicious sauces made with freshest
-                                               ingredients.</p>
+                            with a choice of eight delicious sauces made with freshest
+                            ingredients.</p>
                         <a class="button" href="info/find-us.html">Our Restaurants</a></div>
                 </div>
             </div>
@@ -130,7 +126,7 @@
                             <div class="position-center">
                                 <h2 class="text text-center">Today's Combo</h2>
                                 <p class="text text-center" style="margin-top: 30px;">Today's combo is Pepperoni Pizza
-                                                                                      with delicious Buffalo Wings.</p>
+                                    with delicious Buffalo Wings.</p>
                                 <a class="button" href="ordering/menu-and-order.html"
                                    style="padding: 10px 20px; display: inline-block;">Find Out More</a>
                             </div>
@@ -144,8 +140,8 @@
                             <div class="position-center">
                                 <h2 class="text text-center">Kid's Meal</h2>
                                 <p class="text text-center" style="margin-top: 30px;">Order our small-sized pizzas for
-                                                                                      the little ones or something for
-                                                                                      the group to snack on!</p>
+                                    the little ones or something for
+                                    the group to snack on!</p>
                                 <a class="button" href="ordering/menu-and-order.html"
                                    style="padding: 10px 20px; display: inline-block;">Check It Out</a>
                             </div>
@@ -166,41 +162,41 @@
                     <div class="slide">
                         <div class="testimonial">
                             <p class="testimonial-text">"I've tried many pizza places in town, but this one is hands
-                                                        down the best! The crust is crispy, and the toppings are always
-                                                        fresh. I can't get enough of their Margherita pizza!"</p>
+                                down the best! The crust is crispy, and the toppings are always
+                                fresh. I can't get enough of their Margherita pizza!"</p>
                             <h3 class="testimonial-author">- Sarah T.</h3>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="testimonial">
                             <p class="testimonial-text">"The staff at Pizza Palace are incredibly friendly and
-                                                        accommodating. They went above and beyond to ensure our order
-                                                        was perfect, and their vegan options are delicious!"</p>
+                                accommodating. They went above and beyond to ensure our order
+                                was perfect, and their vegan options are delicious!"</p>
                             <h3 class="testimonial-author">- Michael J.</h3>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="testimonial">
                             <p class="testimonial-text">"Their pizza is amazing! The combination of flavors and the
-                                                        perfect crust make every slice a delight. The Pepperoni Pizza
-                                                        with extra cheese is my go-to order. Highly recommended!"</p>
+                                perfect crust make every slice a delight. The Pepperoni Pizza
+                                with extra cheese is my go-to order. Highly recommended!"</p>
                             <h3 class="testimonial-author">- Olivia M.</h3>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="testimonial">
                             <p class="testimonial-text">"I ordered from Pizza Palace for a family gathering, and
-                                                        everyone loved it! The Buffalo Chicken Pizza was a crowd
-                                                        favorite, and the delivery was fast and hassle-free."</p>
+                                everyone loved it! The Buffalo Chicken Pizza was a crowd
+                                favorite, and the delivery was fast and hassle-free."</p>
                             <h3 class="testimonial-author">- Daniel B.</h3>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="testimonial">
                             <p class="testimonial-text">"The garlic knots at this pizza shop are to die for! They're the
-                                                        perfect side to any pizza order. We also love their Veggie
-                                                        Supreme Pizza - the vegetables are always fresh and
-                                                        flavorful."</p>
+                                perfect side to any pizza order. We also love their Veggie
+                                Supreme Pizza - the vegetables are always fresh and
+                                flavorful."</p>
                             <h3 class="testimonial-author">- Emily W.</h3>
                         </div>
                     </div>
@@ -215,9 +211,9 @@
                 <div class="column-1 recruitment">
                     <h2 class="text-center recruitment-text">WORKING AT PP IS A VIBE!</h2>
                     <p class="text-center recruitment-text">Fine dining? Nope. This is FUN dining. Serve food that
-                                                            really slaps. Apply
-                                                            today to one of the many work opportunities your local BP
-                                                            has to offer.</p>
+                        really slaps. Apply
+                        today to one of the many work opportunities your local BP
+                        has to offer.</p>
                     <a class="button recruitment-btn" href="">Apply Now</a>
                 </div>
             </div>
@@ -227,14 +223,14 @@
                 <div class="column-1 covid">
                     <h2 class="text-center">COVID-19: What we're doing to keep guests, staff and communities safe.</h2>
                     <p class="text-center covid-p">Throughout the pandemic we have been closely monitoring all public
-                                                   health
-                                                   updates and mandates to ensure we are following all required
-                                                   protocols. We
-                                                   are committed to protecting the health, safety and peace of mind of
-                                                   our
-                                                   guests and staff. Learn more about what Pizza Palace is doing to
-                                                   protect your
-                                                   health and safety.</p>
+                        health
+                        updates and mandates to ensure we are following all required
+                        protocols. We
+                        are committed to protecting the health, safety and peace of mind of
+                        our
+                        guests and staff. Learn more about what Pizza Palace is doing to
+                        protect your
+                        health and safety.</p>
                     <a class="button" href="">Find Out More</a>
                 </div>
             </div>
@@ -250,7 +246,7 @@
                 <li><a href="info/about-us.html">About us</a></li>
                 <li><a href="info/find-us.html">Locations</a></li>
                 <li><a href="info/nutrition.html">Nutritional
-                                                  Information</a></li>
+                    Information</a></li>
                 <li><a href="info/find-us.html">Contact Us</a></li>
             </ul>
         </div>
@@ -275,12 +271,12 @@
 
     <div class="footer-bottom">
         <p>&copy; 2023 Pizza Palace. All rights
-           reserved.</p>
+            reserved.</p>
         <p>Disclaimer: This website is purely fictional and has been created solely for educational purposes.
-           All content, images, and information presented on this website are entirely fictitious and are not
-           intended to be taken as real.
-           Any resemblance to actual persons,
-           living or dead, is purely coincidental.</p>
+            All content, images, and information presented on this website are entirely fictitious and are not
+            intended to be taken as real.
+            Any resemblance to actual persons,
+            living or dead, is purely coincidental.</p>
     </div>
 </footer>
 </body>

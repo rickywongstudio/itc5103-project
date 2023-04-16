@@ -31,6 +31,7 @@ header nav li a {
     text-align: center;
     font-weight: 900;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .navbar-item {
@@ -113,6 +114,7 @@ footer {
 
 div .social-icons a {
     margin-right: 20px;
+    width:100%;
 }
 
 .social-icons a:last-child {
