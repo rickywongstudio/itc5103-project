@@ -5,7 +5,7 @@ function loadingItemsToCart() {
     if (!orders || orders.length === 0) {
         return
     }
-    document.getElementById("noOfOrders").innerHTML = "( " + orders.length + " Items )";
+    document.getElementById("noOfOrders").innerHTML = "(" + orders.length + " Items)";
     let tbody = document.getElementById("orderItems");
     if (tbody.hasChildNodes()) {
         tbody.innerHTML = '';

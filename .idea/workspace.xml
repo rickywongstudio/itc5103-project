@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Add member-profile link to header">
-      <change afterPath="$PROJECT_DIR$/scripts/checkout.js" afterDir="false" />
+<<<<<<< HEAD
+    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Finish menu logic">
+      <change afterPath="$PROJECT_DIR$/ordering/Logo SVG-01 1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordering/cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordering/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordering/cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ordering/remove-bin-delete-trash-svgrepo-com.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-03-25_12_53_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-03-25_12_53_a_m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/menu-and-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu-and-order.js" afterDir="false" />
+=======
+    <list default="true" id="6e0b2e50-01ff-44b6-8a94-182d42cafbf8" name="Changes" comment="Debug">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordering/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordering/order-cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordering/order-cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/order-cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/checkout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/menu-and-order.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/menu-and-order.css" afterDir="false" />
+>>>>>>> 577ea356793d3c9a7b4d3d3df94e59b261b7fe85
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +51,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="674c50df5757619a12af4490a788d76250289f78" />
+        <entry key="$PROJECT_DIR$" value="rickywong" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,9 +88,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;stable&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ricky/Documents/GitHub/pizzie-delish/itc5103-project/membership&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;order__menu__feature&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kajan/Documents/Semester 1/Web Programming/Group_Project/itc5103-project/ordering&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -91,27 +97,26 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
     &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/ricky/Documents/GitHub/pizzie-delish/itc5103-project&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kajan\Documents\Semester 1\Web Programming\Group_Project\itc5103-project\ordering" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ricky\Documents\GitHub\pizzie-delish\itc5103-project\membership" />
       <recent name="C:\Users\ricky\OneDrive - The Hong Kong Polytechnic University\Documents\GitHub\itc5103-project\media\unused" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/itc5103-project/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="order-menu.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/order-menu.js" working-dir="$PROJECT_DIR$/scripts">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Node.js.order-menu.js" />
       </list>
     </recent_temporary>
@@ -182,13 +187,17 @@
       <workItem from="1680556992074" duration="118000" />
       <workItem from="1680557189908" duration="820000" />
       <workItem from="1680561791456" duration="593000" />
+<<<<<<< HEAD
+      <workItem from="1680646374775" duration="5357000" />
+      <workItem from="1680652799380" duration="1073000" />
+      <workItem from="1680727115041" duration="3000" />
+      <workItem from="1680984669716" duration="364000" />
+=======
       <workItem from="1680575504229" duration="1034000" />
       <workItem from="1680619973701" duration="34000" />
       <workItem from="1680646433095" duration="55000" />
       <workItem from="1680646512177" duration="987000" />
-      <workItem from="1680725273831" duration="45000" />
-      <workItem from="1681512256676" duration="2577000" />
-      <workItem from="1681524962407" duration="22387000" />
+>>>>>>> 577ea356793d3c9a7b4d3d3df94e59b261b7fe85
     </task>
     <task id="LOCAL-00001" summary="debug">
       <created>1678074721954</created>
@@ -365,63 +374,13 @@
       <option name="project" value="LOCAL" />
       <updated>1680576535773</updated>
     </task>
-    <task id="LOCAL-00026" summary="Debug on css and js (fixed quantity field, src link error) and Add images">
-      <created>1680720242675</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1680720242675</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Debug on css and js (fixed quantity field, src link error) and Add images">
-      <created>1680720313594</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1680720313594</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Debug">
-      <created>1680720356509</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1680720356509</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Fix profile.html, profile.css">
-      <created>1681575082307</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1681575082307</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Add member-profile link to header">
-      <created>1681575787451</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1681575787451</updated>
-    </task>
-    <option name="localTasksCounter" value="31" />
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="HEAD" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -437,13 +396,28 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="stable" />
+                        <option value="Location" />
                       </list>
                     </value>
                   </entry>
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -467,9 +441,6 @@
     <MESSAGE value="Finish menu logic" />
     <MESSAGE value="Finish menu css" />
     <MESSAGE value="Debug" />
-    <MESSAGE value="Debug on css and js (fixed quantity field, src link error" />
-    <MESSAGE value="Fix profile.html, profile.css" />
-    <MESSAGE value="Add member-profile link to header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add member-profile link to header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug" />
   </component>
 </project>
