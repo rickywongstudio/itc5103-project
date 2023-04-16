@@ -1,4 +1,4 @@
-const loginForm = document.getElementById("login-form");
+const loginForm = document.getElementById("form");
 
 loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -12,6 +12,11 @@ loginForm.addEventListener("submit", function (event) {
 
 
     const user = JSON.parse(localStorage.getItem("user"));
+
+    if(!user){
+        alert("User Not found please Signup!")
+        return;
+    }
 
 
     if (user.email === email && user.password === password) {

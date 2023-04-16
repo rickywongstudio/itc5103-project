@@ -1,13 +1,4 @@
-// const onSubmit = (event) => {
-//     console.log(JSON.stringify(event))
-//     event.preventDefault();
-//     let formData = document.getElementsByName("sign-up-form");
-//
-//
-//     // return false;
-// }
-
-const loginForm = document.getElementById("sign-up");
+const loginForm = document.getElementById("form");
 
 loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
