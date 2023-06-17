@@ -18,4 +18,8 @@ The purpose of this project is to develop a website for a pizza shop to improve 
 - Fetching menu items as json
 - Menu displaying and dynamic display of item price (calculated by base price, size, quantity)
 - Mobile responsiveness
-- (To be available) Member Sign up and Login
+- Member Sign up and Login
+
+
+### Demonstration:
+https://pizza-palace-shop.netlify.app/
